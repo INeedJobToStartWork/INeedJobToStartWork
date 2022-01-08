@@ -1,7 +1,5 @@
-- 👋 Hi, I’m @INeedJobToStartWork
-- 👀 I’m interested in FrontEnd / BackEnd
-- 🌱 I’m currently learning HTML, CSS ,JavaScript, PHP, MySQL
-- 📫 How to reach me ...
+Wassup guys, are u here to hire me?
+It's not funny.
 
 <!---
 INeedJobToStartWork/INeedJobToStartWork is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
