@@ -1,0 +1,78 @@
+body {
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+body ::-webkit-scrollbar {
+  width: 0;
+}
+
+body main {
+  width: 100%;
+  height: 100%;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+body main ul {
+  list-style: none;
+}
+
+body main ul li {
+  display: inline-block;
+}
+
+body main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-color: #18191C;
+}
+
+body main section:nth-child(1) {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent)), url("/assets/Hero.jpg");
+  background-image: linear-gradient(to top, black, transparent), url("/assets/Hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat,repeat;
+}
+
+body main section:nth-child(2) {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0% 1px, transparent), linear-gradient(to top, black, transparent), url("/assets/Hero2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat,repeat;
+}
+
+body main section:nth-child(3) {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(black), to(transparent)), url("/assets/hero3.jpg");
+  background-image: linear-gradient(to top, black, transparent), linear-gradient(to bottom, black, transparent), url("/assets/hero3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat,repeat;
+}
+
+body main section:nth-child(4) {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(black), to(transparent)), url("/assets/hero4.jpg");
+  background-image: linear-gradient(to top, black, transparent), linear-gradient(to bottom, black, transparent), url("/assets/hero4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat,repeat;
+}
+/*# sourceMappingURL=index.css.map */
