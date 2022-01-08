@@ -1,4 +1,4 @@
-Wassup guys, are u here to hire me?
+Wassup guys, are u here to hire me? No?
 It's not funny.
 
 <!---
