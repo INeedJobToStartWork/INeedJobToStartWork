@@ -7,3 +7,4 @@ Wassup guys, are u here to hire me? No?
 It's not funny.
 
 --->
+[![Banner](https://raw.githubusercontent.com/INeedJobToStartWork/INeedJobToStartWork/main/Banner.png "Banner")](http://https://raw.githubusercontent.com/INeedJobToStartWork/INeedJobToStartWork/main/Banner.png "Banner")
