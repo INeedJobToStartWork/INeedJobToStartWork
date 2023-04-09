@@ -13,7 +13,7 @@ Fix it, it's look like shit rly
 
 
 <p align="center">🔭 I’m currently working on <a href="https://github.com/DarkUI-Team/DarkUI">DarkUI - Design System</a></p>
-<p align="center">🌱 I’m currently learning <b>Typescript</b></p>
+<p align="center">🌱 I’m currently learning <b>WCAG,WebAPI,Typescript</b></p>
 <p align="center">📫 How to reach me <b>ineedjobtostartwork@gmail.com </b></p>
 
 
