@@ -1,9 +1,42 @@
 {
   "name": "ineedjobtostartwork",
   "version": "0.0.0",
-  "private":true,
+  "private": true,
   "description": "",
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:npm": "turbo build:npm",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "format": "turbo format",
+    "clean": "turbo clean",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "preinstall": "husky init",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\""
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.6",
+    "@types/node": "^20.14.9",
+    "commitsmile": "^0.6.1",
+    "globals": "^13.24.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.7",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.4.0"
 }
