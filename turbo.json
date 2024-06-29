@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "pre": {},
+    "start":{},
     "build": {},
     "build:npm": {
       "inputs": ["*", "!dist"]
