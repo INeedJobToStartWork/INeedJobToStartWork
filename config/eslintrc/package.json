@@ -6,10 +6,15 @@
   "scripts": {
     "start": "pnpm exec eslint-config-inspector",
     "lint": "pnpm eslint .",
-    "lint:fix": "pnpm eslint . --fix"
+    "lint:fix": "pnpm eslint . --fix",
+    "build": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
+		"build:npm": "pnpm npm:prepack && pnpm tsup --config ./config/tsuprc/tsup.prod.ts && pnpm npm:postpack",
+		"dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts"
   },
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.0",
+    "@ineedj/tsconfig": "workspace:*",
+    "@ineedj/tsuprc": "workspace:*",
     "@next/eslint-plugin-next": "^14.2.4",
     "@rushstack/eslint-patch": "^1.10.3",
     "@stylistic/eslint-plugin": "^1.5.1",
@@ -47,8 +52,8 @@
     "eslint-plugin-validate-jsx-nesting": "^0.1.1",
     "eslint-plugin-yml": "^1.14.0",
     "globals": "^13.24.0",
-    "typescript": "^5.5.3",
-    "@ineedj/tsconfig": "workspace:*"
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
   },
   "dependencies": {
     "eslint": "^9.6.0"
