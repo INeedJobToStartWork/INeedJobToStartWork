@@ -1,23 +1,13 @@
-import config from "./tsup.base";
-import { copy } from "esbuild-plugin-copy";
-import { defineConfig } from "tsup";
+import config from './tsup.base';
+import { copy } from 'esbuild-plugin-copy';
+import { defineConfig } from 'tsup';
 
 export default defineConfig({
-	...config,
+  ...config,
 
-	minify: true,
-	shims: true,
-	outDir: "dist",
+  minify: true,
+  shims: true,
+  outDir: 'dist',
 
-	format: ["cjs"],
-	esbuildPlugins: [
-		copy({
-			assets: [
-				{ from: "./package.json", to: "./package.json" },
-				{ from: "./.npmrc", to: "./.npmrc" },
-				{ from: "./.npmignore", to: "./.npmignore" },
-				{ from: "./README.md", to: "./README.md" }
-			]
-		})
-	]
+  format: ['cjs'],
 });
