@@ -7,6 +7,6 @@
       "@/*": ["*"]
     }
   },
-  // "include": ["src"],
+  "include": ["src"],
   "extends": "@ineedj/tsconfig/base.json"
 }
