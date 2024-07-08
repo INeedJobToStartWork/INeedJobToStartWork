@@ -29,22 +29,27 @@ About rules setup more with `@eslint/config-inspector`
 
 
 ## Install
+Ni
+```bash copy
+ni -D "@ineedj/eslintrc"
+```
+
 NPM
 
 ```bash copy
-npm install -g "@ineedj/eslintrc"
+npm install -D "@ineedj/eslintrc"
 ```
 
 PNPM
 
 ```bash copy
-pnpm add -g "@ineedj/eslintrc"
+pnpm add -D "@ineedj/eslintrc"
 ```
 
 Yarn
 
 ```bash copy
-yarn add -g "@ineedj/eslintrc"
+yarn add -D "@ineedj/eslintrc"
 ```
 
 ## Usage
