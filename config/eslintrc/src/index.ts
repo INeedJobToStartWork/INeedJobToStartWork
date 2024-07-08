@@ -23,25 +23,30 @@ interface IinputConfig {
   };
 }
 
-const ineedj = async (inputConfig: IinputConfig) => {
+/**
+ * Generuje ostateczną konfigurację na podstawie podanego inputConfig.
+ *
+ * @param {IinputConfig} inputConfig - Konfiguracja wejściowa zawierająca opcje formatowania i składni.
+ */
+const ineedj = (inputConfig: IinputConfig) => {
   const finalConfig = [];
 
-  if (inputConfig.formatters?.json) finalConfig.push(JSON);
-  if (inputConfig.formatters?.stylistic) finalConfig.push(stylistic);
-  if (inputConfig.formatters?.stylisticJSX) finalConfig.push(stylisticJSX);
-  if (inputConfig.formatters?.stylisticTS) finalConfig.push(stylisticTS);
-  if (inputConfig.formatters?.perfectionistSorters) finalConfig.push(perfectionistSorters);
+  if (inputConfig.formatters?.json) finalConfig.push(...JSON);
+  if (inputConfig.formatters?.stylistic) finalConfig.push(...stylistic);
+  if (inputConfig.formatters?.stylisticJSX) finalConfig.push(...stylisticJSX);
+  if (inputConfig.formatters?.stylisticTS) finalConfig.push(...stylisticTS);
+  if (inputConfig.formatters?.perfectionistSorters) finalConfig.push(...perfectionistSorters);
 
-  if (inputConfig.syntax?.eslint) finalConfig.push(base);
-  if (inputConfig.syntax?.jsx) finalConfig.push(jsx);
-  if (inputConfig.syntax?.next) finalConfig.push(next);
-  if (inputConfig.syntax?.node) finalConfig.push(node);
-  if (inputConfig.syntax?.react) finalConfig.push(react);
-  if (inputConfig.syntax?.storybook) finalConfig.push(storybook);
-  if (inputConfig.syntax?.tailwindcss) finalConfig.push(tailwindcss);
-  if (inputConfig.syntax?.typescript) finalConfig.push(typescript);
-  if (inputConfig.syntax?.toml) finalConfig.push(toml);
-  if (inputConfig.syntax?.yaml) finalConfig.push(yaml);
+  if (inputConfig.syntax?.eslint) finalConfig.push(...base);
+  if (inputConfig.syntax?.jsx) finalConfig.push(...jsx);
+  if (inputConfig.syntax?.next) finalConfig.push(...next);
+  if (inputConfig.syntax?.node) finalConfig.push(...node);
+  if (inputConfig.syntax?.react) finalConfig.push(...react);
+  if (inputConfig.syntax?.storybook) finalConfig.push(...storybook);
+  if (inputConfig.syntax?.tailwindcss) finalConfig.push(...tailwindcss);
+  if (inputConfig.syntax?.typescript) finalConfig.push(...typescript);
+  if (inputConfig.syntax?.toml) finalConfig.push(...toml);
+  if (inputConfig.syntax?.yaml) finalConfig.push(...yaml);
 
   return finalConfig;
 };

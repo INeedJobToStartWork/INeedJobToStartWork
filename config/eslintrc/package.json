@@ -41,7 +41,7 @@
     "npm:postpack": "clean-package restore",
     "npm:prepack": "clean-package"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@eslint/config-inspector": "^0.5.0",
     "@ineedj/tsconfig": "workspace:*",
     "@ineedj/tsuprc": "workspace:*",
@@ -61,7 +61,6 @@
     "eslint-plugin-no-explicit-type-exports": "^0.12.1",
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-optimize-regex": "^1.2.1",
     "eslint-plugin-perfectionist": "^2.11.0",
     "eslint-plugin-pii": "^1.0.2",
     "eslint-plugin-promise": "^6.2.0",
@@ -89,6 +88,7 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
-    "tsup-node": "^0.1.0"
+    "@types/eslint-plugin-security": "^3.0.0",
+    "eslint-plugin-optimize-regex": "^1.2.1"
   }
 }

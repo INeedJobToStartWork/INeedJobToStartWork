@@ -8,6 +8,6 @@
 
 // export default [...Base];
 
-import ineedj from './lib/index.js';
-
-export default ineedj({ syntax: { eslint: true, typescript: true } });
+import ineedj from './dist/index.js';
+console.log(ineedj({}));
+// export default [ineedj({})];

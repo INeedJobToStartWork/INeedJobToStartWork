@@ -5,12 +5,14 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   ...config,
 
+  bundle: true,
   splitting: true,
   minify: true,
   shims: true,
+
   outDir: 'dist',
-  // dts: true,
-  format: ['esm'],
+  
+  format: ['esm', 'cjs'],
 
   esbuildPlugins: [
     copy({
