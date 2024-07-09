@@ -1,9 +1,22 @@
 {
 	"name": "@ineedj/prettierrc",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {},
-	"devDependencies": {
+	"version": "1.0.0",
+	"description": "INEEDJ config for Prettier ",
+	"keywords": [
+		"prettierrc",
+		"ineedj",
+		"ineedjobtostartwork"
+	],
+	"homepage": "https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+	"bugs": "https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues/new/choose",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+		"directory": "config/prettierrc"
+	},
+	"license": "MIT",
+	"author": "ineedjobtostartwork",
+	"peerDependencies": {
 		"prettier": "^3.1.1",
 		"prettier-plugin-packagejson": "^2.4.8"
 	}
