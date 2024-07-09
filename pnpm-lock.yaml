@@ -175,7 +175,7 @@ importers:
   config/myplop: {}
 
   config/prettierrc:
-    devDependencies:
+    dependencies:
       prettier:
         specifier: ^3.1.1
         version: 3.3.2
