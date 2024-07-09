@@ -25,7 +25,7 @@
     "pre:husky": "git add . && lint-staged",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\""
-   },
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.6",
     "@types/node": "^20.14.9",
@@ -38,8 +38,8 @@
   "engines": {
     "node": ">=18"
   },
-  "lint-staged":{
-    "*":""
+  "lint-staged": {
+    "*": ""
   },
   "packageManager": "pnpm@9.4.0"
 }

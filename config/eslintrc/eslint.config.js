@@ -8,26 +8,28 @@
 
 // export default [...Base];
 
-import ineedj from './dist/index.js';
+// import ineedj from './dist/index.js';
 
-export default ineedj({
-  formatters: {
-    json: true,
-    stylistic: true,
-    stylisticJSX: true,
-    stylisticTS: true,
-    perfectionistSorters: true,
-  },
-  syntax: {
-    eslint: true,
-    jsx: true,
-    next: true,
-    node: true,
-    react: true,
-    storybook: true,
-    tailwindcss: true,
-    typescript: true,
-    toml: true,
-    yaml: true,
-  },
-});
+// export default ineedj({
+//   formatters: {
+//     json: true,
+//     stylistic: true,
+//     stylisticJSX: true,
+//     stylisticTS: true,
+//     perfectionistSorters: true,
+//   },
+//   syntax: {
+//     eslint: true,
+//     jsx: true,
+//     next: true,
+//     node: true,
+//     react: true,
+//     storybook: true,
+//     tailwindcss: true,
+//     typescript: true,
+//     toml: true,
+//     yaml: true,
+//   },
+// });
+
+export default [];
