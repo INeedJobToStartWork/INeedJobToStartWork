@@ -2,5 +2,8 @@
   "name": "@ineedj/tsuprc",
   "version": "0.0.0",
   "private": true,
-  "scripts": {}
+  "scripts": {},
+  "publishConfig": {
+    "provenance": true
+  }
 }

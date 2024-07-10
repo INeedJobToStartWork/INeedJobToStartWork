@@ -90,5 +90,8 @@
   "devDependencies": {
     "@types/eslint-plugin-security": "^3.0.0",
     "eslint-plugin-optimize-regex": "^1.2.1"
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }

@@ -15,5 +15,8 @@
     "directory": "config/tsconfig"
   },
   "license": "MIT",
-  "author": "ineedjobtostartwork"
+  "author": "ineedjobtostartwork",
+  "publishConfig": {
+    "provenance": true
+  }
 }
