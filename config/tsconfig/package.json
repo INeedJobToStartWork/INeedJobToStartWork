@@ -1,6 +1,19 @@
 {
   "name": "@ineedj/tsconfig",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {}
+  "version": "1.0.0",
+  "description": "INEEDJ config for Typescript ",
+  "keywords": [
+    "tsconfig",
+    "ineedj",
+    "ineedjobtostartwork"
+  ],
+  "homepage": "https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+  "bugs": "https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues/new/choose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+    "directory": "config/tsconfig"
+  },
+  "license": "MIT",
+  "author": "ineedjobtostartwork"
 }
