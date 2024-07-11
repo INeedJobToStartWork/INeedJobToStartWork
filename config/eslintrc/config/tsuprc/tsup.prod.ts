@@ -9,9 +9,8 @@ export default defineConfig({
   splitting: true,
   minify: true,
   shims: true,
-
   outDir: 'dist',
-  
+
   format: ['esm', 'cjs'],
 
   esbuildPlugins: [
@@ -24,5 +23,5 @@ export default defineConfig({
       ],
     }),
   ],
-  external: ['eslint'],
+  // external: ['eslint'],
 });

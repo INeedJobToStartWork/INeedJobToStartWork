@@ -1,0 +1,3 @@
+{
+  "extends": "@ineedj/tsconfig/base.json"
+}

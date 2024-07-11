@@ -187,6 +187,21 @@ importers:
 
   config/tsuprc: {}
 
+  tests/eslint:
+    devDependencies:
+      '@ineedj/eslintrc':
+        specifier: workspace:*
+        version: link:../../config/eslintrc
+      '@ineedj/tsconfig':
+        specifier: workspace:*
+        version: link:../../config/tsconfig
+      eslint:
+        specifier: ^9.6.0
+        version: 9.6.0
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.3
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

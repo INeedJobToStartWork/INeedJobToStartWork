@@ -1,5 +1,6 @@
-import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from 'rules/formatters';
-import { base, jsx, next, node, react, storybook, tailwindcss, toml, typescript, yaml } from 'rules/syntax';
+// // @ts-nocheck
+import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from './rules/formatters';
+import { base, jsx, next, node, react, storybook, tailwindcss, toml, typescript, yaml } from './rules/syntax';
 
 interface IinputConfig {
   formatters?: {
@@ -52,3 +53,21 @@ const ineedj = (inputConfig: IinputConfig) => {
 };
 
 export default ineedj;
+
+// export default [
+//   ...JSON,
+//   ...perfectionistSorters,
+//   // ...stylistic,
+//   // ...stylisticJSX,
+//   // ...stylisticTS,
+//   ...base,
+//   // ...jsx,
+//   // ...next,
+//   ...node,
+//   // ...react,
+//   // ...storybook,
+//   // ...tailwindcss,
+//   // ...toml,
+//   ...typescript,
+//   // ...yaml,
+// ];

@@ -1,13 +1,13 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts'],
-  target: 'es2020',
+  entry: ['src/*'],
+  target: 'es2022',
   format: ['esm'],
   clean: true,
   splitting: false,
   platform: 'node',
-
+  keepNames: true,
   banner: ({ format }) => {
     if (format === 'esm') {
       const banner = `
