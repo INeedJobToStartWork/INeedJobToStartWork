@@ -38,7 +38,8 @@
     "build:npm": "pnpm npm:prepack && pnpm tsup-node --config ./config/tsuprc/tsup.prod.ts && pnpm npm:postpack",
     "dev": "pnpm tsup-node --config ./config/tsuprc/tsup.dev.ts",
     "npm:postpack": "clean-package restore",
-    "npm:prepack": "clean-package"
+    "npm:prepack": "clean-package",
+    "prepublishOnly": "pnpm build:npm"
   },
   "peerDependencies": {
     "@eslint/config-inspector": "^0.5.0",
