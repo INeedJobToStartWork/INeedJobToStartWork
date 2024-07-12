@@ -9,6 +9,14 @@ export default defineConfig({
   splitting: true,
   minify: true,
   shims: true,
+
+  minifyIdentifiers:true,
+  minifySyntax:true,
+  minifyWhitespace:true,
+  metafile:false,
+  treeshake:true,
+  
+
   outDir: 'dist',
 
   format: ['esm', 'cjs'],

@@ -1,4 +1,7 @@
+// @ts-expect-error: No type declaration for module 
 import EslintNode from "eslint-plugin-node";
+
+
 
 export default [{
 	files: ["**/*.js",

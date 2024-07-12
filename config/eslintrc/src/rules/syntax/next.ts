@@ -1,3 +1,4 @@
+// @ts-expect-error: No type declaration for module 
 import EslintNext from "@next/eslint-plugin-next";
 
 export default [{

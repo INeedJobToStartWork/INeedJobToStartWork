@@ -1,3 +1,4 @@
+// @ts-expect-error: No type declaration for module 
 import EslintJsonFormatter from "eslint-plugin-json";
 
 

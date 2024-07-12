@@ -1,4 +1,4 @@
-// // @ts-nocheck
+// @ts-nocheck
 import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from './rules/formatters';
 import { base, jsx, next, node, react, storybook, tailwindcss, toml, typescript, yaml } from './rules/syntax';
 
@@ -8,7 +8,7 @@ interface IinputConfig {
     stylistic?: boolean;
     stylisticJSX?: boolean;
     stylisticTS?: boolean;
-    perfectionistSorters: boolean;
+    perfectionistSorters?: boolean;
   };
   syntax?: {
     eslint?: boolean;
@@ -25,9 +25,9 @@ interface IinputConfig {
 }
 
 /**
- * Generuje ostateczną konfigurację na podstawie podanego inputConfig.
+ * Generates the final configuration based on the provided inputConfig.
  *
- * @param {IinputConfig} inputConfig - Konfiguracja wejściowa zawierająca opcje formatowania i składni.
+ * @param {IinputConfig} inputConfig - Input configuration containing formatting and syntax options.
  */
 const ineedj = (inputConfig: IinputConfig) => {
   const finalConfig = [];
@@ -54,20 +54,3 @@ const ineedj = (inputConfig: IinputConfig) => {
 
 export default ineedj;
 
-// export default [
-//   ...JSON,
-//   ...perfectionistSorters,
-//   // ...stylistic,
-//   // ...stylisticJSX,
-//   // ...stylisticTS,
-//   ...base,
-//   // ...jsx,
-//   // ...next,
-//   ...node,
-//   // ...react,
-//   // ...storybook,
-//   // ...tailwindcss,
-//   // ...toml,
-//   ...typescript,
-//   // ...yaml,
-// ];

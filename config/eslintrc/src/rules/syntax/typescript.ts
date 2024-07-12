@@ -2,9 +2,9 @@ import tslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import EslintTSCompat from 'eslint-plugin-compat';
 import eslintDeprecation from 'eslint-plugin-deprecation';
-import EslintNoExplicitTypeExports from 'eslint-plugin-no-explicit-type-exports';
+// @ts-expect-error: No type declaration for module 
+import EslintNoExplicitTypeExports  from 'eslint-plugin-no-explicit-type-exports' ;  
 import eslintTSDocs from 'eslint-plugin-tsdoc';
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // 👇️ "/home/borislav/Desktop/javascript/index.js"
@@ -12,20 +12,26 @@ const __filename = fileURLToPath(import.meta.url);
 console.log(__filename);
 
 // 👇️ "/home/borislav/Desktop/javascript"
-const __dirname = path.resolve('tsconfig.json');
+// const __dirname = path.resolve('tsconfig.json');
 
 export default [
   {
+
     ignores: ['**/*.js', '**/*.cjs', '**/*.mjs'],
     languageOptions: {
-      // parser: tsParser,
       parser: tsParser,
+
       parserOptions: {
-        project: true,
-        // tsconfigRootDir: import.meta.dirname,
-        // EXPERIMENTAL_useProjectService: true,
-        // project: true,
+        parser:true,
         tsconfigRootDir: process.cwd(),
+        project: './tsconfig.json',
+
+
+        projectService: true,
+        // extraFileExtensions: ['.ts'],
+
+        allowAutomaticSingleRunInference: false,
+        disallowAutomaticSingleRunInference: true,
       },
     },
     name: 'TypeScript - Strong Typing',
@@ -49,12 +55,12 @@ export default [
       'default-param-last': 'off',
       '@typescript-eslint/default-param-last': 'error', // Security problem at Serverside
       '@typescript-eslint/restrict-plus-operands': 'error', // ?????
-      // "no-throw-literal": "off",
-      // "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
-      '@typescript-eslint/no-throw-literal': 'error',
+      "no-throw-literal": "off",
+      "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
+      // '@typescript-eslint/no-throw-literal': 'error',
 
       // "@typescript-eslint/no-unnecessary-template-expression": "error",// TODO IN NEXT PATCH
-      '@typescript-eslint/no-useless-template-literals': 'error',
+      '@typescript-eslint/no-unnecessary-template-expression': 'error',
       '@typescript-eslint/no-unsafe-enum-comparison': 'error', // ccc
       'no-redeclare': 'off',
       '@typescript-eslint/no-redeclare': 'off',
@@ -84,7 +90,7 @@ export default [
       '@typescript-eslint/await-thenable': 'off',
       '@typescript-eslint/ban-ts-comment': 'error',
       '@typescript-eslint/ban-tslint-comment': 'error',
-      '@typescript-eslint/ban-types': 'warn',
+      // "@typescript-eslint/ban-types": "error", // TEST123123
       '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
       '@typescript-eslint/consistent-indexed-object-style': ['warn', 'record'],
       '@typescript-eslint/consistent-type-exports': 'error',
@@ -187,7 +193,7 @@ export default [
       '@typescript-eslint/triple-slash-reference': 'error',
       '@typescript-eslint/unified-signatures': 'error',
       'require-await': 'off',
-      '@EslintDeprecation/deprecation': 'error',
+      // '@EslintDeprecation/deprecation': 'error', // TEST123123
 
       '@EslintTSDocs/syntax': 'error',
 

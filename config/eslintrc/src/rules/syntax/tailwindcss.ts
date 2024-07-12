@@ -1,3 +1,4 @@
+// @ts-expect-error: No type declaration for module 
 import EslintTailwindCSS from "eslint-plugin-tailwindcss";
 
 export default [{
