@@ -6,15 +6,8 @@
     "scripts": {
       "npm:postpack": "clean-package restore"
     },
-    "bin": {
-      "myplop": "index.js"
-    },
     "exports": {
       ".": {
-        "types": {
-          "import": "./index.d.ts",
-          "require": "./index.d.cts"
-        },
         "import": "./index.js",
         "require": "./index.cjs",
         "*": "./*"
