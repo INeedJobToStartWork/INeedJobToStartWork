@@ -1,8 +1,7 @@
 {
   "name": "@ineedj/eslintrc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
-  "private": true,
   "description": "INEEDJ config for Eslint",
   "license": "MIT",
   "author": "ineedjobtostartwork",
