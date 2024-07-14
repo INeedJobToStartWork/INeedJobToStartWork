@@ -1,6 +1,6 @@
 {
   "name": "@ineedj/eslintrc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "INEEDJ config for Eslint",
   "license": "MIT",
@@ -43,15 +43,11 @@
   },
   "peerDependencies": {
     "@eslint/config-inspector": "^0.5.0",
-    "@ineedj/tsconfig": "workspace:*",
-    "@ineedj/tsuprc": "workspace:*",
     "@next/eslint-plugin-next": "^14.2.4",
     "@rushstack/eslint-patch": "^1.10.3",
     "@stylistic/eslint-plugin": "^1.5.1",
     "@typescript-eslint/eslint-plugin": "8.0.0-alpha.41",
-    "clean-package": "^2.2.0",
     "confusing-browser-globals": "^1.0.11",
-    "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.6.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-compat": "^5.0.0",
@@ -84,13 +80,17 @@
     "eslint-plugin-validate-jsx-nesting": "^0.1.1",
     "eslint-plugin-yml": "^1.14.0",
     "globals": "^13.24.0",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.3"
+    "eslint-plugin-optimize-regex": "^1.2.1"
   },
   "devDependencies": {
+    "@ineedj/tsconfig": "workspace:*",
+    "esbuild-plugin-copy": "^2.1.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3",
     "@types/eslint-plugin-security": "^3.0.0",
     "dts-bundle-generator": "^9.5.1",
-    "eslint-plugin-optimize-regex": "^1.2.1"
+    "@ineedj/tsuprc": "workspace:*",
+    "clean-package": "^2.2.0"
   },
   "publishConfig": {
     "provenance": true,
