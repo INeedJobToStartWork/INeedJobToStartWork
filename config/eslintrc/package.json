@@ -1,6 +1,6 @@
 {
   "name": "@ineedj/eslintrc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "INEEDJ config for Eslint",
   "license": "MIT",
@@ -42,7 +42,6 @@
     "prepublishOnly": "pnpm build:npm"
   },
   "peerDependencies": {
-    "@eslint/config-inspector": "^0.5.0",
     "@next/eslint-plugin-next": "^14.2.4",
     "@rushstack/eslint-patch": "^1.10.3",
     "@stylistic/eslint-plugin": "^1.5.1",
@@ -83,6 +82,7 @@
     "eslint-plugin-optimize-regex": "^1.2.1"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.0",
     "@ineedj/tsconfig": "workspace:*",
     "esbuild-plugin-copy": "^2.1.1",
     "tsup": "^8.1.0",
