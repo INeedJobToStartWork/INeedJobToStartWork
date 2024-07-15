@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.1
+
+### Patch Changes
+
+- fix package exports
+
 ## 0.3.0
 
 ### Minor Changes
