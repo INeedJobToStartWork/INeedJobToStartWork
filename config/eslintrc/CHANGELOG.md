@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.0
+
+### Minor Changes
+
+- remove rules which crash linter
+
 ## 0.2.0
 
 ### Minor Changes

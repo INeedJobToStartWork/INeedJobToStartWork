@@ -1,7 +1,7 @@
 import tslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import EslintTSCompat from "eslint-plugin-compat";
-import eslintDeprecation from "eslint-plugin-deprecation";
+// import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
 import eslintTSDocs from "eslint-plugin-tsdoc";
@@ -35,7 +35,7 @@ export default [
     name: "TypeScript - Strong Typing",
     plugins: {
       "@typescript-eslint": tslint,
-      "@EslintDeprecation": eslintDeprecation,
+      // "@EslintDeprecation": eslintDeprecation,
       "@EslintTSDocs": eslintTSDocs,
       "@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
       "@EslintTSCompat": EslintTSCompat,
@@ -197,7 +197,7 @@ export default [
       "@typescript-eslint/triple-slash-reference": "error",
       "@typescript-eslint/unified-signatures": "error",
       "require-await": "off",
-      "@EslintDeprecation/deprecation": "error", // TEST123123
+      // "@EslintDeprecation/deprecation": "error", // TEST123123
 
       "@EslintTSDocs/syntax": "error",
 
