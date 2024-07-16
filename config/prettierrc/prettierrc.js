@@ -1,4 +1,5 @@
-{
+
+module.exports = {
 	"arrowParens": "avoid",
 	"bracketSameLine": true,
 	"bracketSpacing": true,
@@ -8,5 +9,6 @@
 	"proseWrap": "always",
 	"tabWidth": 2,
 	"trailingComma": "none",
-	"useTabs": true
+	"useTabs": true,
+	
 }
