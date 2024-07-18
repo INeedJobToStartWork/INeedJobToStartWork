@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.2
+
+### Patch Changes
+
+- peerDependencies on same version or patched
+
 ## 0.3.1
 
 ### Patch Changes
