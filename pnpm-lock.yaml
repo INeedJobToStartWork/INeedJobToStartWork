@@ -151,8 +151,11 @@ importers:
         version: 13.24.0
     devDependencies:
       '@eslint/config-inspector':
-        specifier: ~0.5.0
+        specifier: ^0.5.0
         version: 0.5.0(eslint@9.6.0)
+      '@ineedj/prettierrc':
+        specifier: ^2.0.0
+        version: 2.0.0(prettier-plugin-packagejson@2.5.0(prettier@3.3.2))(prettier@3.3.2)
       '@ineedj/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -160,22 +163,22 @@ importers:
         specifier: workspace:*
         version: link:../tsuprc
       '@types/eslint-plugin-security':
-        specifier: ~3.0.0
+        specifier: ^3.0.0
         version: 3.0.0
       clean-package:
-        specifier: ~2.2.0
+        specifier: ^2.2.0
         version: 2.2.0
       dts-bundle-generator:
-        specifier: ~9.5.1
+        specifier: ^9.5.1
         version: 9.5.1
       esbuild-plugin-copy:
-        specifier: ~2.1.1
+        specifier: ^2.1.1
         version: 2.1.1(esbuild@0.21.5)
       tsup:
-        specifier: ~8.1.0
+        specifier: ^8.1.0
         version: 8.1.0(postcss@8.4.39)(typescript@5.5.3)
       typescript:
-        specifier: ~5.5.3
+        specifier: ^5.5.3
         version: 5.5.3
     publishDirectory: dist
 
@@ -189,10 +192,6 @@ importers:
       prettier-plugin-packagejson:
         specifier: ^2.4.8
         version: 2.5.0(prettier@3.3.2)
-    devDependencies:
-      '@antfu/ni':
-        specifier: ^0.22.0
-        version: 0.22.0
 
   config/tsconfig: {}
 
@@ -203,10 +202,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@antfu/ni@0.22.0':
-    resolution: {integrity: sha512-qP2zFsmypfWpKnmQcjoqMfYrPRHbqcXnhaUrg3VGqPGFXyN9sKz2+/TvNKByWDqAfuVStE8Fy2ppuVdoWQDjkw==}
-    hasBin: true
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
@@ -460,6 +455,12 @@ packages:
   '@humanwhocodes/retry@0.3.0':
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
+
+  '@ineedj/prettierrc@2.0.0':
+    resolution: {integrity: sha512-Ag8uMZajNVq0XUY26LG2pnYxYf11tKWm/pCSa9h7e/6oaOfXGF+PovMV5tmImLIbyiyEmJgaqkJFJD6hqtx3Bw==}
+    peerDependencies:
+      prettier: ^3.1.1
+      prettier-plugin-packagejson: ^2.4.8
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -3185,8 +3186,6 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@antfu/ni@0.22.0': {}
-
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
@@ -3499,6 +3498,11 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
+
+  '@ineedj/prettierrc@2.0.0(prettier-plugin-packagejson@2.5.0(prettier@3.3.2))(prettier@3.3.2)':
+    dependencies:
+      prettier: 3.3.2
+      prettier-plugin-packagejson: 2.5.0(prettier@3.3.2)
 
   '@isaacs/cliui@8.0.2':
     dependencies:

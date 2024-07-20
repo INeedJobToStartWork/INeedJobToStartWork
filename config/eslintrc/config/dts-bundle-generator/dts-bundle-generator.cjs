@@ -19,12 +19,10 @@ const config = {
 			filePath: "../../src/index.ts",
 			outFile: "../../dist/index.d.ts",
 
-            
 			libraries: {
 				inlinedLibraries: [],
 				importedLibraries: [],
-				allowedTypesLibraries: [],
-				
+				allowedTypesLibraries: []
 			},
 
 			output: commonOutputParams
