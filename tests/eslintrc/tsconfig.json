@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "extends": "@ineedj/tsconfig/base.json"
+}

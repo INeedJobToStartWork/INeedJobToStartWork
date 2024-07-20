@@ -1,0 +1,22 @@
+{
+  "name": "test/eslintrc",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "pnpm eslint .",
+    "lint:fix": "pnpm eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@ineedj/eslintrc": "^0.3.2",
+    "@ineedj/tsconfig": "^1.0.0",
+    "eslint": "^9.7.0",
+    "typescript": "^5.5.3"
+  }
+}
