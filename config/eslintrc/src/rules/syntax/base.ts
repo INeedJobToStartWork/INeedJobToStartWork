@@ -429,7 +429,7 @@ export default [
 			"@EslintUnicorn/prefer-ternary": ["error", "only-single-line"], // I am not sure i configured this like i wanted to.
 			"@EslintUnicorn/prefer-top-level-await": "off", // Can have issues
 			"@EslintUnicorn/prefer-type-error": "error",
-			"@EslintUnicorn/prevent-abbreviations": "error",
+			"@EslintUnicorn/prevent-abbreviations": "off", // No idea
 			"@EslintUnicorn/relative-url-style": "error",
 			"@EslintUnicorn/require-array-join-separator": "error",
 			"@EslintUnicorn/require-number-to-fixed-digits-argument": "error",

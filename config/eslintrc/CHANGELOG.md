@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.4.0
+
+### Minor Changes
+
+- `@EslintUnicorn/prevent-abbreviations` => `off`
+
 ## 0.3.6
 
 ### Patch Changes
