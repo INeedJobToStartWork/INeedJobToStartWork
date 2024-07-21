@@ -1,6 +1,6 @@
 import tslint from "@typescript-eslint/eslint-plugin";
 import EslintTSCompat from "eslint-plugin-compat";
-// import eslintDeprecation from "eslint-plugin-deprecation";
+import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
 import eslintTSDocs from "eslint-plugin-tsdoc";
@@ -21,7 +21,7 @@ export default [
 		name: "TypeScript - Strong Typing",
 		plugins: {
 			"@typescript-eslint": tslint,
-			// "@EslintDeprecation": eslintDeprecation,
+			"@EslintDeprecation": eslintDeprecation,
 			"@EslintTSDocs": eslintTSDocs,
 			"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
 			"@EslintTSCompat": EslintTSCompat
@@ -35,16 +35,17 @@ export default [
 			"@typescript-eslint/consistent-type-definitions": "off",
 			"@typescript-eslint/restrict-template-expressions": "off", // TODO
 			"@typescript-eslint/no-meaningless-void-operator": "off",
-			// '@typescript-eslint/no-mixed-enums': 'error', // ccc TODO1
+			"@typescript-eslint/no-mixed-enums": "error", // ccc TODO1
 			"default-param-last": "off",
 			"@typescript-eslint/default-param-last": "error", // Security problem at Serverside
 			"@typescript-eslint/restrict-plus-operands": "error", // ?????
 			"no-throw-literal": "off",
 			// "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
-			// '@typescript-eslint/no-throw-literal': 'error',
+			"@typescript-eslint/no-throw-literal": "error",
 
 			// "@typescript-eslint/no-unnecessary-template-expression": "error",// TODO IN NEXT PATCH
 			// "@typescript-eslint/no-unnecessary-template-expression": "error",
+			"@typescript-eslint/no-useless-template-literals": "error",
 			"@typescript-eslint/no-unsafe-enum-comparison": "error", // ccc
 			"no-redeclare": "off",
 			"@typescript-eslint/no-redeclare": "off",
@@ -141,8 +142,8 @@ export default [
 			"@typescript-eslint/no-unsafe-return": "error",
 			"@typescript-eslint/no-unsafe-unary-minus": "error",
 			"@typescript-eslint/no-unused-expressions": "error",
-			// "no-unused-vars": "off",
-			// "@typescript-eslint/no-unused-vars": "warn",
+			"no-unused-vars": "off",
+			"@typescript-eslint/no-unused-vars": "warn",
 			"no-unnecessary-type-arguments": "off",
 			"@typescript-eslint/no-use-before-define": "off",
 			"@typescript-eslint/no-useless-constructor": "error",
@@ -154,7 +155,6 @@ export default [
 			"@typescript-eslint/prefer-destructuring": "off",
 			"no-unused-expressions": "off",
 			"@typescript-eslint/prefer-enum-initializers": "error",
-			"no-unused-vars": "off",
 			"@typescript-eslint/prefer-for-of": "error",
 			"no-use-before-define": "off",
 			"@typescript-eslint/prefer-includes": "error",
@@ -178,7 +178,7 @@ export default [
 			"@typescript-eslint/triple-slash-reference": "error",
 			"@typescript-eslint/unified-signatures": "error",
 			"require-await": "off",
-			// "@EslintDeprecation/deprecation": "error", // TEST123123
+			"@EslintDeprecation/deprecation": "error", // TEST123123
 
 			"@EslintTSDocs/syntax": "error",
 

@@ -42,7 +42,7 @@ export default [
 			"@EslintUnicorn": EslintUnicorn,
 			"@EslintSonar": EslintSonar,
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
-			// "@EslintUnusedImports": EslintUnusedImports,
+			"@EslintUnusedImports": EslintUnusedImports,
 			"@EslintCompat": EslintCompat
 		},
 		rules: {
@@ -474,10 +474,10 @@ export default [
 			"@EslintNoUnsanitized/method": "error",
 
 			// CanIUse
-			"@EslintCompat/compat": "error"
+			"@EslintCompat/compat": "error",
 
-			// "@EslintUnusedImports/no-unused-vars": "error",
-			// "@EslintUnusedImports/no-unused-imports": "error"
+			"@EslintUnusedImports/no-unused-vars": "error",
+			"@EslintUnusedImports/no-unused-imports": "error"
 		}
 	}
 ];

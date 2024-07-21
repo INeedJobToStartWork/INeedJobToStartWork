@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "0.3.5",
+	"version": "0.3.6",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",

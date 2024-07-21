@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.6
+
+### Patch Changes
+
+- change some rules and dep versions
+
 ## 0.3.5
 
 ### Patch Changes
