@@ -8,7 +8,7 @@
 
 // // export default [...Base];
 
-import ineedj from "./dist/index.mjs";
+import ineedj from "./dist/index.js";
 
 export default ineedj({
 	formatters: {

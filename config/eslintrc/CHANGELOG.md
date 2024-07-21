@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.5
+
+### Patch Changes
+
+- downgrade eslint version to `8.57.0` and other deps to correct
+
 ## 0.3.4
 
 ### Patch Changes

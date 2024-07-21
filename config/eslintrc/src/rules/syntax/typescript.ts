@@ -40,11 +40,11 @@ export default [
 			"@typescript-eslint/default-param-last": "error", // Security problem at Serverside
 			"@typescript-eslint/restrict-plus-operands": "error", // ?????
 			"no-throw-literal": "off",
-			"@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
+			// "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
 			// '@typescript-eslint/no-throw-literal': 'error',
 
 			// "@typescript-eslint/no-unnecessary-template-expression": "error",// TODO IN NEXT PATCH
-			"@typescript-eslint/no-unnecessary-template-expression": "error",
+			// "@typescript-eslint/no-unnecessary-template-expression": "error",
 			"@typescript-eslint/no-unsafe-enum-comparison": "error", // ccc
 			"no-redeclare": "off",
 			"@typescript-eslint/no-redeclare": "off",

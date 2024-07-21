@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "0.3.4",
+	"version": "0.3.5",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -42,9 +42,6 @@
 		"prepublishOnly": "pnpm build:npm",
 		"start": "pnpm exec eslint-config-inspector"
 	},
-	"dependencies": {
-		"local-pkg": "^0.5.0"
-	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.0",
 		"@ineedj/prettierrc": "^2.0.0",
@@ -61,9 +58,9 @@
 		"@next/eslint-plugin-next": "~14.2.5",
 		"@rushstack/eslint-patch": "~1.10.3",
 		"@stylistic/eslint-plugin": "~2.3.0",
-		"@typescript-eslint/eslint-plugin": "8.0.0-alpha.41",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"confusing-browser-globals": "~1.0.11",
-		"eslint": "~9.6.0",
+		"eslint": "~8.57.0",
 		"eslint-import-resolver-node": "~0.3.9",
 		"eslint-plugin-compat": "~6.0.0",
 		"eslint-plugin-deprecation": "~3.0.0",
@@ -92,10 +89,11 @@
 		"eslint-plugin-tsdoc": "~0.3.0",
 		"eslint-plugin-typescript-compat": "~1.0.2",
 		"eslint-plugin-unicorn": "~54.0.0",
-		"eslint-plugin-unused-imports": "~4.0.0",
+		"eslint-plugin-unused-imports": "^3.0.0",
 		"eslint-plugin-validate-jsx-nesting": "~0.1.1",
 		"eslint-plugin-yml": "~1.14.0",
-		"globals": "~15.8.0"
+		"globals": "~15.8.0",
+		"local-pkg": "^0.5.0"
 	},
 	"publishConfig": {
 		"directory": "dist",
