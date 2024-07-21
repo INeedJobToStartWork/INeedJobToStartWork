@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.3
+
+### Patch Changes
+
+- fix Typescript support
+
 ## 0.3.2
 
 ### Patch Changes

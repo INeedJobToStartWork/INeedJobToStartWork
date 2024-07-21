@@ -1,11 +1,11 @@
 import tslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
 import EslintTSCompat from "eslint-plugin-compat";
 // import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
 import eslintTSDocs from "eslint-plugin-tsdoc";
 import { fileURLToPath } from "node:url";
+import { languageOptionsTS } from "../helpers";
 
 // 👇️ "/home/borislav/Desktop/javascript/index.js"
 const __filename = fileURLToPath(import.meta.url);
@@ -13,25 +13,11 @@ console.log(__filename);
 
 // 👇️ "/home/borislav/Desktop/javascript"
 // const __dirname = path.resolve('tsconfig.json');
-
 export default [
 	{
 		ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
-		languageOptions: {
-			parser: tsParser,
-
-			parserOptions: {
-				parser: true,
-				tsconfigRootDir: process.cwd(),
-				project: "./tsconfig.json",
-
-				projectService: true,
-				// extraFileExtensions: ['.ts'],
-
-				allowAutomaticSingleRunInference: false,
-				disallowAutomaticSingleRunInference: true
-			}
-		},
+		files: ["**/*.ts", "**/*.cts", "**/*.mts", "**.*.tsx"],
+		languageOptions: languageOptionsTS(),
 		name: "TypeScript - Strong Typing",
 		plugins: {
 			"@typescript-eslint": tslint,
@@ -155,7 +141,8 @@ export default [
 			"@typescript-eslint/no-unsafe-return": "error",
 			"@typescript-eslint/no-unsafe-unary-minus": "error",
 			"@typescript-eslint/no-unused-expressions": "error",
-			"@typescript-eslint/no-unused-vars": "warn",
+			// "no-unused-vars": "off",
+			// "@typescript-eslint/no-unused-vars": "warn",
 			"no-unnecessary-type-arguments": "off",
 			"@typescript-eslint/no-use-before-define": "off",
 			"@typescript-eslint/no-useless-constructor": "error",

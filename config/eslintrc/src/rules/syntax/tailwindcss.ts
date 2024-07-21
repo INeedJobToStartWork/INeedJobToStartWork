@@ -1,10 +1,12 @@
 // @ts-expect-error: No type declaration for module
 import EslintTailwindCSS from "eslint-plugin-tailwindcss";
+import { languageOptionsTS } from "../helpers";
 
 export default [
 	{
 		files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets", "**/*.html"],
 		name: "TailwindCSS",
+		languageOptions: languageOptionsTS(),
 		plugins: { "@EslintTailwindCSS": EslintTailwindCSS },
 		rules: {
 			"@EslintTailwindCSS/classnames-order": "error",

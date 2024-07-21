@@ -13,11 +13,13 @@ import EslintReactRefresh from "eslint-plugin-react-refresh";
 import EslintSSRFriendly from "eslint-plugin-ssr-friendly";
 // @ts-expect-error: No type declaration for module
 import EslintValJSXNesting from "eslint-plugin-validate-jsx-nesting";
+import { isTS, languageOptionsTS } from "../helpers";
 
 export default [
 	{
-		files: ["**/*.jsx", "**/*.tsx"],
+		files: ["**/*.jsx", ...(isTS ? ["**/*.tsx"] : [])],
 		name: "React",
+		languageOptions: languageOptionsTS(),
 		plugins: {
 			"@EslintReact": EslintReact,
 			"@EslintReactRefresh": EslintReactRefresh,

@@ -9,6 +9,12 @@ import EslintUnicorn from "eslint-plugin-unicorn";
 import EslintUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 
+import { filesTS, languageOptionsTS } from "../helpers";
+
+const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
+const languageOptions = (() =>
+	languageOptionsTS({ ecmaVersion: "latest", sourceType: "module", globals: { ...globals.node } }))();
+
 export default [
 	{
 		ignores: [
@@ -25,12 +31,8 @@ export default [
 		]
 	},
 	{
-		files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"],
-		languageOptions: {
-			ecmaVersion: "latest",
-			sourceType: "module",
-			globals: { ...globals.node }
-		},
+		files: files,
+		languageOptions: languageOptions,
 		name: "Default",
 		plugins: {
 			"@EslintOptRegConf": EslintOptRegConf,
@@ -40,7 +42,7 @@ export default [
 			"@EslintUnicorn": EslintUnicorn,
 			"@EslintSonar": EslintSonar,
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
-			"@EslintUnusedImports": EslintUnusedImports,
+			// "@EslintUnusedImports": EslintUnusedImports,
 			"@EslintCompat": EslintCompat
 		},
 		rules: {
@@ -472,10 +474,10 @@ export default [
 			"@EslintNoUnsanitized/method": "error",
 
 			// CanIUse
-			"@EslintCompat/compat": "error",
+			"@EslintCompat/compat": "error"
 
-			"@EslintUnusedImports/no-unused-vars": "error",
-			"@EslintUnusedImports/no-unused-imports": "error"
+			// "@EslintUnusedImports/no-unused-vars": "error",
+			// "@EslintUnusedImports/no-unused-imports": "error"
 		}
 	}
 ];

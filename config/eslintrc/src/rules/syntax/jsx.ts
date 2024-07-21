@@ -1,11 +1,14 @@
 // @ts-expect-error: No type declaration for module
 import EslintJSXA11 from "eslint-plugin-jsx-a11y";
+import { isTS, languageOptionsTS } from "../helpers";
+
+export const files = ["**/*.jsx", ...(isTS ? ["**/*.tsx"] : [])];
 
 export default [
 	{
-		files: ["**/*.jsx", "**/*.tsx"],
 		name: "Default",
-
+		files: files,
+		languageOptions: languageOptionsTS(),
 		plugins: { "@EslintJSXA11": EslintJSXA11 },
 		rules: {
 			"@EslintJSXA11/alt-text": "error",

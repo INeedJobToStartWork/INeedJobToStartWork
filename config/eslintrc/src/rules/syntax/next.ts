@@ -1,11 +1,13 @@
 // @ts-expect-error: No type declaration for module
 import EslintNext from "@next/eslint-plugin-next";
+import { languageOptionsTS, filesTS } from "../helpers";
 
 export default [
 	{
 		files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"],
 		name: "NextJS",
 		plugins: { "@EslintNext": EslintNext },
+		languageOptions: languageOptionsTS(),
 		rules: {
 			"@EslintNext/google-font-display": "error",
 			"@EslintNext/google-font-preconnect": "error",
