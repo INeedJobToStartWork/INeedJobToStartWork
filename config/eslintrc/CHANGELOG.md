@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.3.4
+
+### Patch Changes
+
+- update eslint plugins versions
+
 ## 0.3.3
 
 ### Patch Changes
