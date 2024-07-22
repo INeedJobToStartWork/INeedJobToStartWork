@@ -6,7 +6,8 @@
 		"paths": {
 			"@/*": ["*"]
 		},
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"lib": ["ES2015.Iterable"]
 	},
 	"include": ["src"],
 	"extends": "@ineedj/tsconfig/base.json"

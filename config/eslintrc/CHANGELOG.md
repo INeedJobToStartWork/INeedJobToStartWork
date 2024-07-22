@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.5.1
+
+### Patch Changes
+
+- fix `ignoreGlobalFiles` implementation
+
 ## 0.5.0
 
 ### Minor Changes

@@ -1,6 +1,18 @@
 import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from "./rules/formatters";
-import type { IignoreGlobalFiles } from "./rules/syntax";
-import { base, jsx, next, node, react, storybook, tailwindcss, toml, typescript, yaml } from "./rules/syntax";
+import {
+	base,
+	ignoreGlobalFiles,
+	jsx,
+	next,
+	node,
+	react,
+	storybook,
+	tailwindcss,
+	toml,
+	typescript,
+	yaml,
+	type IignoreGlobalFiles
+} from "./rules/syntax";
 
 interface IinputConfig {
 	formatters?: {
@@ -25,15 +37,11 @@ interface IinputConfig {
 	ignoreGlobalFiles?: IignoreGlobalFiles;
 }
 
-/**
- * Generates the final configuration based on the provided inputConfig.
- *
- * @param {IinputConfig} inputConfig - Input configuration containing formatting and syntax options.
- */
+// eslint-disable-next-line complexity
 const ineedj = (inputConfig: IinputConfig) => {
 	const finalConfig = [];
 
-	if (inputConfig.formatters?.json) finalConfig.push(...ignoreGlobalFiles());
+	if (inputConfig.ignoreGlobalFiles) finalConfig.push(...ignoreGlobalFiles(inputConfig.ignoreGlobalFiles));
 
 	if (inputConfig.formatters?.json) finalConfig.push(...JSON);
 	if (inputConfig.formatters?.stylistic) finalConfig.push(...stylistic);
