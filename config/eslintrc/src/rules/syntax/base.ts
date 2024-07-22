@@ -17,20 +17,6 @@ const languageOptions = (() =>
 
 export default [
 	{
-		ignores: [
-			"**/.vscode/**",
-			"**/.next/**",
-			"**/config/**",
-			"**/node_modules/**",
-			"**/dist/**",
-			"**/lib/**",
-			"**/*.d.ts",
-			"**/tsconfig.json",
-			"**/theme.config.jsx",
-			"**/templates/**"
-		]
-	},
-	{
 		files: files,
 		languageOptions: languageOptions,
 		name: "Default",

@@ -8,3 +8,4 @@ export { default as tailwindcss } from "./tailwindcss";
 export { default as toml } from "./toml";
 export { default as typescript } from "./typescript";
 export { default as yaml } from "./yaml";
+export * from "./ignoreGlobalFiles";

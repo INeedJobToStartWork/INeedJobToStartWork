@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.5.0
+
+### Minor Changes
+
+- add new config `ignoreGlobalFiles`!
+
 ## 0.4.0
 
 ### Minor Changes

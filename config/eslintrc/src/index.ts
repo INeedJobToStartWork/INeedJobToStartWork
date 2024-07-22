@@ -1,5 +1,5 @@
-// @ts-nocheck
 import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from "./rules/formatters";
+import type { IignoreGlobalFiles } from "./rules/syntax";
 import { base, jsx, next, node, react, storybook, tailwindcss, toml, typescript, yaml } from "./rules/syntax";
 
 interface IinputConfig {
@@ -22,6 +22,7 @@ interface IinputConfig {
 		toml?: boolean;
 		yaml?: boolean;
 	};
+	ignoreGlobalFiles?: IignoreGlobalFiles;
 }
 
 /**
@@ -31,6 +32,8 @@ interface IinputConfig {
  */
 const ineedj = (inputConfig: IinputConfig) => {
 	const finalConfig = [];
+
+	if (inputConfig.formatters?.json) finalConfig.push(...ignoreGlobalFiles());
 
 	if (inputConfig.formatters?.json) finalConfig.push(...JSON);
 	if (inputConfig.formatters?.stylistic) finalConfig.push(...stylistic);

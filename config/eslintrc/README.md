@@ -7,23 +7,24 @@
 
 ## Little Config
 
-| Option                            | Type input | Description                                  |
-| --------------------------------- | ---------- | -------------------------------------------- |
-| `formatters.json`                 | boolean    | Enables JSON formatting.                     |
-| `formatters.stylistic`            | boolean    | Enables stylistic formatting.                |
-| `formatters.stylisticJSX`         | boolean    | Enables stylistic formatting for JSX.        |
-| `formatters.stylisticTS`          | boolean    | Enables stylistic formatting for TypeScript. |
-| `formatters.perfectionistSorters` | boolean    | Enables perfectionist sorting.               |
-| `syntax.eslint`                   | boolean    | Enables support for ESLint.                  |
-| `syntax.jsx`                      | boolean    | Enables support for JSX.                     |
-| `syntax.next`                     | boolean    | Enables support for Next.js.                 |
-| `syntax.node`                     | boolean    | Enables support for Node.js.                 |
-| `syntax.react`                    | boolean    | Enables support for React.                   |
-| `syntax.storybook`                | boolean    | Enables support for Storybook.               |
-| `syntax.tailwindcss`              | boolean    | Enables support for Tailwind CSS.            |
-| `syntax.typescript`               | boolean    | Enables support for TypeScript.              |
-| `syntax.toml`                     | boolean    | Enables support for TOML.                    |
-| `syntax.yaml`                     | boolean    | Enables support for YAML.                    |
+| Option                            | Type input         | Description                                  |
+| --------------------------------- | ------------------ | -------------------------------------------- |
+| `formatters.json`                 | boolean            | Enables JSON formatting.                     |
+| `formatters.stylistic`            | boolean            | Enables stylistic formatting.                |
+| `formatters.stylisticJSX`         | boolean            | Enables stylistic formatting for JSX.        |
+| `formatters.stylisticTS`          | boolean            | Enables stylistic formatting for TypeScript. |
+| `formatters.perfectionistSorters` | boolean            | Enables perfectionist sorting.               |
+| `syntax.eslint`                   | boolean            | Enables support for ESLint.                  |
+| `syntax.jsx`                      | boolean            | Enables support for JSX.                     |
+| `syntax.next`                     | boolean            | Enables support for Next.js.                 |
+| `syntax.node`                     | boolean            | Enables support for Node.js.                 |
+| `syntax.react`                    | boolean            | Enables support for React.                   |
+| `syntax.storybook`                | boolean            | Enables support for Storybook.               |
+| `syntax.tailwindcss`              | boolean            | Enables support for Tailwind CSS.            |
+| `syntax.typescript`               | boolean            | Enables support for TypeScript.              |
+| `syntax.toml`                     | boolean            | Enables support for TOML.                    |
+| `syntax.yaml`                     | boolean            | Enables support for YAML.                    |
+| `ignoreGlobalFiles`               | IignoreGlobalFiles | Enables global ignoreFiles Config            |
 
 About rules setup more with `@eslint/config-inspector`
 
