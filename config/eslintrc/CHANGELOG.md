@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.8.0
+
+### Minor Changes
+
+- add rules for imports/exports from `eslint-plugin-import`
+
 ## 0.7.0
 
 ### Minor Changes
