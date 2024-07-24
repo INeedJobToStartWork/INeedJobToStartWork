@@ -6,6 +6,7 @@ export { default as react } from "./react";
 export { default as storybook } from "./storybook";
 export { default as tailwindcss } from "./tailwindcss";
 export { default as toml } from "./toml";
+export { default as website } from "./website";
 export { default as typescript } from "./typescript";
 export { default as yaml } from "./yaml";
 export * from "./ignoreGlobalFiles";

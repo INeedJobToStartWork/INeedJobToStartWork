@@ -25,6 +25,7 @@
 | `syntax.toml`                     | boolean            | Enables support for TOML.                    |
 | `syntax.yaml`                     | boolean            | Enables support for YAML.                    |
 | `ignoreGlobalFiles`               | IignoreGlobalFiles | Enables global ignoreFiles Config            |
+| `syntax.website`                  | boolean            | Enables support for WEBSITES.                |
 
 About rules setup more with `@eslint/config-inspector`
 

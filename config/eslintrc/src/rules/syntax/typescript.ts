@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import tslint from "@typescript-eslint/eslint-plugin";
-import EslintTSCompat from "eslint-plugin-compat";
 import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
@@ -23,8 +23,7 @@ export default [
 			"@typescript-eslint": tslint,
 			"@EslintDeprecation": eslintDeprecation,
 			"@EslintTSDocs": eslintTSDocs,
-			"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
-			"@EslintTSCompat": EslintTSCompat
+			"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports
 		},
 		rules: {
 			"@typescript-eslint/explicit-module-boundary-types": "error", // ccc
@@ -42,7 +41,6 @@ export default [
 			"no-throw-literal": "off",
 			// "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
 			"@typescript-eslint/no-throw-literal": "error",
-
 			// "@typescript-eslint/no-unnecessary-template-expression": "error",// TODO IN NEXT PATCH
 			// "@typescript-eslint/no-unnecessary-template-expression": "error",
 			"@typescript-eslint/no-useless-template-literals": "error",
@@ -182,8 +180,7 @@ export default [
 
 			"@EslintTSDocs/syntax": "error",
 
-			"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error",
-			"@EslintTSCompat/compat": "error"
+			"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error"
 		}
 	}
 ];

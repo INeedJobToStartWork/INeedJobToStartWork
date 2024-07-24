@@ -1,14 +1,21 @@
-import EslintCompat from "eslint-plugin-compat";
+/* eslint-disable max-lines */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
+// @ts-expect-error: No type declaration for module
 import EslintNoUnsanitized from "eslint-plugin-no-unsanitized";
+// @ts-expect-error: No type declaration for module
 import EslintOptRegConf from "eslint-plugin-optimize-regex";
+// @ts-expect-error: No type declaration for module
 import EslintPii from "eslint-plugin-pii";
+// @ts-expect-error: No type declaration for module
 import EslintPromise from "eslint-plugin-promise";
 import EslintSecurity from "eslint-plugin-security";
 import EslintSonar from "eslint-plugin-sonarjs";
+// @ts-expect-error: No type declaration for module
 import EslintUnicorn from "eslint-plugin-unicorn";
+// @ts-expect-error: No type declaration for module
 import EslintUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
-
 import { filesTS, languageOptionsTS } from "../helpers";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
@@ -28,8 +35,7 @@ export default [
 			"@EslintUnicorn": EslintUnicorn,
 			"@EslintSonar": EslintSonar,
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
-			"@EslintUnusedImports": EslintUnusedImports,
-			"@EslintCompat": EslintCompat
+			"@EslintUnusedImports": EslintUnusedImports
 		},
 		rules: {
 			"array-callback-return": "error",
@@ -97,17 +103,14 @@ export default [
 				}
 			],
 			"no-unused-private-class-members": "error",
-
 			// "capitalized-comments": ["error", "never"],
 			"no-unused-vars": "warn",
 			"class-methods-use-this": "error",
 			"no-use-before-define": "off",
 			complexity: ["error", 10],
 			"no-useless-backreference": "error",
-
 			// "consistent-return": "error",
 			"require-atomic-updates": "warn",
-
 			"consistent-this": "error",
 			"use-isnan": "error",
 			curly: ["error", "multi-line"],
@@ -194,7 +197,6 @@ export default [
 			"no-script-url": "error",
 			"no-sequences": "error",
 			"max-params": ["error", 4],
-
 			"no-shadow": "off",
 			"no-shadow-restricted-names": "error",
 			"no-ternary": "off",
@@ -228,51 +230,32 @@ export default [
 			"prefer-numeric-literals": "error",
 			"prefer-object-has-own": "warn",
 			"prefer-object-spread": "error",
-
 			// "sort-keys": "warn", // No because some scripts can depends on keys order
-
 			"prefer-promise-reject-errors": "error",
-
 			"prefer-regex-literals": "error",
-
 			"prefer-rest-params": "error",
-
 			"prefer-spread": "error",
-
 			"prefer-template": "error",
-
 			"line-comment-position": "off",
 			radix: "off",
-
 			"require-await": "warn",
-
 			"require-unicode-regexp": "warn",
-
 			"require-yield": "error",
-
 			"no-eq-null": "error",
 			"sort-imports": "off", // used in other
-
 			"sort-vars": "off",
-
 			strict: "off",
-
 			"symbol-description": "warn",
-
 			"vars-on-top": "warn",
-
 			yoda: "error",
 
 			"unicode-bom": "error",
 
 			"@EslintPii/no-email": "error",
-
 			"@EslintPii/no-ip": "error",
-
-			"@EslintOptRegConf/optimize-regex": "error",
-
 			"@EslintPii/no-phone-number": "error",
 
+			"@EslintOptRegConf/optimize-regex": "error",
 			"@EslintSecurity/detect-unsafe-regex": "error",
 
 			"@EslintSecurity/detect-object-injection": "error",
@@ -301,7 +284,7 @@ export default [
 			"@EslintPromise/no-nesting": "error",
 			"@EslintPromise/no-promise-in-callback": "error",
 			"@EslintPromise/no-callback-in-promise": "error",
-			"@EslintPromise/avoid-new": "error",
+			"@EslintPromise/avoid-new": "off",
 			"@EslintPromise/no-new-statics": "error",
 			"@EslintPromise/no-return-in-finally": "error",
 			"@EslintPromise/valid-params": "error",
@@ -458,9 +441,6 @@ export default [
 			// Security
 			"@EslintNoUnsanitized/property": "error",
 			"@EslintNoUnsanitized/method": "error",
-
-			// CanIUse
-			"@EslintCompat/compat": "error",
 
 			"@EslintUnusedImports/no-unused-vars": "error",
 			"@EslintUnusedImports/no-unused-imports": "error"

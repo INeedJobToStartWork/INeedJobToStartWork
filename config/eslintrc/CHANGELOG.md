@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.6.0
+
+### Minor Changes
+
+- add new config option `website`!
+
 ## 0.5.2
 
 ### Patch Changes

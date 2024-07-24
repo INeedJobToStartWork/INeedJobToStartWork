@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // @ts-expect-error: No type declaration for module
 import EslintReact from "eslint-plugin-react";
 // @ts-expect-error: No type declaration for module

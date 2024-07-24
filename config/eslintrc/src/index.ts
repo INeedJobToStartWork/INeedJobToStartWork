@@ -10,6 +10,7 @@ import {
 	tailwindcss,
 	toml,
 	typescript,
+	website,
 	yaml,
 	type IignoreGlobalFiles
 } from "./rules/syntax";
@@ -33,12 +34,13 @@ interface IinputConfig {
 		typescript?: boolean;
 		toml?: boolean;
 		yaml?: boolean;
+		website?: boolean;
 	};
 	ignoreGlobalFiles?: IignoreGlobalFiles;
 }
 
 // eslint-disable-next-line complexity
-const ineedj = (inputConfig: IinputConfig) => {
+const ineedj = (inputConfig: IinputConfig): object[] => {
 	const finalConfig = [];
 
 	if (inputConfig.ignoreGlobalFiles) finalConfig.push(...ignoreGlobalFiles(inputConfig.ignoreGlobalFiles));
@@ -49,6 +51,7 @@ const ineedj = (inputConfig: IinputConfig) => {
 	if (inputConfig.formatters?.stylisticTS) finalConfig.push(...stylisticTS);
 	if (inputConfig.formatters?.perfectionistSorters) finalConfig.push(...perfectionistSorters);
 
+	if (inputConfig.syntax?.website) finalConfig.push(...website);
 	if (inputConfig.syntax?.eslint) finalConfig.push(...base);
 	if (inputConfig.syntax?.jsx) finalConfig.push(...jsx);
 	if (inputConfig.syntax?.next) finalConfig.push(...next);
