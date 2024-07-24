@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.7.0
+
+### Minor Changes
+
+- add ban types with `@typescript-eslint/ban-types`
+
 ## 0.6.0
 
 ### Minor Changes

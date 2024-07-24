@@ -180,7 +180,17 @@ export default [
 
 			"@EslintTSDocs/syntax": "error",
 
-			"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error"
+			"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error",
+
+			"@typescript-eslint/ban-types": [
+				"error",
+				{
+					types: {
+						TODO: "It's only allowed in Development"
+					},
+					extendDefaults: true
+				}
+			]
 		}
 	}
 ];

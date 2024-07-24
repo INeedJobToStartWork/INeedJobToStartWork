@@ -1,4 +1,5 @@
-const yoda = true;
+type TODO = any;
+const yoda: TODO = true;
 if (true == yoda) {
   console.log("Yoda here");
 }
