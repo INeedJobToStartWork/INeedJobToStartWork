@@ -11,9 +11,9 @@ import {
 	toml,
 	typescript,
 	website,
-	yaml,
-	type IignoreGlobalFiles
+	yaml
 } from "./rules/syntax";
+import type { IignoreGlobalFiles } from "./rules/syntax";
 
 interface IinputConfig {
 	formatters?: {

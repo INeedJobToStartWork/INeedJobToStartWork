@@ -14,6 +14,8 @@ import EslintSonar from "eslint-plugin-sonarjs";
 // @ts-expect-error: No type declaration for module
 import EslintUnicorn from "eslint-plugin-unicorn";
 // @ts-expect-error: No type declaration for module
+import EslintImports from "eslint-plugin-import";
+// @ts-expect-error: No type declaration for module
 import EslintUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import { filesTS, languageOptionsTS } from "../helpers";
@@ -35,7 +37,8 @@ export default [
 			"@EslintUnicorn": EslintUnicorn,
 			"@EslintSonar": EslintSonar,
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
-			"@EslintUnusedImports": EslintUnusedImports
+			"@EslintUnusedImports": EslintUnusedImports,
+			"@EslintImports": EslintImports
 		},
 		rules: {
 			"array-callback-return": "error",
@@ -58,7 +61,7 @@ export default [
 			"no-dupe-else-if": "error",
 			"no-dupe-keys": "error",
 			"no-duplicate-case": "error",
-			"no-duplicate-imports": "error",
+			// "no-duplicate-imports": "error", <--- provided by eslint-plugin-import cuz it doesnt support ts
 			"no-empty-character-class": "error",
 			"no-empty-pattern": "warn",
 			"no-ex-assign": "error",
@@ -443,7 +446,60 @@ export default [
 			"@EslintNoUnsanitized/method": "error",
 
 			"@EslintUnusedImports/no-unused-vars": "error",
-			"@EslintUnusedImports/no-unused-imports": "error"
+			"@EslintUnusedImports/no-unused-imports": "error",
+
+			// Imports
+			"@EslintImports/no-unresolved": "off", // [2, { caseSensitiveStrict: true }] Off cuz can have issues with bundlers
+			"@EslintImports/named": "off",
+			"@EslintImports/default": "warn",
+			"@EslintImports/no-namespace": "off", // needed in some libs
+			"@EslintImports/export": "error",
+			"@EslintImports/exports-lats": "off",
+			// "@EslintImports/no-mutable-exports"
+			"@EslintImports/namespace": "error",
+			"@EslintImports/no-mutable-exports": "error",
+			"@EslintImports/extensions": "off", // Don't want to configure
+			"@EslintImports/no-restricted-paths": "off",
+			"@EslintImports/no-internal-modules": "off", // Need to be setup manually per project
+			"@EslintImports/group-exports": "off",
+			"@EslintImports/no-relative-packages": "off", // Maybe problems
+			"@EslintImports/no-relative-parent-imports": "off",
+			"@EslintImports/consistent-type-specifier-style": ["error", "prefer-top-level"],
+			"@EslintImports/no-self-import": "error",
+			"@EslintImports/no-cycle": "error", // Maybe off
+			"@EslintImports/no-named-default": "error",
+			"@EslintImports/no-named-as-default": "off",
+			"@EslintImports/no-anonymous-default-export": "off",
+			"@EslintImports/no-unused-modules": "off", // Need to be setup manually per project,
+			"@EslintImports/no-commonjs": "off", // Only ESM but sometimes needed
+			"@EslintImports/no-duplicates": ["error", { considerQueryString: true }],
+			"@EslintImports/first": "error",
+			"@EslintImports/max-dependencies": "off",
+			"@EslintImports/no-extraneous-dependencies": "off", // Need strong config
+			"@EslintImports/no-absolute-path": "warn", // Sometimes needed
+			"@EslintImports/no-nodejs-modules": "off", //
+			"@EslintImports/no-webpack-loader-syntax": "error", // Webpack
+			"@EslintImports/order": "off",
+			"@EslintImports/newline-after-import": ["error", { count: 1 }],
+			"@EslintImports/prefer-default-export": "off",
+			"@EslintImports/no-default-export": "off",
+			"@EslintImports/no-named-export": "off",
+			"@EslintImports/no-dynamic-require": "warn",
+			"@EslintImports/unambiguous": "warn",
+			"@EslintImports/no-unassigned-import": "warn", // Maybe off
+			"@EslintImports/no-useless-path-segments": [
+				"error",
+				{
+					noUselessIndex: true
+				}
+			],
+			"@EslintImports/dynamic-import-chunkname": "off", // Webpack, not sure about config
+			"@EslintImports/no-import-module-exports": "off",
+			"@EslintImports/no-empty-named-blocks": "error",
+			"@EslintImports/exports-last": "off",
+			"@EslintImports/no-deprecated": "error",
+			"@EslintImports/no-named-as-default-member": "off",
+			"@EslintImports/no-amd": "off"
 		}
 	}
 ];
