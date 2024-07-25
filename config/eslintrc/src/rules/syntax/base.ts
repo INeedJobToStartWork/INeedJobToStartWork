@@ -411,6 +411,7 @@ export default [
 			"@EslintUnicorn/template-indent": "error",
 			"@EslintUnicorn/text-encoding-identifier-case": "error",
 			"@EslintUnicorn/throw-new-error": "error",
+
 			"@EslintSonar/no-all-duplicated-branches": "error",
 			"@EslintSonar/no-collapsible-if": "error",
 			"@EslintSonar/no-collection-size-mischeck": "error",

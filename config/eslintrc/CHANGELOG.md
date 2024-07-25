@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.9.0
+
+### Minor Changes
+
+- add some rules for Node Config
+
 ## 0.8.0
 
 ### Minor Changes

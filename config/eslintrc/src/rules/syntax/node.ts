@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // @ts-expect-error: No type declaration for module
 import EslintNode from "eslint-plugin-node";
 import globals from "globals";
@@ -29,7 +30,37 @@ export default [
 			"@EslintNode/global-require": "error", // There will be cases to off this for suer
 			"@EslintNode/handle-callback-err": "error", // Errors
 			"@EslintNode/no-callback-literal": "error",
-			"@EslintNode/no-deprecated-api": "off" // used in other
+			"@EslintNode/no-deprecated-api": "off", // used in other
+			"@EslintNode/no-extraneous-import": "off",
+			"@EslintNode/shebang": "error",
+			"@EslintNode/process-exit-as-throw": "off",
+			"@EslintNode/prefer-promises/fs": "warn", // Maybe Turn off
+			"@EslintNode/prefer-promises/dns": "warn",
+			"@EslintNode/prefer-global/url": "error",
+			"@EslintNode/prefer-global/url-search-params": "error",
+			"@EslintNode/prefer-global/text-encoder": "error",
+			"@EslintNode/prefer-global/text-decoder": "error",
+			"@EslintNode/prefer-global/process": "error",
+			"@EslintNode/prefer-global/console": "error",
+			"@EslintNode/prefer-global/buffer": "error",
+			"@EslintNode/no-unsupported-features/node-builtins": "error",
+			"@EslintNode/no-unsupported-features/es-syntax": "error",
+			"@EslintNode/no-unsupported-features/es-builtins": "error",
+			"@EslintNode/no-unpublished-require": "warn", // Maybe problems with bundlers
+			"@EslintNode/no-unpublished-import": "warn", // Maybe problems with bundlers
+			"@EslintNode/no-unpublished-bin": "error",
+			"@EslintNode/no-sync": "off",
+			"@EslintNode/no-restricted-require": "off", // Manually config
+			"@EslintNode/no-restricted-import": "off", // Manually config
+			"@EslintNode/no-process-exit": "warn", // In future put on error
+			"@EslintNode/no-process-env": "warn", // Maybe off
+			"@EslintNode/no-new-require": "off", //  Silly and only esm
+			"@EslintNode/no-path-concat": "error",
+			"@EslintNode/no-mixed-requires": "error",
+			"@EslintNode/no-missing-require": "error",
+			"@EslintNode/no-missing-import": "error",
+			"@EslintNode/no-extraneous-require": "error",
+			"@EslintNode/no-exports-assign": "error"
 		}
 	}
 ];
