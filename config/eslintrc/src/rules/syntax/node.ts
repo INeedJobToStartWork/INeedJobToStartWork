@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // @ts-expect-error: No type declaration for module
-import EslintNode from "eslint-plugin-node";
+import EslintNode from "eslint-plugin-n";
 import globals from "globals";
 
 import tsParserOptions from "../helpers/tsParser";
@@ -32,20 +32,21 @@ export default [
 			"@EslintNode/no-callback-literal": "error",
 			"@EslintNode/no-deprecated-api": "off", // used in other
 			"@EslintNode/no-extraneous-import": "off",
-			"@EslintNode/shebang": "error",
+			"@EslintNode/hashbang": "error",
+			"@EslintNode/prefer-node-protocol": "error", // used in other plug too
 			"@EslintNode/process-exit-as-throw": "off",
-			"@EslintNode/prefer-promises/fs": "warn", // Maybe Turn off
-			"@EslintNode/prefer-promises/dns": "warn",
-			"@EslintNode/prefer-global/url": "error",
-			"@EslintNode/prefer-global/url-search-params": "error",
-			"@EslintNode/prefer-global/text-encoder": "error",
-			"@EslintNode/prefer-global/text-decoder": "error",
-			"@EslintNode/prefer-global/process": "error",
-			"@EslintNode/prefer-global/console": "error",
-			"@EslintNode/prefer-global/buffer": "error",
-			"@EslintNode/no-unsupported-features/node-builtins": "error",
-			"@EslintNode/no-unsupported-features/es-syntax": "error",
-			"@EslintNode/no-unsupported-features/es-builtins": "error",
+			// "@EslintNode/prefer-promises/fs": "warn", // Maybe Turn off
+			// "@EslintNode/prefer-promises/dns": "warn",
+			// "@EslintNode/prefer-global/url": "error",
+			// "@EslintNode/prefer-global/url-search-params": "error",
+			// "@EslintNode/prefer-global/text-encoder": "error",
+			// "@EslintNode/prefer-global/text-decoder": "error",
+			// "@EslintNode/prefer-global/process": "error",
+			// "@EslintNode/prefer-global/console": "error",
+			// "@EslintNode/prefer-global/buffer": "error",
+			// "@EslintNode/no-unsupported-features/node-builtins": "error",
+			// "@EslintNode/no-unsupported-features/es-syntax": "error",
+			// "@EslintNode/no-unsupported-features/es-builtins": "error",
 			"@EslintNode/no-unpublished-require": "warn", // Maybe problems with bundlers
 			"@EslintNode/no-unpublished-import": "warn", // Maybe problems with bundlers
 			"@EslintNode/no-unpublished-bin": "error",

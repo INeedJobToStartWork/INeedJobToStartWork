@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.10.1
+
+### Patch Changes
+
+- disable rules for node which throw error
+
 ## 0.10.0
 
 ### Minor Changes
