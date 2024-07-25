@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.10.0
+
+### Minor Changes
+
+- add some rules for storybook config!
+
 ## 0.9.0
 
 ### Minor Changes
