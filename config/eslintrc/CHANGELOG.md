@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.11.0
+
+### Minor Changes
+
+- turn off 2 import rules from `eslint-plugin-n` which throws wrong errors.
+
 ## 0.10.1
 
 ### Patch Changes

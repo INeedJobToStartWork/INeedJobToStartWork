@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-// @ts-expect-error: No type declaration for module
+
 import EslintNode from "eslint-plugin-n";
 import globals from "globals";
 
@@ -58,8 +58,8 @@ export default [
 			"@EslintNode/no-new-require": "off", //  Silly and only esm
 			"@EslintNode/no-path-concat": "error",
 			"@EslintNode/no-mixed-requires": "error",
-			"@EslintNode/no-missing-require": "error",
-			"@EslintNode/no-missing-import": "error",
+			// "@EslintNode/no-missing-require": "error", // Wrong Errors - To imports use other plugin `eslint-plugin-import`
+			// "@EslintNode/no-missing-import": "error", // Wrong Errors - To imports use other plugin `eslint-plugin-import`
 			"@EslintNode/no-extraneous-require": "error",
 			"@EslintNode/no-exports-assign": "error"
 		}
