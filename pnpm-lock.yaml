@@ -77,15 +77,18 @@ importers:
       eslint-plugin-jsx-a11y:
         specifier: ~6.9.0
         version: 6.9.0(eslint@8.57.0)
+      eslint-plugin-markdownlint:
+        specifier: ^0.6.0
+        version: 0.6.0(eslint@8.57.0)
+      eslint-plugin-mdx:
+        specifier: ^3.1.5
+        version: 3.1.5(eslint@8.57.0)
       eslint-plugin-n:
         specifier: ^17.9.0
         version: 17.9.0(eslint@8.57.0)
       eslint-plugin-no-explicit-type-exports:
         specifier: ~0.12.1
         version: 0.12.1(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
-      eslint-plugin-no-unsanitized:
-        specifier: ~4.0.2
-        version: 4.0.2(eslint@8.57.0)
       eslint-plugin-optimize-regex:
         specifier: ~1.2.1
         version: 1.2.1
@@ -195,12 +198,9 @@ importers:
       esbuild-plugin-copy:
         specifier: ^2.1.1
         version: 2.1.1(esbuild@0.21.5)
-      eslint-plugin-markdownlint:
-        specifier: ^0.6.0
-        version: 0.6.0(eslint@8.57.0)
-      eslint-plugin-mdx:
-        specifier: ^3.1.5
-        version: 3.1.5(eslint@8.57.0)
+      eslint-plugin-no-unsanitized:
+        specifier: ^4.0.2
+        version: 4.0.2(eslint@8.57.0)
       tsup:
         specifier: ^8.1.0
         version: 8.1.0(postcss@8.4.39)(typescript@5.5.3)
