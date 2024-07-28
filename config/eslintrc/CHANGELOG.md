@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.13.0
+
+### Minor Changes
+
+- add some rules for turbo process.env!
+
 ## 0.12.0
 
 ### Minor Changes

@@ -18,7 +18,8 @@ export default ineedj({
 		tailwindcss: false,
 		typescript: true,
 		toml: false,
-		yaml: false
+		yaml: false,
+		turbo: true
 	}
 });
 

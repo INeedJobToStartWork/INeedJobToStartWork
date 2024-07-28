@@ -1,3 +1,5 @@
+import { parse } from "node:url";
+
 type TODO = any;
 const yoda: TODO = true;
 if (true == yoda) {
@@ -7,3 +9,5 @@ if (true == yoda) {
 export type Prettify<T> = {
   [K in keyof T]: NonNullable<T[K]>;
 };
+
+const url = parse("/foo"); // ❌ 'parse' is deprecated. Use the WHATWG URL API instead. eslint(deprecation/deprecation)

@@ -9,6 +9,7 @@ import {
 	storybook,
 	tailwindcss,
 	toml,
+	turbo,
 	typescript,
 	website,
 	yaml
@@ -32,6 +33,7 @@ interface IinputConfig {
 		storybook?: boolean;
 		tailwindcss?: boolean;
 		typescript?: boolean;
+		turbo?: boolean;
 		toml?: boolean;
 		yaml?: boolean;
 		website?: boolean;
@@ -51,6 +53,7 @@ const ineedj = (inputConfig: IinputConfig): object[] => {
 	if (inputConfig.formatters?.stylisticTS) finalConfig.push(...stylisticTS);
 	if (inputConfig.formatters?.perfectionistSorters) finalConfig.push(...perfectionistSorters);
 
+	if (inputConfig.syntax?.turbo) finalConfig.push(...turbo);
 	if (inputConfig.syntax?.website) finalConfig.push(...website);
 	if (inputConfig.syntax?.eslint) finalConfig.push(...base);
 	if (inputConfig.syntax?.jsx) finalConfig.push(...jsx);

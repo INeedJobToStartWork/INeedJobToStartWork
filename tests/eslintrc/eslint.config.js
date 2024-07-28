@@ -19,6 +19,7 @@ export default ineedj({
     typescript: true,
     toml: false,
     yaml: false,
+    turbo: true,
   },
 });
 

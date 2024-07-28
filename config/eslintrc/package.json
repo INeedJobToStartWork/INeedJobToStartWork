@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "0.12.0",
+	"version": "0.13.0",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -51,7 +51,6 @@
 		"clean-package": "^2.2.0",
 		"dts-bundle-generator": "^9.5.1",
 		"esbuild-plugin-copy": "^2.1.1",
-		"eslint-plugin-readable-tailwind": "^1.5.2",
 		"tsup": "^8.1.0",
 		"typescript": "^5.5.3"
 	},
@@ -84,6 +83,7 @@
 		"eslint-plugin-react-perf": "~3.3.2",
 		"eslint-plugin-react-prefer-function-component": "~3.3.0",
 		"eslint-plugin-react-refresh": "~0.4.9",
+		"eslint-plugin-readable-tailwind": "^1.5.2",
 		"eslint-plugin-security": "~3.0.1",
 		"eslint-plugin-sonarjs": "~1.0.3",
 		"eslint-plugin-ssr-friendly": "~1.3.0",
@@ -91,6 +91,7 @@
 		"eslint-plugin-tailwindcss": "~3.17.4",
 		"eslint-plugin-toml": "~0.11.1",
 		"eslint-plugin-tsdoc": "~0.3.0",
+		"eslint-plugin-turbo": "^2.0.9",
 		"eslint-plugin-typescript-compat": "~1.0.2",
 		"eslint-plugin-unicorn": "~54.0.0",
 		"eslint-plugin-unused-imports": "~3.2.0",
