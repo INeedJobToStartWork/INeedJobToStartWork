@@ -3,6 +3,7 @@ import {
 	base,
 	ignoreGlobalFiles,
 	jsx,
+	mdx,
 	next,
 	node,
 	react,
@@ -39,6 +40,7 @@ interface IinputConfig {
 		vitest?: boolean;
 		yaml?: boolean;
 		website?: boolean;
+		mdx?: boolean;
 	};
 	ignoreGlobalFiles?: IignoreGlobalFiles;
 }
@@ -68,6 +70,7 @@ const ineedj = (inputConfig: IinputConfig): object[] => {
 	if (inputConfig.syntax?.typescript) finalConfig.push(...typescript);
 	if (inputConfig.syntax?.toml) finalConfig.push(...toml);
 	if (inputConfig.syntax?.yaml) finalConfig.push(...yaml);
+	if (inputConfig.syntax?.mdx) finalConfig.push(...mdx);
 
 	return finalConfig;
 };

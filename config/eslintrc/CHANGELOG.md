@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.17.0
+
+### Minor Changes
+
+- add new config for MDX!
+
 ## 0.16.0
 
 ### Minor Changes
