@@ -1,5 +1,12 @@
 # @ineedj/eslintrc
 
+## 0.18.0
+
+### Minor Changes
+
+- change `peerDependencies` versions install on patches only and add some rules from `eslint-plugin-array-func` to
+  `base` config
+
 ## 0.17.0
 
 ### Minor Changes

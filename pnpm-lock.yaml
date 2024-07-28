@@ -89,6 +89,9 @@ importers:
       eslint-plugin-no-explicit-type-exports:
         specifier: ~0.12.1
         version: 0.12.1(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
+      eslint-plugin-no-unsanitized:
+        specifier: ^4.0.2
+        version: 4.0.2(eslint@8.57.0)
       eslint-plugin-optimize-regex:
         specifier: ~1.2.1
         version: 1.2.1
@@ -198,9 +201,9 @@ importers:
       esbuild-plugin-copy:
         specifier: ^2.1.1
         version: 2.1.1(esbuild@0.21.5)
-      eslint-plugin-no-unsanitized:
-        specifier: ^4.0.2
-        version: 4.0.2(eslint@8.57.0)
+      eslint-plugin-array-func:
+        specifier: ^5.0.1
+        version: 5.0.1(eslint@8.57.0)
       tsup:
         specifier: ^8.1.0
         version: 8.1.0(postcss@8.4.39)(typescript@5.5.3)
@@ -1525,6 +1528,12 @@ packages:
         optional: true
       eslint-import-resolver-webpack:
         optional: true
+
+  eslint-plugin-array-func@5.0.1:
+    resolution: {integrity: sha512-bRydL/TorX9B6HMMGzggkTzoaY0dM1iCIdA/SGM8VB2P8+38TH+dqYmDdfLCR5LOdDUHq0XBFgkvVnb7DB61cw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=8.51.0'
 
   eslint-plugin-compat@6.0.0:
     resolution: {integrity: sha512-oIynkQYqGnW9ibHl1cGLER8XkUlKaOI8bS80Qz7CjKROvbQm4oN8fWb5l2cG9GJJ4h5eFIHPqkB9ZJuMzwpPFQ==}
@@ -5356,6 +5365,10 @@ snapshots:
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
+
+  eslint-plugin-array-func@5.0.1(eslint@8.57.0):
+    dependencies:
+      eslint: 8.57.0
 
   eslint-plugin-compat@6.0.0(eslint@8.57.0):
     dependencies:

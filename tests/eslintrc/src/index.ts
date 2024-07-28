@@ -11,3 +11,6 @@ export type Prettify<T> = {
 };
 
 const url = parse("/foo"); // ❌ 'parse' is deprecated. Use the WHATWG URL API instead. eslint(deprecation/deprecation)
+
+const stringExample: string = "Example";
+const testPrefArrFunc = [...stringExample];

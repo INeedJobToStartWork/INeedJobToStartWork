@@ -1,6 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import EslintPrefArrayFunc from "eslint-plugin-array-func";
 // @ts-expect-error: No type declaration for module
 import EslintNoUnsanitized from "eslint-plugin-no-unsanitized";
 // @ts-expect-error: No type declaration for module
@@ -38,7 +39,8 @@ export default [
 			"@EslintSonar": EslintSonar,
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
 			"@EslintUnusedImports": EslintUnusedImports,
-			"@EslintImports": EslintImports
+			"@EslintImports": EslintImports,
+			"@EslintPrefArrayFunc": EslintPrefArrayFunc
 		},
 		rules: {
 			"array-callback-return": "error",
@@ -500,7 +502,13 @@ export default [
 			"@EslintImports/exports-last": "off",
 			"@EslintImports/no-deprecated": "error",
 			"@EslintImports/no-named-as-default-member": "off",
-			"@EslintImports/no-amd": "off"
+			"@EslintImports/no-amd": "off",
+			"@EslintPrefArrayFunc/from-map": "error",
+			"@EslintPrefArrayFunc/no-unnecessary-this-arg": "error",
+			"@EslintPrefArrayFunc/prefer-array-from": "error",
+			"@EslintPrefArrayFunc/avoid-reverse": "error",
+			"@EslintPrefArrayFunc/prefer-flat-map": "error",
+			"@EslintPrefArrayFunc/prefer-flat": "error"
 		}
 	}
 ];
