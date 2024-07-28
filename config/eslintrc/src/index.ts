@@ -11,6 +11,7 @@ import {
 	toml,
 	turbo,
 	typescript,
+	vitest,
 	website,
 	yaml
 } from "./rules/syntax";
@@ -35,6 +36,7 @@ interface IinputConfig {
 		typescript?: boolean;
 		turbo?: boolean;
 		toml?: boolean;
+		vitest?: boolean;
 		yaml?: boolean;
 		website?: boolean;
 	};
@@ -53,6 +55,7 @@ const ineedj = (inputConfig: IinputConfig): object[] => {
 	if (inputConfig.formatters?.stylisticTS) finalConfig.push(...stylisticTS);
 	if (inputConfig.formatters?.perfectionistSorters) finalConfig.push(...perfectionistSorters);
 
+	if (inputConfig.syntax?.vitest) finalConfig.push(...vitest);
 	if (inputConfig.syntax?.turbo) finalConfig.push(...turbo);
 	if (inputConfig.syntax?.website) finalConfig.push(...website);
 	if (inputConfig.syntax?.eslint) finalConfig.push(...base);

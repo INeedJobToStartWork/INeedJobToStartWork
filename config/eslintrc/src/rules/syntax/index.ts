@@ -1,4 +1,5 @@
 export { default as base } from "./base";
+export { default as vitest } from "./vitest";
 export { default as turbo } from "./turbo";
 export { default as jsx } from "./jsx";
 export { default as next } from "./next";

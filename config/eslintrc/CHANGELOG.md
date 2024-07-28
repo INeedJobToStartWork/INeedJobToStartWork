@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.16.0
+
+### Minor Changes
+
+- add rules (defaults) for Vitest!
+
 ## 0.15.0
 
 ### Minor Changes
