@@ -1,5 +1,6 @@
 // @ts-expect-error: No type declaration for module
 import EslintTailwindCSS from "eslint-plugin-tailwindcss";
+import EslintTailwindCSSReadable from "eslint-plugin-readable-tailwind";
 import { languageOptionsTS } from "../helpers";
 
 export default [
@@ -7,7 +8,7 @@ export default [
 		files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets", "**/*.html"],
 		name: "TailwindCSS",
 		languageOptions: languageOptionsTS(),
-		plugins: { "@EslintTailwindCSS": EslintTailwindCSS },
+		plugins: { "@EslintTailwindCSS": EslintTailwindCSS, "@EslintTailwindCSSReadable": EslintTailwindCSSReadable },
 		rules: {
 			"@EslintTailwindCSS/classnames-order": "error",
 			"@EslintTailwindCSS/enforces-negative-arbitrary-values": "error",
@@ -16,7 +17,11 @@ export default [
 			"@EslintTailwindCSS/no-arbitrary-value": "off",
 			"@EslintTailwindCSS/no-contradicting-classname": "error", // can have problems
 			"@EslintTailwindCSS/no-custom-classname": "off",
-			"@EslintTailwindCSS/no-unnecessary-arbitrary-value": "error"
+			"@EslintTailwindCSS/no-unnecessary-arbitrary-value": "error",
+			// Formatter
+			"@EslintTailwindCSSReadable/multiline": "warn",
+			"@EslintTailwindCSSReadable/no-unnecessary-whitespace": "warn",
+			"@EslintTailwindCSSReadable/sort-classes": "warn"
 		}
 	}
 ];

@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.12.0
+
+### Minor Changes
+
+- add rules about TailwindCSS formatter
+
 ## 0.11.0
 
 ### Minor Changes
