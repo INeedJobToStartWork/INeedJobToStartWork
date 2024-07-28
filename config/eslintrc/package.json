@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "0.18.0",
+	"version": "0.19.0",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -74,6 +74,7 @@
 		"eslint-plugin-mdx": "~3.1.5",
 		"eslint-plugin-n": "~17.9.0",
 		"eslint-plugin-no-explicit-type-exports": "~0.12.1",
+		"eslint-plugin-no-secrets": "~1.0.2",
 		"eslint-plugin-no-unsanitized": "~4.0.2",
 		"eslint-plugin-optimize-regex": "~1.2.1",
 		"eslint-plugin-perfectionist": "~2.11.0",

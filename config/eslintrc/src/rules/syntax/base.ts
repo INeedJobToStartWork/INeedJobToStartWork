@@ -1,6 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import EslintNoSecrets from "eslint-plugin-no-secrets";
 import EslintPrefArrayFunc from "eslint-plugin-array-func";
 // @ts-expect-error: No type declaration for module
 import EslintNoUnsanitized from "eslint-plugin-no-unsanitized";
@@ -40,7 +41,8 @@ export default [
 			"@EslintNoUnsanitized": EslintNoUnsanitized,
 			"@EslintUnusedImports": EslintUnusedImports,
 			"@EslintImports": EslintImports,
-			"@EslintPrefArrayFunc": EslintPrefArrayFunc
+			"@EslintPrefArrayFunc": EslintPrefArrayFunc,
+			"@EslintNoSecrets": EslintNoSecrets
 		},
 		rules: {
 			"array-callback-return": "error",
@@ -508,7 +510,8 @@ export default [
 			"@EslintPrefArrayFunc/prefer-array-from": "error",
 			"@EslintPrefArrayFunc/avoid-reverse": "error",
 			"@EslintPrefArrayFunc/prefer-flat-map": "error",
-			"@EslintPrefArrayFunc/prefer-flat": "error"
+			"@EslintPrefArrayFunc/prefer-flat": "error",
+			"@EslintNoSecrets/no-secrets": "error"
 		}
 	}
 ];

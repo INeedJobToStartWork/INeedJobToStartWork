@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.19.0
+
+### Minor Changes
+
+- add rule from `eslint-plugin-no-secrets` to find secrets in code.
+
 ## 0.18.0
 
 ### Minor Changes
