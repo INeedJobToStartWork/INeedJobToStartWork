@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.15.0
+
+### Minor Changes
+
+- add rules for Yaml config!
+
 ## 0.14.0
 
 ### Minor Changes
