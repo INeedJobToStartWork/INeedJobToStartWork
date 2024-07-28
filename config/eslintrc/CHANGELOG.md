@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.14.0
+
+### Minor Changes
+
+- add new rules for TOML
+
 ## 0.13.0
 
 ### Minor Changes

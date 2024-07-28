@@ -17,8 +17,8 @@ export default ineedj({
 		storybook: false,
 		tailwindcss: false,
 		typescript: true,
-		toml: false,
-		yaml: false,
+		toml: true,
+		yaml: true,
 		turbo: true
 	}
 });
