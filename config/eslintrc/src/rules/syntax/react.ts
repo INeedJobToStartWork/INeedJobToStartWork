@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import EslintCssModules from "eslint-plugin-css-modules";
 // @ts-expect-error: No type declaration for module
 import EslintReact from "eslint-plugin-react";
 // @ts-expect-error: No type declaration for module
@@ -29,7 +30,8 @@ export default [
 			"@EslintReactHooksForms": EslintReactHooksForms,
 			"@EslintSSRFriendly": EslintSSRFriendly,
 			"@EslintValJSXNesting": EslintValJSXNesting,
-			"@EslintReactPerf": EslintReactPerf
+			"@EslintReactPerf": EslintReactPerf,
+			"@EslintCssModules": EslintCssModules
 		},
 		rules: {
 			"@EslintReact/boolean-prop-naming": "error",
@@ -203,7 +205,9 @@ export default [
 			"@EslintReactPerf/jsx-no-new-object-as-prop": "off",
 			"@EslintReactPerf/jsx-no-new-array-as-prop": "off",
 			"@EslintReactPerf/jsx-no-new-function-as-prop": "off",
-			"@EslintReactPerf/jsx-no-jsx-as-prop": "error"
+			"@EslintReactPerf/jsx-no-jsx-as-prop": "error",
+			"@EslintCssModules/no-unused-class": "error",
+			"@EslintCssModules/no-undef-class": "error"
 		}
 	}
 ];

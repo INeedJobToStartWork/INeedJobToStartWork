@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.21.0
+
+### Minor Changes
+
+- add css modules support for react from `eslint-plugin-css-modules`!
+
 ## 0.20.0
 
 ### Minor Changes
