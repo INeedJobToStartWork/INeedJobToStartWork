@@ -2,7 +2,7 @@ import ineedj from "./dist/index.js";
 
 export default ineedj({
 	formatters: {
-		json: false,
+		json: true,
 		stylistic: false,
 		stylisticJSX: false,
 		stylisticTS: false,

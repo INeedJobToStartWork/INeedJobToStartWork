@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.22.0
+
+### Minor Changes
+
+- remove `eslint-plugin-jsonc` and replace him on `eslint-plugin-jsonc` at json config!
+
 ## 0.21.0
 
 ### Minor Changes

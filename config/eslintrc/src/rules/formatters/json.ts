@@ -1,36 +1,55 @@
-// @ts-expect-error: No type declaration for module
-import EslintJsonFormatter from "eslint-plugin-json";
+import EslintJsonC from "eslint-plugin-jsonc";
+import { filesTS } from "../helpers";
+
+const files = filesTS(["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.jsx", "**/*.json"]);
 
 export default [
 	{
-		files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts", "**/*.jsx", "**/*.tsx", "**/*.json"],
+		files: files,
 		name: "JSON formatter",
-		plugins: { "@EslintJsonFormatter": EslintJsonFormatter },
-
-		// processor: "json/json",
+		plugins: { "@EslintJsonC": EslintJsonC as object },
 
 		rules: {
-			"@EslintJsonFormatter/*": ["error", "allowComments"],
-			"@EslintJsonFormatter/json": "error",
-			"@EslintJsonFormatter/unknown": "error",
-			"@EslintJsonFormatter/comment-not-permitted": "error",
-			"@EslintJsonFormatter/undefined": "error",
-			"@EslintJsonFormatter/enum-value-mismatch": "error",
-			"@EslintJsonFormatter/unexpected-end-of-comment": "error",
-			"@EslintJsonFormatter/unexpected-end-of-string": "error",
-			"@EslintJsonFormatter/unexpected-end-of-number": "error",
-			"@EslintJsonFormatter/invalid-unicode": "error",
-			"@EslintJsonFormatter/invalid-escape-character": "error",
-			"@EslintJsonFormatter/invalid-character": "error",
-			"@EslintJsonFormatter/property-expected": "error",
-			"@EslintJsonFormatter/comma-expected": "error",
-			"@EslintJsonFormatter/colon-expected": "error",
-			"@EslintJsonFormatter/value-expected": "error",
-			"@EslintJsonFormatter/comma-or-close-backet-expected": "error",
-			"@EslintJsonFormatter/comma-or-close-brace-expected": "error",
-			"@EslintJsonFormatter/trailing-comma": "error",
-			"@EslintJsonFormatter/duplicate-key": "error",
-			"@EslintJsonFormatter/schema-resolve-error": "error"
+			"@EslintJsonC/array-bracket-newline": "error",
+			"@EslintJsonC/array-bracket-spacing": ["error", "never"],
+			"@EslintJsonC/array-element-newline": "off",
+			"@EslintJsonC/auto": "error",
+			"@EslintJsonC/comma-dangle": "error",
+			"@EslintJsonC/comma-style": "error",
+			"@EslintJsonC/indent": "error",
+			"@EslintJsonC/key-name-casing": "error",
+			"@EslintJsonC/key-spacing": "error",
+			"@EslintJsonC/no-bigint-literals": "error",
+			"@EslintJsonC/no-binary-expression": "off", // sometimes can be more readable
+			"@EslintJsonC/no-binary-numeric-literals": "error",
+			"@EslintJsonC/no-comments": "error",
+			"@EslintJsonC/no-dupe-keys": "error",
+			"@EslintJsonC/no-escape-sequence-in-identifier": "error",
+			"@EslintJsonC/no-floating-decimal": "error",
+			"@EslintJsonC/no-hexadecimal-numeric-literals": "error",
+			"@EslintJsonC/no-infinity": "error",
+			"@EslintJsonC/no-irregular-whitespace": "error",
+			"@EslintJsonC/no-multi-str": "error",
+			"@EslintJsonC/no-nan": "error",
+			"@EslintJsonC/no-number-props": "error",
+			"@EslintJsonC/no-numeric-separators": "off",
+			"@EslintJsonC/no-octal-escape": "error",
+			"@EslintJsonC/no-octal-numeric-literals": "off",
+			"@EslintJsonC/no-octal": "off",
+			"@EslintJsonC/no-parenthesized": "error",
+			"@EslintJsonC/no-plus-sign": "error",
+			"@EslintJsonC/no-regexp-literals": "warn",
+			"@EslintJsonC/no-sparse-arrays": "warn",
+			"@EslintJsonC/no-template-literals": "off",
+			"@EslintJsonC/no-undefined-value": "error",
+			"@EslintJsonC/no-unicode-codepoint-escapes": "error",
+			"@EslintJsonC/no-useless-escape": "error",
+			"@EslintJsonC/object-curly-newline": "error",
+			"@EslintJsonC/sort-array-values": "off",
+			"@EslintJsonC/sort-keys": "off",
+			"@EslintJsonC/space-unary-ops": "error",
+			"@EslintJsonC/valid-json-number": "error",
+			"@EslintJsonC/vue-custom-block/no-parsing-error": "off" // Only React
 		}
 	}
 ];
