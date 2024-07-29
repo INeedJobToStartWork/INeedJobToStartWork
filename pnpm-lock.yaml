@@ -92,6 +92,9 @@ importers:
       eslint-plugin-no-explicit-type-exports:
         specifier: ~0.12.1
         version: 0.12.1(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
+      eslint-plugin-no-secrets:
+        specifier: ^1.0.2
+        version: 1.0.2(eslint@8.57.0)
       eslint-plugin-no-unsanitized:
         specifier: ^4.0.2
         version: 4.0.2(eslint@8.57.0)
@@ -204,9 +207,9 @@ importers:
       esbuild-plugin-copy:
         specifier: ^2.1.1
         version: 2.1.1(esbuild@0.21.5)
-      eslint-plugin-no-secrets:
-        specifier: ^1.0.2
-        version: 1.0.2(eslint@8.57.0)
+      eslint-plugin-typescript-sort-keys:
+        specifier: ^3.2.0
+        version: 3.2.0(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3)
       tsup:
         specifier: ^8.1.0
         version: 8.1.0(postcss@8.4.39)(typescript@5.5.3)
@@ -1741,6 +1744,14 @@ packages:
     peerDependencies:
       typescript: ^3.9.7 || ^4.0.0 || ^5.0.0
 
+  eslint-plugin-typescript-sort-keys@3.2.0:
+    resolution: {integrity: sha512-GutszvriaVtwmn7pQjuj9/9o0iXhD7XZs0/424+zsozdRr/fdg5e8206t478Vnqnqi1GjuxcAolj1kf74KnhPA==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      '@typescript-eslint/parser': ^6 || ^7
+      eslint: ^7 || ^8
+      typescript: ^3 || ^4 || ^5
+
   eslint-plugin-unicorn@54.0.0:
     resolution: {integrity: sha512-XxYLRiYtAWiAjPv6z4JREby1TAE2byBC7wlh0V4vWDCpccOSU1KovWV//jqPXF6bq3WKxqX9rdjoRQ1EhdmNdQ==}
     engines: {node: '>=18.18'}
@@ -2410,6 +2421,9 @@ packages:
 
   json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
+
+  json-schema@0.4.0:
+    resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
 
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
@@ -5662,6 +5676,17 @@ snapshots:
       - eslint
       - supports-color
 
+  eslint-plugin-typescript-sort-keys@3.2.0(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)(typescript@5.5.3):
+    dependencies:
+      '@typescript-eslint/experimental-utils': 5.62.0(eslint@8.57.0)(typescript@5.5.3)
+      '@typescript-eslint/parser': 7.14.1(eslint@8.57.0)(typescript@5.5.3)
+      eslint: 8.57.0
+      json-schema: 0.4.0
+      natural-compare-lite: 1.4.0
+      typescript: 5.5.3
+    transitivePeerDependencies:
+      - supports-color
+
   eslint-plugin-unicorn@54.0.0(eslint@8.57.0):
     dependencies:
       '@babel/helper-validator-identifier': 7.24.7
@@ -6359,6 +6384,8 @@ snapshots:
   json-schema-traverse@0.4.1: {}
 
   json-schema-traverse@1.0.0: {}
+
+  json-schema@0.4.0: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 

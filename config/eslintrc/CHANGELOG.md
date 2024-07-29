@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.20.0
+
+### Minor Changes
+
+- add some rules to sort Typescript Sort Keys from `eslint-plugin-typescript-sort-keys`!
+
 ## 0.19.0
 
 ### Minor Changes

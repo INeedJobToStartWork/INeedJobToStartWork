@@ -2,6 +2,8 @@
 import tslint from "@typescript-eslint/eslint-plugin";
 import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
+import EslintTypescriptSortKeys from "eslint-plugin-typescript-sort-keys";
+// @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
 import eslintTSDocs from "eslint-plugin-tsdoc";
 import { fileURLToPath } from "node:url";
@@ -23,7 +25,8 @@ export default [
 			"@typescript-eslint": tslint,
 			"@EslintDeprecation": eslintDeprecation,
 			"@EslintTSDocs": eslintTSDocs,
-			"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports
+			"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
+			"@EslintTypescriptSortKeys": EslintTypescriptSortKeys
 		},
 		rules: {
 			"@typescript-eslint/explicit-module-boundary-types": "error", // ccc
@@ -181,7 +184,8 @@ export default [
 			"@EslintTSDocs/syntax": "error",
 
 			"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error",
-
+			"@EslintTypescriptSortKeys/interface": "warn",
+			"@EslintTypescriptSortKeys/string-enum": "warn",
 			"@typescript-eslint/ban-types": [
 				"error",
 				{
