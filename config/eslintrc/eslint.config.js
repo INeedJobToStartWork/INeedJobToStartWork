@@ -8,6 +8,9 @@ export default ineedj({
 		stylisticTS: false,
 		perfectionistSorters: false
 	},
+	modifiers: {
+		only: "warn"
+	},
 	syntax: {
 		mdx: true,
 		vitest: false,
@@ -21,7 +24,11 @@ export default ineedj({
 		typescript: true,
 		toml: true,
 		yaml: true,
-		turbo: true
+		turbo: false,
+		ignoreGlobalFiles: {
+			gitIgnore: true,
+			basicIgnores: true
+		}
 	}
 });
 

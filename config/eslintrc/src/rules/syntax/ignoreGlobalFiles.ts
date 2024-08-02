@@ -1,11 +1,12 @@
 import gitIgnore from "eslint-config-flat-gitignore";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 
 /*
  * Gen JSDocs
  */
 export interface IignoreGlobalFiles {
-	gitIgnore?: boolean;
 	basicIgnores?: boolean;
+	gitIgnore?: boolean;
 	ignoreFiles?: string[];
 }
 
@@ -16,10 +17,12 @@ export interface IignoreGlobalFiles {
 export const ignoreGlobalFiles = (
 	properties: IignoreGlobalFiles = { gitIgnore: true, basicIgnores: true }
 ): Object[] => [
-	{
+	defineFlatConfig({
+		name: "Ignore Global - Custom",
 		ignores: properties.ignoreFiles ?? []
-	},
-	{
+	}),
+	defineFlatConfig({
+		name: "Ignore Global - Basic",
 		ignores: properties.basicIgnores
 			? [
 					"**/.vscode/**",
@@ -34,8 +37,11 @@ export const ignoreGlobalFiles = (
 					"**/templates/**"
 				]
 			: []
-	},
-	properties.gitIgnore ? gitIgnore() : []
+	}),
+	{
+		name: "Ignore Global - gitignore",
+		...(properties.gitIgnore ? gitIgnore() : {})
+	}
 ];
 
 export default ignoreGlobalFiles;

@@ -1,5 +1,6 @@
 {
 	"$schema": "http://json.schemastore.org/tsconfig",
+
 	"compilerOptions": {
 		"outDir": "./dist",
 		"baseUrl": "./src",
@@ -7,8 +8,8 @@
 			"@/*": ["*"]
 		},
 		"skipLibCheck": true,
-		"lib": ["ES2015.Iterable"]
+		"lib": ["ES2015.Iterable", "esnext", "dom"]
 	},
-	"include": ["src"],
+	"include": ["src", "./types.d.ts"],
 	"extends": "@ineedj/tsconfig/base.json"
 }

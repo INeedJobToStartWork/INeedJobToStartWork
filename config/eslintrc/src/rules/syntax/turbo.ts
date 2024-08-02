@@ -6,6 +6,7 @@ import globals from "globals";
 
 import tsParserOptions from "../helpers/tsParser";
 import { filesTS, isTS, languageOptionsTS } from "../helpers";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
 
@@ -17,14 +18,12 @@ const languageOptions = (() =>
 		...(isTS ? tsParserOptions : {})
 	}))();
 
-export default [
-	{
-		name: "Turbo",
-		files: files,
-		languageOptions: languageOptions,
-		plugins: { "@EslintTurbo": EslintTurbo },
-		rules: {
-			"@EslintTurbo/no-undeclared-env-vars": "error"
-		}
+export default defineFlatConfig({
+	name: "Turbo",
+	files: files,
+	languageOptions: languageOptions,
+	plugins: { "@EslintTurbo": EslintTurbo },
+	rules: {
+		"@EslintTurbo/no-undeclared-env-vars": "error"
 	}
-];
+});

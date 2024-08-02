@@ -5,6 +5,7 @@ import globals from "globals";
 
 import tsParserOptions from "../helpers/tsParser";
 import { isTS, languageOptionsTS } from "../helpers";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const languageOptions = (() =>
 	languageOptionsTS({
@@ -14,14 +15,12 @@ const languageOptions = (() =>
 		...(isTS ? tsParserOptions : {})
 	}))();
 
-export default [
-	{
-		name: "VitestJS",
-		files: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
-		languageOptions: languageOptions,
-		plugins: { "@EslintVitest": EslintVitest },
-		rules: {
-			...EslintVitest.configs.recommended
-		}
+export default defineFlatConfig({
+	name: "VitestJS",
+	files: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
+	languageOptions: languageOptions,
+	plugins: { "@EslintVitest": EslintVitest },
+	rules: {
+		...EslintVitest.configs.recommended
 	}
-];
+});
