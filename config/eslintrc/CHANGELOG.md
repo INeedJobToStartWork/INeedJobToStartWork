@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 0.23.0
+
+### Minor Changes
+
+- 4a9c9da: add new modifiers!
+
 ## 0.22.0
 
 ### Minor Changes
