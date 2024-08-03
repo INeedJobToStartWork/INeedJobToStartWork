@@ -21,7 +21,7 @@ export default defineFlatConfig({
 	name: "NodeJS",
 	files: files,
 	languageOptions: languageOptions,
-	plugins: { "@EslintNode": EslintNode },
+	plugins: { "@EslintNode": EslintNode as any },
 	rules: {
 		"@EslintNode/callback-return": "error",
 		"@EslintNode/exports-style": "error", // maybe problems cuz we only esm

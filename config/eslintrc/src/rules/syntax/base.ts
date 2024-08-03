@@ -36,10 +36,10 @@ export default defineFlatConfig({
 	plugins: {
 		"@EslintOptRegConf": EslintOptRegConf,
 		"@EslintPii": EslintPii,
-		"@EslintSecurity": EslintSecurity,
+		"@EslintSecurity": EslintSecurity as any,
 		"@EslintPromise": EslintPromise,
 		"@EslintUnicorn": EslintUnicorn,
-		"@EslintSonar": EslintSonar,
+		"@EslintSonar": EslintSonar as any,
 		"@EslintNoUnsanitized": EslintNoUnsanitized,
 		"@EslintUnusedImports": EslintUnusedImports,
 		"@EslintImports": EslintImports,

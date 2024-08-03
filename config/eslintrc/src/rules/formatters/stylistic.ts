@@ -12,8 +12,8 @@ export default defineFlatConfig({
 	},
 	name: "stylistic_js",
 	plugins: {
-		"@stylistic/plus": stylisticPlus,
-		"@stylistic/js": stylisticJs
+		"@stylistic/plus": stylisticPlus as any,
+		"@stylistic/js": stylisticJs as any
 	},
 	rules: {
 		"@stylistic/plus/type-generic-spacing": ["error"],

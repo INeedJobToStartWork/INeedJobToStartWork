@@ -9,11 +9,11 @@ export default composer([
 		name: "Mdx",
 		files: ["**/*.md"],
 		// languageOptions: languageOptions,
-		plugins: { "@EslintMdx": EslintMdx },
+		plugins: { "@EslintMdx": EslintMdx as any },
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 		processor: mdxProcessor({
 			lintCodeBlocks: true
-		}),
+		}) as any,
 		rules: {
 			"@EslintMdx/remark": "warn"
 		}
@@ -72,7 +72,7 @@ export default composer([
 	// 		"@EslintMdxLinter/md050": "error"
 	// 	}
 	// })
-]);
+]) as any;
 // export default composer([
 // 	defineFlatConfig({
 // 		name: "Mdx",

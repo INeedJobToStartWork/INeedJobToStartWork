@@ -4,7 +4,7 @@ import { defineFlatConfig } from "eslint-flat-config-utils";
 export default defineFlatConfig({
 	ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
 	name: "Stylistic - Strong Typing",
-	plugins: { "@stylistic/jsx": stylisticJSX },
+	plugins: { "@stylistic/jsx": stylisticJSX as any },
 	rules: {
 		// "@stylistic/jsx/jsx-child-element-spacing": [1, { selfClosing: "line-aligned", nonEmpty: "after-props" }], TODO
 		"@stylistic/jsx/jsx-closing-bracket-location": "error",

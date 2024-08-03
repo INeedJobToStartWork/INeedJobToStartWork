@@ -6,7 +6,7 @@ import { defineFlatConfig } from "eslint-flat-config-utils";
 export default defineFlatConfig({
 	name: "NextJS",
 	files: filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]),
-	plugins: { "@EslintNext": EslintNext },
+	plugins: { "@EslintNext": EslintNext as any },
 	languageOptions: languageOptionsTS(),
 	rules: {
 		"@EslintNext/google-font-display": "error",

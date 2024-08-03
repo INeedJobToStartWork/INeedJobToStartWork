@@ -1,12 +1,12 @@
-// @ts-expect-error: No type declaration for module
 import { defineFlatConfig } from "eslint-flat-config-utils";
+// @ts-expect-error: No type declaration for module
 import EslintPerfectionist from "eslint-plugin-perfectionist";
 
 export default defineFlatConfig({
 	files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"],
 	name: "Perfectionist Sorter",
 
-	plugins: { "@EslintPerfectionist": EslintPerfectionist },
+	plugins: { "@EslintPerfectionist": EslintPerfectionist as any },
 	rules: {
 		"@EslintPerfectionist/sort-array-includes": [
 			"error",

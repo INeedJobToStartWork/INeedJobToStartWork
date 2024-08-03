@@ -1,13 +1,15 @@
+//-----------------------------------------
+// Imports
+//-----------------------------------------
+
 import { FlatConfigComposer } from "eslint-flat-config-utils";
 import type { Prettify } from "./types";
 import type { IignoreGlobalFiles } from "./rules/syntax";
 import { modifiersConfig } from "./rules/modifiers";
-
 import type { ImodifiercsConfig } from "./rules/modifiers";
 import { JSON, perfectionistSorters, stylistic, stylisticJSX, stylisticTS } from "./rules/formatters";
 import {
 	base,
-	ignoreGlobalFiles,
 	jsx,
 	next,
 	react,
@@ -19,9 +21,41 @@ import {
 	vitest,
 	website,
 	yaml,
-	node
+	node,
+	ignoreGlobalFiles
 } from "./rules/syntax";
 
+//-----------------------------------------
+// Types
+//-----------------------------------------
+
+/**
+ * Interfejs dla konfiguracji wejściowej.
+ *
+ * @interface IConfigInput
+ * @property {Object} [formatters] - Opcje formatowania.
+ * @property {boolean} [formatters.json] - Włącza/wyłącza formatowanie JSON.
+ * @property {boolean} [formatters.perfectionistSorters] - Włącza/wyłącza sortowanie perfekcjonistyczne.
+ * @property {boolean} [formatters.stylistic] - Włącza/wyłącza formatowanie stylistyczne.
+ * @property {boolean} [formatters.stylisticJSX] - Włącza/wyłącza formatowanie stylistyczne dla JSX.
+ * @property {boolean} [formatters.stylisticTS] - Włącza/wyłącza formatowanie stylistyczne dla TypeScript.
+ * @property {Prettify<ImodifiercsConfig>} [modifiers] - Opcje modyfikatorów.
+ * @property {Object} [syntax] - Opcje składni.
+ * @property {boolean} [syntax.eslint] - Włącza/wyłącza składnię ESLint.
+ * @property {Prettify<IignoreGlobalFiles>} [syntax.ignoreGlobalFiles] - Opcje ignorowania globalnych plików.
+ * @property {boolean} [syntax.jsx] - Włącza/wyłącza składnię JSX.
+ * @property {boolean} [syntax.next] - Włącza/wyłącza składnię Next.js.
+ * @property {boolean} [syntax.node] - Włącza/wyłącza składnię Node.js.
+ * @property {boolean} [syntax.react] - Włącza/wyłącza składnię React.
+ * @property {boolean} [syntax.storybook] - Włącza/wyłącza składnię Storybook.
+ * @property {boolean} [syntax.tailwindcss] - Włącza/wyłącza składnię Tailwind CSS.
+ * @property {boolean} [syntax.toml] - Włącza/wyłącza składnię TOML.
+ * @property {boolean} [syntax.turbo] - Włącza/wyłącza składnię Turbo.
+ * @property {boolean} [syntax.typescript] - Włącza/wyłącza składnię TypeScript.
+ * @property {boolean} [syntax.vitest] - Włącza/wyłącza składnię Vitest.
+ * @property {boolean} [syntax.website] - Włącza/wyłącza składnię dla stron internetowych.
+ * @property {boolean} [syntax.yaml] - Włącza/wyłącza składnię YAML.
+ */
 interface IConfigInput {
 	formatters?: {
 		json?: boolean;
@@ -50,11 +84,42 @@ interface IConfigInput {
 	};
 }
 
-const configLoader = <T extends Object | Object[]>(
-	ObjectValue: boolean | object | undefined,
-	value: T
-): T extends Object[] ? null[] | T : T | null =>
-	Array.isArray(value) ? (ObjectValue ? value : [null]) : (ObjectValue ? value : null);
+//-----------------------------------------
+// Helpers
+//-----------------------------------------
+
+/**
+ * Load eslint config.
+ *
+ * @param {boolean} TruthyValue asd
+ * @param {boolean} config asd
+ * @returns Config if `TruthyValue` returns true.
+ *
+ * @internal Do not Export
+ */
+
+// const configLoader = <T extends Linter.Config<Linter.RulesRecord>>(
+const configLoader = (TruthyValue: unknown, config: unknown[] | unknown) => {
+	// eslint-disable-next-line @EslintUnicorn/no-null, @typescript-eslint/no-unsafe-return
+	if (Array.isArray(config)) return TruthyValue ? config : [null];
+	// eslint-disable-next-line @EslintUnicorn/no-null
+	return TruthyValue ? config : null;
+};
+
+//-----------------------------------------
+// Exports
+//-----------------------------------------
+
+/**
+ * Configurator for eslint config.
+ *
+ * @example
+ * ```ts
+ * export default ineedj({ syntax: { eslint: true, typescript: true } })
+ * ```
+ * @param {IConfigInput} inputConfig - Input configuration for eslint.
+ * @returns {Promise<FlatConfigComposer>} Array of Eslint configs objects.
+ */
 
 const ineedj = async (inputConfig: IConfigInput): Promise<FlatConfigComposer> =>
 	new FlatConfigComposer([
@@ -72,10 +137,11 @@ const ineedj = async (inputConfig: IConfigInput): Promise<FlatConfigComposer> =>
 		// Syntax
 
 		configLoader(inputConfig.syntax?.eslint, base),
-		...configLoader(inputConfig.syntax?.ignoreGlobalFiles, ignoreGlobalFiles(inputConfig.syntax?.ignoreGlobalFiles)), // error?
+		...(configLoader(
+			inputConfig.syntax?.ignoreGlobalFiles,
+			ignoreGlobalFiles(inputConfig.syntax?.ignoreGlobalFiles)
+		) as any), // error?
 		configLoader(inputConfig.syntax?.jsx, jsx),
-		// configLoader(inputConfig.syntax?.mdx, mdx),
-		// ...(await configLoader(inputConfig.syntax?.mdx, mdx)),
 		configLoader(inputConfig.syntax?.next, next),
 		configLoader(inputConfig.syntax?.node, node),
 		configLoader(inputConfig.syntax?.react, react),

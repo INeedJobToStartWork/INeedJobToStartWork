@@ -4,7 +4,7 @@ import EslintYML from "eslint-plugin-yml";
 export default defineFlatConfig({
 	files: ["**/*.yml", "**/*.yaml"],
 	name: "Yaml",
-	plugins: { "@EslintYML": EslintYML },
+	plugins: { "@EslintYML": EslintYML as any },
 	rules: {
 		"@EslintYML/block-mapping-colon-indicator-newline": ["error", "always"],
 		"@EslintYML/block-mapping-question-indicator-newline": ["error", "always"],

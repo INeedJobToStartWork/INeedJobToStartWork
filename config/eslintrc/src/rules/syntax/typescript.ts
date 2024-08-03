@@ -22,9 +22,9 @@ export default defineFlatConfig({
 	languageOptions: languageOptionsTS(),
 	name: "TypeScript - Strong Typing",
 	plugins: {
-		"@typescript-eslint": tslint,
-		"@EslintDeprecation": eslintDeprecation,
-		"@EslintTSDocs": eslintTSDocs,
+		"@typescript-eslint": tslint as any,
+		"@EslintDeprecation": eslintDeprecation as any,
+		"@EslintTSDocs": eslintTSDocs as any,
 		"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
 		"@EslintTypescriptSortKeys": EslintTypescriptSortKeys
 	},

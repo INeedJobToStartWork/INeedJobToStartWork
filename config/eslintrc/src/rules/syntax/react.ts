@@ -26,7 +26,7 @@ export default defineFlatConfig({
 	plugins: {
 		"@EslintReact": EslintReact,
 		"@EslintReactRefresh": EslintReactRefresh,
-		"@EslintReactPrefFuncComp": EslintReactPrefFuncComp,
+		"@EslintReactPrefFuncComp": EslintReactPrefFuncComp as any,
 		"@EslintReactFormFields": EslintReactFormFields,
 		"@EslintReactHooksForms": EslintReactHooksForms,
 		"@EslintSSRFriendly": EslintSSRFriendly,

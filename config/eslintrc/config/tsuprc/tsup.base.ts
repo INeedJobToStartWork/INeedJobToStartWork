@@ -8,6 +8,7 @@ export default defineConfig({
 	splitting: false,
 	platform: "node",
 	keepNames: true,
+	dts: true,
 	tsconfig: "./tsconfig.json",
 
 	banner: ({ format }) => {

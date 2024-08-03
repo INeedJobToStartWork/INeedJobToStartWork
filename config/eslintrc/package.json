@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "0.23.0",
+	"version": "1.0.0",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -34,6 +34,7 @@
 		"build": "pnpm tsup-node --config ./config/tsuprc/tsup.prod.ts ",
 		"build:npm": "pnpm npm:prepack && pnpm tsup-node --config ./config/tsuprc/tsup.prod.ts && pnpm npm:postpack",
 		"dev": "pnpm tsup-node --config ./config/tsuprc/tsup.dev.ts",
+		"dts": "pnpm dts-bundle-generator --config ./config/dts-bundle-generator/dts-bundle-generator.cjs",
 		"format": "pnpm prettier . --write && pnpm prettier . --check",
 		"lint": "pnpm eslint .",
 		"lint:fix": "pnpm eslint . --fix",

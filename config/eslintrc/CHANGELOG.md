@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.0.0
+
+### Major Changes
+
+- Add `.d.ts` support, fix `ignoreGlobalFiles` error and simple JSDocs!
+
 ## 0.23.0
 
 ### Minor Changes

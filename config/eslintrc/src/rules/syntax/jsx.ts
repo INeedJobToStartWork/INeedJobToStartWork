@@ -11,7 +11,7 @@ export default defineFlatConfig({
 	name: "Default",
 	files: files,
 	languageOptions: languageOptionsTS(),
-	plugins: { "@EslintJSXA11": EslintJSXA11 },
+	plugins: { "@EslintJSXA11": EslintJSXA11 as any },
 	rules: {
 		"@EslintJSXA11/alt-text": "error",
 		"@EslintJSXA11/anchor-ambiguous-text": "error",

@@ -8,7 +8,10 @@ export default defineFlatConfig({
 	files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets", "**/*.html"],
 	name: "TailwindCSS",
 	languageOptions: languageOptionsTS(),
-	plugins: { "@EslintTailwindCSS": EslintTailwindCSS, "@EslintTailwindCSSReadable": EslintTailwindCSSReadable },
+	plugins: {
+		"@EslintTailwindCSS": EslintTailwindCSS as any,
+		"@EslintTailwindCSSReadable": EslintTailwindCSSReadable as any
+	},
 	rules: {
 		"@EslintTailwindCSS/classnames-order": "error",
 		"@EslintTailwindCSS/enforces-negative-arbitrary-values": "error",

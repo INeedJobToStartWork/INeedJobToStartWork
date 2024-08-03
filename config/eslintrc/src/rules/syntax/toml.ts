@@ -4,7 +4,7 @@ import EslintTOML from "eslint-plugin-toml";
 export default defineFlatConfig({
 	files: ["**/*.toml"],
 	name: "Toml",
-	plugins: { "@EslintTOML": EslintTOML },
+	plugins: { "@EslintTOML": EslintTOML as any },
 	rules: {
 		"@EslintTOML/array-bracket-newline": "error",
 		"@EslintTOML/array-bracket-spacing": "error",

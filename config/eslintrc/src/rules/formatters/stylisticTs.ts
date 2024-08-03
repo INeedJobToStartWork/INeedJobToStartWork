@@ -4,7 +4,7 @@ import { defineFlatConfig } from "eslint-flat-config-utils";
 export default defineFlatConfig({
 	ignores: ["**/*.ts", "**/*.cts", "**/*.mts", "**/*.tsx"],
 	name: "Stylistic - Strong Typing",
-	plugins: { "@stylistic/ts": stylisticTs },
+	plugins: { "@stylistic/ts": stylisticTs as any },
 	rules: {
 		"@stylistic/ts/block-spacing": ["error", "always"],
 		"@stylistic/ts/brace-style": ["error", "stroustrup", { allowSingleLine: true }],

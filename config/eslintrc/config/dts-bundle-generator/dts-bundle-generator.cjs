@@ -21,7 +21,7 @@ const config = {
 
 			libraries: {
 				inlinedLibraries: [],
-				importedLibraries: [],
+				importedLibraries: ["eslint-flat-config-utils"],
 				allowedTypesLibraries: []
 			},
 
