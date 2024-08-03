@@ -118,40 +118,42 @@ const configLoader = (TruthyValue: unknown, config: unknown[] | unknown) => {
  * export default ineedj({ syntax: { eslint: true, typescript: true } })
  * ```
  * @param {IConfigInput} inputConfig - Input configuration for eslint.
-//  * @returns {Promise<FlatConfigComposer>} Array of Eslint configs objects.
+ * @returns {FlatConfigComposer} Array of Eslint configs objects.
  */
 
-const ineedj = async (inputConfig: IConfigInput) =>
-	(async (inputConfig: IConfigInput) =>
-		new FlatConfigComposer([
-			// Modifiers
-			configLoader(inputConfig.modifiers, modifiersConfig(inputConfig.modifiers)),
+// eslint-disable-next-line @typescript-eslint/promise-function-async
+const ineedj = (inputConfig: IConfigInput) =>
+	// eslint-disable-next-line @typescript-eslint/promise-function-async
 
-			// Formatters
-			configLoader(inputConfig.formatters?.json, JSON),
-			configLoader(inputConfig.formatters?.perfectionistSorters, perfectionistSorters),
-			configLoader(inputConfig.formatters?.stylistic, stylistic),
-			configLoader(inputConfig.formatters?.stylisticJSX, stylisticJSX),
-			configLoader(inputConfig.formatters?.stylisticTS, stylisticTS),
+	new FlatConfigComposer([
+		// Modifiers
+		configLoader(inputConfig.modifiers, modifiersConfig(inputConfig.modifiers)),
 
-			// Syntax
-			configLoader(inputConfig.syntax?.eslint, base),
-			...(configLoader(
-				inputConfig.syntax?.ignoreGlobalFiles,
-				ignoreGlobalFiles(inputConfig.syntax?.ignoreGlobalFiles)
-			) as any), // error?
-			configLoader(inputConfig.syntax?.jsx, jsx),
-			configLoader(inputConfig.syntax?.next, next),
-			configLoader(inputConfig.syntax?.node, node),
-			configLoader(inputConfig.syntax?.react, react),
-			configLoader(inputConfig.syntax?.storybook, storybook),
-			configLoader(inputConfig.syntax?.tailwindcss, tailwindcss),
-			configLoader(inputConfig.syntax?.toml, toml),
-			configLoader(inputConfig.syntax?.turbo, turbo),
-			configLoader(inputConfig.syntax?.typescript, typescript),
-			configLoader(inputConfig.syntax?.vitest, vitest),
-			configLoader(inputConfig.syntax?.website, website),
-			configLoader(inputConfig.syntax?.yaml, yaml)
-		]))(inputConfig);
+		// Formatters
+		configLoader(inputConfig.formatters?.json, JSON),
+		configLoader(inputConfig.formatters?.perfectionistSorters, perfectionistSorters),
+		configLoader(inputConfig.formatters?.stylistic, stylistic),
+		configLoader(inputConfig.formatters?.stylisticJSX, stylisticJSX),
+		configLoader(inputConfig.formatters?.stylisticTS, stylisticTS),
+
+		// Syntax
+		configLoader(inputConfig.syntax?.eslint, base),
+		...(configLoader(
+			inputConfig.syntax?.ignoreGlobalFiles,
+			ignoreGlobalFiles(inputConfig.syntax?.ignoreGlobalFiles)
+		) as any), // error?
+		configLoader(inputConfig.syntax?.jsx, jsx),
+		configLoader(inputConfig.syntax?.next, next),
+		configLoader(inputConfig.syntax?.node, node),
+		configLoader(inputConfig.syntax?.react, react),
+		configLoader(inputConfig.syntax?.storybook, storybook),
+		configLoader(inputConfig.syntax?.tailwindcss, tailwindcss),
+		configLoader(inputConfig.syntax?.toml, toml),
+		configLoader(inputConfig.syntax?.turbo, turbo),
+		configLoader(inputConfig.syntax?.typescript, typescript),
+		configLoader(inputConfig.syntax?.vitest, vitest),
+		configLoader(inputConfig.syntax?.website, website),
+		configLoader(inputConfig.syntax?.yaml, yaml)
+	]);
 
 export default ineedj;

@@ -14,6 +14,7 @@
     "start": "turbo start",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "lint:test": "turbo lint:test",
     "format": "turbo format",
     "clean": "turbo clean",
     "npm:prepack": "turbo npm:prepack",

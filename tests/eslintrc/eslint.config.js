@@ -1,6 +1,5 @@
 import ineedj from "@ineedj/eslintrc";
 
-// typedef {import("@ineedj/eslintrc/index.js").IConfigInput}
 export default await ineedj({
   modifiers: {
     only: "warn",
@@ -25,4 +24,4 @@ export default await ineedj({
     yaml: false,
     turbo: true,
   },
-});
+}).renamePlugins({ "@EslintUnusedImports": "OOOOOOOOOOOOOOOOOOOOOOLA" });

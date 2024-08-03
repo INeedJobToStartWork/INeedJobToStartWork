@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.0.2
+
+### Patch Changes
+
+- default export lost methods and types
+
 ## 1.0.1
 
 ### Patch Changes
