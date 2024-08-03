@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.0
+
+### Minor Changes
+
+- plugin `@EslintNoSecrets` removed, rule `@EslintNode/no-unpublished-import` set to `off` - throw wrong errors
+
 ## 1.0.2
 
 ### Patch Changes

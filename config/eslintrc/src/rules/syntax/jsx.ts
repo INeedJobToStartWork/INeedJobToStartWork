@@ -1,5 +1,3 @@
-// eslint-disable @EslintNoSecrets/no-secrets
-
 // @ts-expect-error: No type declaration for module
 import EslintJSXA11 from "eslint-plugin-jsx-a11y";
 import { isTS, languageOptionsTS } from "../helpers";

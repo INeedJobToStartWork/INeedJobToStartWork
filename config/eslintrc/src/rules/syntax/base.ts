@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 // @ts-expect-error: No type declaration for module
-import EslintNoSecrets from "eslint-plugin-no-secrets";
 // @ts-expect-error: No type declaration for module
 import EslintPrefArrayFunc from "eslint-plugin-array-func";
 // @ts-expect-error: No type declaration for module
@@ -43,8 +42,7 @@ export default defineFlatConfig({
 		"@EslintNoUnsanitized": EslintNoUnsanitized,
 		"@EslintUnusedImports": EslintUnusedImports,
 		"@EslintImports": EslintImports,
-		"@EslintPrefArrayFunc": EslintPrefArrayFunc,
-		"@EslintNoSecrets": EslintNoSecrets
+		"@EslintPrefArrayFunc": EslintPrefArrayFunc
 	},
 	rules: {
 		"array-callback-return": "error",
@@ -512,7 +510,6 @@ export default defineFlatConfig({
 		"@EslintPrefArrayFunc/prefer-array-from": "error",
 		"@EslintPrefArrayFunc/avoid-reverse": "error",
 		"@EslintPrefArrayFunc/prefer-flat-map": "error",
-		"@EslintPrefArrayFunc/prefer-flat": "error",
-		"@EslintNoSecrets/no-secrets": "error"
+		"@EslintPrefArrayFunc/prefer-flat": "error"
 	}
 });

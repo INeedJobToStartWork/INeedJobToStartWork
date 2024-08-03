@@ -47,7 +47,7 @@ export default defineFlatConfig({
 		// "@EslintNode/no-unsupported-features/es-syntax": "error",
 		// "@EslintNode/no-unsupported-features/es-builtins": "error",
 		"@EslintNode/no-unpublished-require": "warn", // Maybe problems with bundlers
-		"@EslintNode/no-unpublished-import": "warn", // Maybe problems with bundlers
+		"@EslintNode/no-unpublished-import": "off", // Maybe problems with bundlers
 		"@EslintNode/no-unpublished-bin": "error",
 		"@EslintNode/no-sync": "off",
 		"@EslintNode/no-restricted-require": "off", // Manually config
