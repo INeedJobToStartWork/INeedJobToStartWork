@@ -1,6 +1,7 @@
 import ineedj from "@ineedj/eslintrc";
 
-export default ineedj({
+// typedef {import("@ineedj/eslintrc/index.js").IConfigInput}
+export default await ineedj({
   modifiers: {
     only: "warn",
   },
@@ -25,5 +26,3 @@ export default ineedj({
     turbo: true,
   },
 });
-
-// export default [];

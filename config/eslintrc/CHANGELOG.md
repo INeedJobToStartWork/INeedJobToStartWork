@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.0.1
+
+### Patch Changes
+
+- default return function is no more async
+
 ## 1.0.0
 
 ### Major Changes
