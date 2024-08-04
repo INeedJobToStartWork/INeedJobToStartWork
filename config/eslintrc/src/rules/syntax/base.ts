@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 // @ts-expect-error: No type declaration for module
-// @ts-expect-error: No type declaration for module
 import EslintPrefArrayFunc from "eslint-plugin-array-func";
 // @ts-expect-error: No type declaration for module
 import EslintNoUnsanitized from "eslint-plugin-no-unsanitized";
