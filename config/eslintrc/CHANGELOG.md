@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.1
+
+### Patch Changes
+
+- remove `name` from globalIgnores to let them properly work.
+
 ## 1.1.0
 
 ### Minor Changes

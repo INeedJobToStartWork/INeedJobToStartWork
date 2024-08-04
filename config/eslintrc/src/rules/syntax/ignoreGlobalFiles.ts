@@ -18,11 +18,11 @@ export const ignoreGlobalFiles = (
 	properties: IignoreGlobalFiles = { gitIgnore: true, basicIgnores: true }
 ): Object[] => [
 	defineFlatConfig({
-		name: "Ignore Global - Custom",
+		// name: "Ignore Global - Custom",
 		ignores: properties.ignoreFiles ?? []
 	}),
 	defineFlatConfig({
-		name: "Ignore Global - Basic",
+		// name: "Ignore Global - Basic",
 		ignores: properties.basicIgnores
 			? [
 					"**/.vscode/**",
@@ -39,7 +39,7 @@ export const ignoreGlobalFiles = (
 			: []
 	}),
 	{
-		name: "Ignore Global - gitignore",
+		// name: "Ignore Global - gitignore",
 		...(properties.gitIgnore ? gitIgnore() : {})
 	}
 ];
