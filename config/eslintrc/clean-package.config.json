@@ -1,6 +1,6 @@
 {
 	"indent": 4,
-	"remove": ["devDependencies", "dependencies", "lint-staged", "bin"],
+	"remove": ["devDependencies", "lint-staged", "bin"],
 	"replace": {
 		"type": "commonjs",
 		"scripts": {

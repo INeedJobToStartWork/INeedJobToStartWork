@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.3
+
+### Patch Changes
+
+- fix package deps
+
 ## 1.1.2
 
 ### Patch Changes
