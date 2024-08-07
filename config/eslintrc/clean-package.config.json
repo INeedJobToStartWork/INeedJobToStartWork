@@ -9,11 +9,11 @@
 		"exports": {
 			".": {
 				"types": {
-					"import": "./index.d.ts",
-					"require": "./index.d.cts"
+					"import": "./index.d.mts",
+					"require": "./index.d.ts"
 				},
-				"import": "./index.js",
-				"require": "./index.cjs",
+				"import": "./index.mjs",
+				"require": "./index.js",
 				"*": "./*"
 			}
 		}

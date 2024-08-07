@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.4
+
+### Patch Changes
+
+- fix exports
+
 ## 1.1.3
 
 ### Patch Changes
