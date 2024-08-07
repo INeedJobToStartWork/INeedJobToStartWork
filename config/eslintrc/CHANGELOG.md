@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.2
+
+### Patch Changes
+
+- move dependencies from `peerDependencies` => `dependencies` to avoid problems with versions at pnpm install etc
+
 ## 1.1.1
 
 ### Patch Changes

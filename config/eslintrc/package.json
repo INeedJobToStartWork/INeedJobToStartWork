@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -43,20 +43,7 @@
 		"prepublishOnly": "pnpm build:npm",
 		"start": "pnpm exec eslint-config-inspector"
 	},
-	"devDependencies": {
-		"@eslint/config-inspector": "^0.5.2",
-		"@ineedj/prettierrc": "^2.0.0",
-		"@ineedj/tsconfig": "workspace:*",
-		"@ineedj/tsuprc": "workspace:*",
-		"@types/eslint-plugin-security": "^3.0.0",
-		"clean-package": "^2.2.0",
-		"dts-bundle-generator": "^9.5.1",
-		"esbuild-plugin-copy": "^2.1.1",
-		"eslint-typegen": "^0.3.0",
-		"tsup": "^8.1.0",
-		"typescript": "^5.5.3"
-	},
-	"peerDependencies": {
+	"dependencies": {
 		"@next/eslint-plugin-next": "~14.2.5",
 		"@rushstack/eslint-patch": "~1.10.3",
 		"@stylistic/eslint-plugin": "~2.3.0",
@@ -111,6 +98,19 @@
 		"eslint-plugin-yml": "~1.14.0",
 		"globals": "~15.8.0",
 		"local-pkg": "~0.5.0"
+	},
+	"devDependencies": {
+		"@eslint/config-inspector": "^0.5.2",
+		"@ineedj/prettierrc": "^2.0.0",
+		"@ineedj/tsconfig": "workspace:*",
+		"@ineedj/tsuprc": "workspace:*",
+		"@types/eslint-plugin-security": "^3.0.0",
+		"clean-package": "^2.2.0",
+		"dts-bundle-generator": "^9.5.1",
+		"esbuild-plugin-copy": "^2.1.1",
+		"eslint-typegen": "^0.3.0",
+		"tsup": "^8.1.0",
+		"typescript": "^5.5.3"
 	},
 	"publishConfig": {
 		"directory": "dist",
