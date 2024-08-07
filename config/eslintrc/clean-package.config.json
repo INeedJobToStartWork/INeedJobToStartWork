@@ -8,8 +8,12 @@
 		},
 		"exports": {
 			".": {
-				"import": "./index.mjs",
-				"require": "./index.js",
+				"types": {
+					"import": "./index.d.ts",
+					"require": "./index.d.cts"
+				},
+				"import": "./index.js",
+				"require": "./index.cjs",
 				"*": "./*"
 			}
 		}

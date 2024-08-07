@@ -18,7 +18,7 @@ export const ignoreGlobalFiles = (
 	properties: IignoreGlobalFiles = { gitIgnore: true, basicIgnores: true }
 ): Object[] => [
 	defineFlatConfig({
-		// name: "Ignore Global - Custom",
+		// name: "Ignore Global - Custom", // ADD when it will be backported or ported to eslint 9
 		ignores: properties.ignoreFiles ?? []
 	}),
 	defineFlatConfig({
