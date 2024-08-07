@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.5
+
+### Patch Changes
+
+- translate pl => en IConfigInput
+
 ## 1.1.4
 
 ### Patch Changes

@@ -30,31 +30,31 @@ import {
 //-----------------------------------------
 
 /**
- * Interfejs dla konfiguracji wejściowej.
+ * Interface for input configuration.
  *
  * @interface IConfigInput
- * @property {Object} [formatters] - Opcje formatowania.
- * @property {boolean} [formatters.json] - Włącza/wyłącza formatowanie JSON.
- * @property {boolean} [formatters.perfectionistSorters] - Włącza/wyłącza sortowanie perfekcjonistyczne.
- * @property {boolean} [formatters.stylistic] - Włącza/wyłącza formatowanie stylistyczne.
- * @property {boolean} [formatters.stylisticJSX] - Włącza/wyłącza formatowanie stylistyczne dla JSX.
- * @property {boolean} [formatters.stylisticTS] - Włącza/wyłącza formatowanie stylistyczne dla TypeScript.
- * @property {Prettify<ImodifiercsConfig>} [modifiers] - Opcje modyfikatorów.
- * @property {Object} [syntax] - Opcje składni.
- * @property {boolean} [syntax.eslint] - Włącza/wyłącza składnię ESLint.
- * @property {Prettify<IignoreGlobalFiles>} [syntax.ignoreGlobalFiles] - Opcje ignorowania globalnych plików.
- * @property {boolean} [syntax.jsx] - Włącza/wyłącza składnię JSX.
- * @property {boolean} [syntax.next] - Włącza/wyłącza składnię Next.js.
- * @property {boolean} [syntax.node] - Włącza/wyłącza składnię Node.js.
- * @property {boolean} [syntax.react] - Włącza/wyłącza składnię React.
- * @property {boolean} [syntax.storybook] - Włącza/wyłącza składnię Storybook.
- * @property {boolean} [syntax.tailwindcss] - Włącza/wyłącza składnię Tailwind CSS.
- * @property {boolean} [syntax.toml] - Włącza/wyłącza składnię TOML.
- * @property {boolean} [syntax.turbo] - Włącza/wyłącza składnię Turbo.
- * @property {boolean} [syntax.typescript] - Włącza/wyłącza składnię TypeScript.
- * @property {boolean} [syntax.vitest] - Włącza/wyłącza składnię Vitest.
- * @property {boolean} [syntax.website] - Włącza/wyłącza składnię dla stron internetowych.
- * @property {boolean} [syntax.yaml] - Włącza/wyłącza składnię YAML.
+ * @property {Object} [formatters] - Formatting options.
+ * @property {boolean} [formatters.json] - Enables/disables JSON formatting.
+ * @property {boolean} [formatters.perfectionistSorters] - Enables/disables perfectionist sorting.
+ * @property {boolean} [formatters.stylistic] - Enables/disables stylistic formatting.
+ * @property {boolean} [formatters.stylisticJSX] - Enables/disables stylistic formatting for JSX.
+ * @property {boolean} [formatters.stylisticTS] - Enables/disables stylistic formatting for TypeScript.
+ * @property {Prettify<ImodifiercsConfig>} [modifiers] - Modifier options.
+ * @property {Object} [syntax] - Syntax options.
+ * @property {boolean} [syntax.eslint] - Enables/disables ESLint syntax.
+ * @property {Prettify<IignoreGlobalFiles>} [syntax.ignoreGlobalFiles] - Options for ignoring global files.
+ * @property {boolean} [syntax.jsx] - Enables/disables JSX syntax.
+ * @property {boolean} [syntax.next] - Enables/disables Next.js syntax.
+ * @property {boolean} [syntax.node] - Enables/disables Node.js syntax.
+ * @property {boolean} [syntax.react] - Enables/disables React syntax.
+ * @property {boolean} [syntax.storybook] - Enables/disables Storybook syntax.
+ * @property {boolean} [syntax.tailwindcss] - Enables/disables Tailwind CSS syntax.
+ * @property {boolean} [syntax.toml] - Enables/disables TOML syntax.
+ * @property {boolean} [syntax.turbo] - Enables/disables Turbo syntax.
+ * @property {boolean} [syntax.typescript] - Enables/disables TypeScript syntax.
+ * @property {boolean} [syntax.vitest] - Enables/disables Vitest syntax.
+ * @property {boolean} [syntax.website] - Enables/disables website syntax.
+ * @property {boolean} [syntax.yaml] - Enables/disables YAML syntax.
  */
 interface IConfigInput {
 	formatters?: {
