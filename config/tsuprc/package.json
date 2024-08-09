@@ -1,8 +1,21 @@
 {
   "name": "@ineedj/tsuprc",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {},
+  "description": "INEEDJ config for tsup",
+  "version": "1.0.0",
+  "author": "ineedjobtostartwork",
+  "license": "MIT",
+  "keywords": [
+    "tsuprc",
+    "ineedj",
+    "ineedjobtostartwork"
+  ],
+  "homepage": "https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+  "bugs": "https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues/new/choose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INeedJobToStartWork/INeedJobToStartWork",
+    "directory": "config/tsuprc"
+  },
   "publishConfig": {
     "provenance": true
   }

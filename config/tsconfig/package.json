@@ -1,7 +1,7 @@
 {
   "name": "@ineedj/tsconfig",
   "version": "1.0.0",
-  "description": "INEEDJ config for Typescript ",
+  "description": "INEEDJ config for Typescript",
   "keywords": [
     "tsconfig",
     "ineedj",
