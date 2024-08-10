@@ -1,11 +1,11 @@
 import tsParserOptions from "./tsParser";
-import isTS from "./isTS";
+import isTs from "./isTs";
 
 export const languageOptionsTS = (userLanguageOptions: object = {}) => ({
 	...userLanguageOptions,
-	...(isTS ? tsParserOptions : {})
+	...(isTs ? tsParserOptions : {})
 });
-export const filesTS = (userFiles: string[] = []) => [
+export const filesTS = (userFiles: string[] = []): string[] => [
 	...userFiles,
-	...(isTS ? ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"] : [])
+	...(isTs ? ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"] : [])
 ];

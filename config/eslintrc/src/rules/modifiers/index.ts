@@ -19,7 +19,7 @@ export interface ImodifiercsConfig {
 	renamePlugins?: boolean; // If true, renamePlugins in options will override this.
 }
 
-export const modifiersConfig = (props: ImodifiercsConfig | undefined = {}) =>
+export const modifiersConfig = (props: ImodifiercsConfig | undefined = {}): object =>
 	defineFlatConfig({
 		name: "Modifiers",
 		plugins: {

@@ -30,6 +30,11 @@ export default ineedj({
 			basicIgnores: true
 		}
 	}
-}).removeRules("@typescript-eslint/no-unsafe-assignment", "@typescript-eslint/no-explicit-any");
+}).removeRules(
+	"@typescript-eslint/no-unsafe-assignment",
+	"@typescript-eslint/no-explicit-any",
+	"@EslintTSDocs/syntax",
+	"@typescript-eslint/explicit-module-boundary-types"
+);
 
 // export default [];

@@ -1,2 +1,2 @@
-export { default as isTS } from "./isTS";
+export { default as isTS } from "./isTs";
 export * from "./tsSettings";
