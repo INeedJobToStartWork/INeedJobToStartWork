@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.6
+
+### Patch Changes
+
+- add json files to ignore for `eslint` and `typescript` config
+
 ## 1.1.5
 
 ### Patch Changes

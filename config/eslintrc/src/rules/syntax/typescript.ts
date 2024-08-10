@@ -17,7 +17,7 @@ console.log(__filename);
 // 👇️ "/home/borislav/Desktop/javascript"
 // const __dirname = path.resolve('tsconfig.json');
 export default defineFlatConfig({
-	ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+	ignores: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.json"],
 	files: ["**/*.ts", "**/*.cts", "**/*.mts", "**.*.tsx"],
 	languageOptions: languageOptionsTS(),
 	name: "TypeScript - Strong Typing",

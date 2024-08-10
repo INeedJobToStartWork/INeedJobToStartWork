@@ -29,6 +29,7 @@ const languageOptions = (() =>
 
 export default defineFlatConfig({
 	files: files,
+	ignores: ["**/*.json"],
 	languageOptions: languageOptions,
 	name: "Default",
 	plugins: {
