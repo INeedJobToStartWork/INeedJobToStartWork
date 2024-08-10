@@ -34,7 +34,8 @@ export const ignoreGlobalFiles = (
 					"**/*.d.ts",
 					"**/tsconfig.json",
 					"**/theme.config.jsx",
-					"**/templates/**"
+					"**/templates/**",
+					"**/*.json"
 				]
 			: []
 	}),

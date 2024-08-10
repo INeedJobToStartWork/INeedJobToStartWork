@@ -8,7 +8,7 @@ export default defineFlatConfig({
 	files: files,
 	name: "JSON formatter",
 	plugins: { "@EslintJsonC": EslintJsonC as object },
-
+	ignores: ["!**/*.json"], //unignore cuz it's ignored globally
 	rules: {
 		"@EslintJsonC/array-bracket-newline": "error",
 		"@EslintJsonC/array-bracket-spacing": ["error", "never"],

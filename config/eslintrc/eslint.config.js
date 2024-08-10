@@ -30,6 +30,6 @@ export default ineedj({
 			basicIgnores: true
 		}
 	}
-});
+}).removeRules("@typescript-eslint/no-unsafe-assignment", "@typescript-eslint/no-explicit-any");
 
 // export default [];

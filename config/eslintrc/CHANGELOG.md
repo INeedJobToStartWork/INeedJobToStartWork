@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.1.7
+
+### Patch Changes
+
+- fix eslitn problem with .json files
+
 ## 1.1.6
 
 ### Patch Changes
