@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.2.0
+
+### Minor Changes
+
+- add new `eslint-plugin-command` support by `modifiers.commands` option!
+
 ## 1.1.7
 
 ### Patch Changes

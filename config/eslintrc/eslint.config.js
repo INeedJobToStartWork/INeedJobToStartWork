@@ -9,7 +9,8 @@ export default ineedj({
 		perfectionistSorters: false
 	},
 	modifiers: {
-		only: "warn"
+		only: "warn",
+		commands: true
 	},
 	syntax: {
 		mdx: true,
