@@ -1,2 +1,4 @@
-export { default as isTs } from "./isTs";
+export * from "./isTs";
+export * from "./tsParser";
+export * from "./tsParser";
 export * from "./tsSettings";

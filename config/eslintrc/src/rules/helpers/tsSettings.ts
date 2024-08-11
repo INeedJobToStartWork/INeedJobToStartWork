@@ -9,3 +9,4 @@ export const filesTS = (userFiles: string[] = []): string[] => [
 	...userFiles,
 	...(isTs ? ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"] : [])
 ];
+export default languageOptionsTS;
