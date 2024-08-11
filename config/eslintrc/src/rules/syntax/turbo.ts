@@ -4,8 +4,7 @@
 import EslintTurbo from "eslint-plugin-turbo";
 import globals from "globals";
 
-import tsParserOptions from "../helpers/tsParser";
-import { filesTS, isTs, languageOptionsTS } from "../helpers";
+import { filesTS, isTs, languageOptionsTS, tsParserOptions } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
