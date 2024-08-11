@@ -16,11 +16,11 @@ import EslintReactRefresh from "eslint-plugin-react-refresh";
 import EslintSSRFriendly from "eslint-plugin-ssr-friendly";
 // @ts-expect-error: No type declaration for module
 import EslintValJSXNesting from "eslint-plugin-validate-jsx-nesting";
-import { isTS, languageOptionsTS } from "../helpers";
+import { isTs, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 export default defineFlatConfig({
-	files: ["**/*.jsx", ...(isTS ? ["**/*.tsx"] : [])],
+	files: ["**/*.jsx", ...(isTs ? ["**/*.tsx"] : [])],
 	name: "React",
 	languageOptions: languageOptionsTS(),
 	plugins: {

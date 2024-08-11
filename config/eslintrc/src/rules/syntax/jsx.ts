@@ -1,9 +1,9 @@
 // @ts-expect-error: No type declaration for module
 import EslintJSXA11 from "eslint-plugin-jsx-a11y";
-import { isTS, languageOptionsTS } from "../helpers";
+import { isTs, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-export const files = ["**/*.jsx", ...(isTS ? ["**/*.tsx"] : [])];
+export const files = ["**/*.jsx", ...(isTs ? ["**/*.tsx"] : [])];
 
 export default defineFlatConfig({
 	name: "Default",

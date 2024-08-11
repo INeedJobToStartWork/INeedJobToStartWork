@@ -5,7 +5,7 @@ import EslintTurbo from "eslint-plugin-turbo";
 import globals from "globals";
 
 import tsParserOptions from "../helpers/tsParser";
-import { filesTS, isTS, languageOptionsTS } from "../helpers";
+import { filesTS, isTs, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
@@ -15,7 +15,7 @@ const languageOptions = (() =>
 		ecmaVersion: "latest",
 		sourceType: "module",
 		globals: { ...globals.node },
-		...(isTS ? tsParserOptions : {})
+		...(isTs ? tsParserOptions : {})
 	}))();
 
 export default defineFlatConfig({
