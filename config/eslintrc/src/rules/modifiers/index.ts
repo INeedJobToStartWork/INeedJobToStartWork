@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { defineFlatConfig, mergeConfigs } from "eslint-flat-config-utils";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 // @ts-expect-error: No type declaration for module
 import ban from "eslint-plugin-ban";
 // @ts-expect-error: No type declaration for module
@@ -21,25 +21,23 @@ export interface ImodifiercsConfig {
 	renamePlugins?: boolean;
 }
 
-export const modifiersConfig = (props: ImodifiercsConfig | undefined = { commands: true }): object =>
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
-	mergeConfigs(
-		defineFlatConfig({
-			name: "Modifiers",
-			plugins: {
-				"@ModifierBan": ban,
-				"@ModifierHeader": header,
-				...(Object.hasOwn(props, "only") && props.only === "warn"
-					? { "@ModifierOnlyWarning": OnlyWarning }
-					: { "@ModifierOnlyError": OnlyError }) // Sometimes bugging
-			},
-			rules: {
-				"@ModifierHeader/header": Object.hasOwn(props, "headers") ? props.headers : "off",
-				"@ModifierBan/ban": Object.hasOwn(props, "ban") ? props.ban : "off"
-			}
-		}),
-		props.commands ? (commands() as any) : {}
-	);
+export const modifiersConfig = (props: ImodifiercsConfig | undefined = { commands: true }): object => [
+	defineFlatConfig({
+		name: "Modifiers",
+		plugins: {
+			"@ModifierBan": ban,
+			"@ModifierHeader": header,
+			...(Object.hasOwn(props, "only") && props.only === "warn"
+				? { "@ModifierOnlyWarning": OnlyWarning }
+				: { "@ModifierOnlyError": OnlyError }) // Sometimes bugging
+		},
+		rules: {
+			"@ModifierHeader/header": Object.hasOwn(props, "headers") ? props.headers : "off",
+			"@ModifierBan/ban": Object.hasOwn(props, "ban") ? props.ban : "off"
+		}
+	}),
+	props.commands ? commands({ name: "eslint-plugin-command" }) : void 0
+];
 
 export default modifiersConfig;
 export * from "./types";

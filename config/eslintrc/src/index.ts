@@ -123,11 +123,10 @@ const configLoader = (TruthyValue: unknown, config: unknown[] | unknown) => {
 
 // eslint-disable-next-line @typescript-eslint/promise-function-async
 const ineedj = (inputConfig: IConfigInput) =>
-	// eslint-disable-next-line @typescript-eslint/promise-function-async
-
 	new FlatConfigComposer([
 		// Modifiers
-		configLoader(inputConfig.modifiers, modifiersConfig(inputConfig.modifiers)),
+		...(configLoader(inputConfig.modifiers, modifiersConfig(inputConfig.modifiers)) as any),
+		// configLoader(inputConfig.modifiers, modifiersConfig(inputConfig.modifiers)),
 
 		// Formatters
 		configLoader(inputConfig.formatters?.json, JSON),
@@ -141,7 +140,7 @@ const ineedj = (inputConfig: IConfigInput) =>
 		...(configLoader(
 			inputConfig.syntax?.ignoreGlobalFiles,
 			ignoreGlobalFiles(inputConfig.syntax?.ignoreGlobalFiles)
-		) as any), // error?
+		) as any),
 		configLoader(inputConfig.syntax?.jsx, jsx),
 		configLoader(inputConfig.syntax?.next, next),
 		configLoader(inputConfig.syntax?.node, node),

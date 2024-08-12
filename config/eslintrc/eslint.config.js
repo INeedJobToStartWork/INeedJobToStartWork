@@ -10,7 +10,7 @@ export default ineedj({
 	},
 	modifiers: {
 		only: "warn",
-		commands: true
+		commands: false
 	},
 	syntax: {
 		mdx: true,
