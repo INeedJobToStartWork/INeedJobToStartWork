@@ -11,5 +11,7 @@
   },
   "hide-files.files": [],
   "emmet.extensionsPath": ["./emmet", "./settings.json"],
-  "emmet.includeLanguages": { "typescript": "html" }
+  "emmet.includeLanguages": {
+    "typescript": "html"
+  }
 }
