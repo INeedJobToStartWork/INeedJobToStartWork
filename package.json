@@ -14,6 +14,7 @@
     "start": "turbo start",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "lint:next": "turbo lint:next",
     "lint:test": "turbo lint:test",
     "format": "turbo format",
     "clean": "turbo clean",

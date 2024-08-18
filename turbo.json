@@ -5,6 +5,7 @@
     "start": {},
     "build": {},
     "dts": {},
+    "lint:next": {},
     "lint:test": {},
     "build:npm": {
       "inputs": ["*", "!dist"]
