@@ -7,9 +7,10 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**.css.map": true,
-    "**.cssa": true
+    "**.cssa": true,
+    "node_modules": true
   },
-  "hide-files.files": [],
+  "hide-files.files": ["node_modules"],
   "emmet.extensionsPath": ["./emmet", "./settings.json"],
   "emmet.includeLanguages": {
     "typescript": "html"
