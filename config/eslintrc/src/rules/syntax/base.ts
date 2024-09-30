@@ -456,12 +456,12 @@ export default defineFlatConfig({
 		// Imports
 		"@EslintImports/no-unresolved": "off", // [2, { caseSensitiveStrict: true }] Off cuz can have issues with bundlers
 		"@EslintImports/named": "off",
-		"@EslintImports/default": "warn",
+		"@EslintImports/default": "off", // ERRORS ["error"]
 		"@EslintImports/no-namespace": "off", // needed in some libs
 		"@EslintImports/export": "error",
 		"@EslintImports/exports-lats": "off",
 		// "@EslintImports/no-mutable-exports"
-		"@EslintImports/namespace": "error",
+		"@EslintImports/namespace": "off", // ERRORS ["error"]
 		"@EslintImports/no-mutable-exports": "error",
 		"@EslintImports/extensions": "off", // Don't want to configure
 		"@EslintImports/no-restricted-paths": "off",
@@ -502,7 +502,7 @@ export default defineFlatConfig({
 		"@EslintImports/no-import-module-exports": "off",
 		"@EslintImports/no-empty-named-blocks": "error",
 		"@EslintImports/exports-last": "off",
-		"@EslintImports/no-deprecated": "error",
+		"@EslintImports/no-deprecated": "off", // ERRORS ["error"]
 		"@EslintImports/no-named-as-default-member": "off",
 		"@EslintImports/no-amd": "off",
 		"@EslintPrefArrayFunc/from-map": "error",

@@ -25,10 +25,13 @@ export const ignoreGlobalFiles = (
 		// name: "Ignore Global - Basic",
 		ignores: properties.basicIgnores
 			? [
+					".npmrc",
+					"*.config.@(js|mjs|cjs|ts|mts|cts)",
 					"**/.vscode/**",
 					"**/.next/**",
 					"**/config/**",
 					"**/node_modules/**",
+
 					"**/dist/**",
 					"**/lib/**",
 					"**/*.d.ts",

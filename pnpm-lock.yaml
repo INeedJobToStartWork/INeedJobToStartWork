@@ -251,24 +251,6 @@ importers:
 
   config/tsuprc: {}
 
-  tests/eslintrc:
-    devDependencies:
-      '@ineedj/eslintrc':
-        specifier: workspace:*
-        version: link:../../config/eslintrc/dist
-      '@ineedj/tsconfig':
-        specifier: ^1.0.0
-        version: 1.0.0
-      eslint:
-        specifier: ~8.57.0
-        version: 8.57.0
-      globals:
-        specifier: ~15.8.0
-        version: 15.8.0
-      typescript:
-        specifier: ^5.5.3
-        version: 5.5.3
-
   website/personal:
     dependencies:
       '@ineedj/eslintrc':
@@ -592,9 +574,6 @@ packages:
     peerDependencies:
       prettier: ^3.1.1
       prettier-plugin-packagejson: ^2.4.8
-
-  '@ineedj/tsconfig@1.0.0':
-    resolution: {integrity: sha512-usPCmbipgVH8tDLp4XiTF0nPa7cGENEp98Aforhgks0M5+ZvbTYJjXPBdg7DQ75sz7/A+9Ffk9l+IOeVpcb6Ww==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -4577,8 +4556,6 @@ snapshots:
     dependencies:
       prettier: 3.3.2
       prettier-plugin-packagejson: 2.5.0(prettier@3.3.2)
-
-  '@ineedj/tsconfig@1.0.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:

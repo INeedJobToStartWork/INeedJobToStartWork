@@ -12,7 +12,17 @@
 		"skipLibCheck": true,
 		"lib": ["ES2015.Iterable", "esnext", "dom"]
 	},
-	"include": ["src/*"],
+	// "include": ["src/*"],
+	// "include": ["*"],
+	// "include": [
+	// 	"src/*",
+	// 	"src/**/*",
+	// 	"*.config.js",
+	// 	"*.config.mjs",
+	// 	"next.config.mjs",
+	// 	"postcss.config.mjs",
+	// 	"prettier.config.mjs"
+	// ],
 
 	"extends": "@ineedj/tsconfig/base.json"
 }
