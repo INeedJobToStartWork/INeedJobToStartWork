@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -55,7 +55,7 @@
 		"eslint-import-resolver-node": "~0.3.9",
 		"eslint-plugin-array-func": "~5.0.1",
 		"eslint-plugin-ban": "~1.6.0",
-		"eslint-plugin-command": "^0.2.3",
+		"eslint-plugin-command": "0.2.6",
 		"eslint-plugin-compat": "~6.0.0",
 		"eslint-plugin-css-modules": "~2.12.0",
 		"eslint-plugin-deprecation": "~3.0.0",
@@ -89,7 +89,7 @@
 		"eslint-plugin-tailwindcss": "~3.17.4",
 		"eslint-plugin-toml": "~0.11.1",
 		"eslint-plugin-tsdoc": "~0.3.0",
-		"eslint-plugin-turbo": "~2.0.9",
+		"eslint-plugin-turbo": "~2.0.14",
 		"eslint-plugin-typescript-compat": "~1.0.2",
 		"eslint-plugin-typescript-sort-keys": "~3.2.0",
 		"eslint-plugin-unicorn": "~54.0.0",

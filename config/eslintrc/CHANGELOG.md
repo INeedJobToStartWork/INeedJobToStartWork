@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.2.1
+
+### Patch Changes
+
+- fix vitest errors and general tsconfig error
+
 ## 1.2.0
 
 ### Minor Changes
