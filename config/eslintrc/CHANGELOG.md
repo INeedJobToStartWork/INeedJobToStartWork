@@ -1,5 +1,11 @@
 # @ineedj/eslintrc
 
+## 1.2.2
+
+### Patch Changes
+
+- Now support newer version of `eslint-plugin-command` (0.2.6)!
+
 ## 1.2.1
 
 ### Patch Changes
