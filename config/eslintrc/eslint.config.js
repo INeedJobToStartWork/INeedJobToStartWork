@@ -1,4 +1,4 @@
-import ineedj from "@ineedj/eslintrc";
+import ineedj from "../dist/index.js";
 
 export default ineedj({
 	formatters: {
