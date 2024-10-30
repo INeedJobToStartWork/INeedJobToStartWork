@@ -1,5 +1,12 @@
 # @ineedj/eslintrc
 
+## 1.2.3
+
+### Patch Changes
+
+- changed rules: "complexity" 10 -> 16, @EslintSecurity/detect-object-injection `"error"` -> `"off"`,
+  @EslintSonar/no-duplicate-string `"error"` -> `"off"`
+
 ## 1.2.2
 
 ### Patch Changes

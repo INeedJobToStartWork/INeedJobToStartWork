@@ -1,6 +1,6 @@
 {
 	"name": "@ineedj/eslintrc",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "INEEDJ config for Eslint",
 	"keywords": [
 		"eslintrc",
@@ -102,6 +102,7 @@
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.2",
+		"@ineedj/eslintrc": "^1.2.3",
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "workspace:*",
 		"@ineedj/tsuprc": "workspace:*",

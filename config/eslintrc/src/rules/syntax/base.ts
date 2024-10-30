@@ -25,7 +25,11 @@ import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
 const languageOptions = (() =>
-	languageOptionsTS({ ecmaVersion: "latest", sourceType: "module", globals: { ...globals.node } }))();
+	languageOptionsTS({
+		ecmaVersion: "latest",
+		sourceType: "module",
+		globals: { ...globals.node }
+	}))();
 
 export default defineFlatConfig({
 	files: files,
@@ -114,7 +118,7 @@ export default defineFlatConfig({
 		"no-unused-vars": "warn",
 		"class-methods-use-this": "error",
 		"no-use-before-define": "off",
-		complexity: ["error", 10],
+		complexity: ["error", 16],
 		"no-useless-backreference": "error",
 		// "consistent-return": "error",
 		"require-atomic-updates": "warn",
@@ -265,7 +269,7 @@ export default defineFlatConfig({
 		"@EslintOptRegConf/optimize-regex": "error",
 		"@EslintSecurity/detect-unsafe-regex": "error",
 
-		"@EslintSecurity/detect-object-injection": "error",
+		"@EslintSecurity/detect-object-injection": "off", // Many errors, not big benefits
 		"@EslintSecurity/detect-non-literal-regexp": "error",
 		"@EslintSecurity/detect-bidi-characters": "error",
 
@@ -419,7 +423,7 @@ export default defineFlatConfig({
 		"@EslintSonar/no-all-duplicated-branches": "error",
 		"@EslintSonar/no-collapsible-if": "error",
 		"@EslintSonar/no-collection-size-mischeck": "error",
-		"@EslintSonar/no-duplicate-string": "error",
+		"@EslintSonar/no-duplicate-string": "off", // Bruh
 		"@EslintSonar/no-duplicated-branches": "error",
 		"@EslintSonar/no-element-overwrite": "error",
 		"@EslintSonar/no-empty-collection": "error",
