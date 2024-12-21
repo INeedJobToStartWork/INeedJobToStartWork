@@ -1,0 +1,150 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "paste",
+      "id": "User.paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "find",
+      "id": "User.find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+  "firstWindowPreference": "defaultProfile",
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "colorScheme": "xcad",
+      "cursorShape": "filledBox",
+      "font": {
+        "face": "Hack Nerd Font",
+        "size": 14
+      },
+      "historySize": 12000,
+      "intenseTextStyle": "bright",
+      "opacity": 95,
+      "padding": "8",
+      "scrollbarState": "visible",
+      "useAcrylic": true
+    },
+    "list": [
+      {
+        "colorScheme": "xcad",
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "colorScheme": "xcad",
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "colorScheme": "xcad",
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "colorScheme": "xcad",
+        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+      },
+      {
+        "colorScheme": "xcad",
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": true,
+        "name": "Ubuntu",
+        "opacity": 82,
+        "source": "Windows.Terminal.Wsl",
+        "useAcrylic": true
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
+      },
+      {
+        "guid": "{5429372f-9797-5667-b0a9-de8ba7aa9ff3}",
+        "hidden": false,
+        "name": "Developer Command Prompt for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{6b0409c7-6f49-54c9-898b-cb3d3b9a444d}",
+        "hidden": false,
+        "name": "Developer PowerShell for VS 2022",
+        "source": "Windows.Terminal.VisualStudio"
+      },
+      {
+        "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+        "hidden": true,
+        "name": "Visual Studio Debug Console",
+        "source": "VSDebugConsole"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#1A1A1A",
+      "black": "#121212",
+      "blue": "#2B4FFF",
+      "brightBlack": "#666666",
+      "brightBlue": "#5C78FF",
+      "brightCyan": "#5AC8FF",
+      "brightGreen": "#905AFF",
+      "brightPurple": "#5EA2FF",
+      "brightRed": "#BA5AFF",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#685AFF",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#28B9FF",
+      "foreground": "#F1F1F1",
+      "green": "#7129FF",
+      "name": "xcad",
+      "purple": "#2883FF",
+      "red": "#A52AFF",
+      "selectionBackground": "#FFFFFF",
+      "white": "#F1F1F1",
+      "yellow": "#3D2AFF"
+    }
+  ],
+  "showTabsInTitlebar": true,
+  "tabSwitcherMode": "inOrder",
+  "themes": [],
+  "useAcrylicInTabRow": true
+}
