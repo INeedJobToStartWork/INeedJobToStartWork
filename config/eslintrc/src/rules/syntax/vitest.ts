@@ -19,8 +19,9 @@ export default defineFlatConfig({
 	name: "VitestJS",
 	files: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
 	languageOptions: languageOptions,
-	plugins: { "@EslintVitest": EslintVitest as any },
+	plugins: { vitest: EslintVitest as any },
+	// plugins: { "@EslintVitest": EslintVitest as any },
 	rules: {
-		...(EslintVitest.configs.recommended as any)
+		...EslintVitest.configs.recommended.rules
 	}
 });

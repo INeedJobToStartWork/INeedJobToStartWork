@@ -1,5 +1,24 @@
 # @ineedj/eslintrc
 
+## 1.2.3
+
+### Patch Changes
+
+- changed rules: "complexity" 10 -> 16, @EslintSecurity/detect-object-injection `"error"` -> `"off"`,
+  @EslintSonar/no-duplicate-string `"error"` -> `"off"`
+
+## 1.2.2
+
+### Patch Changes
+
+- Now support newer version of `eslint-plugin-command` (0.2.6)!
+
+## 1.2.1
+
+### Patch Changes
+
+- fix vitest errors and general tsconfig error
+
 ## 1.2.0
 
 ### Minor Changes

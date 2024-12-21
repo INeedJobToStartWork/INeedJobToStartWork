@@ -3,7 +3,7 @@
 Hey there! <br/>
 
 We are really excited that **you** are interested in contributing. <br/>
-This is a **general contribution guide** for most of [INEEDJ's projects](https://gi). Before submitting your contribution, please make sure to take a moment and read through the following guide:
+This is a **general contribution guide** for most of [INEEDJ's projects](https://github.com/INeedJobToStartWork). Before submitting your contribution, please make sure to take a moment and read through the following guide:
 
 ## 📜 Table of Contents
 

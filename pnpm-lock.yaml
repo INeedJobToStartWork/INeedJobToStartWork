@@ -31,7 +31,11 @@ importers:
         version: 15.2.7
       turbo:
         specifier: latest
+<<<<<<< HEAD
         version: 2.1.1
+=======
+        version: 2.2.3
+>>>>>>> 1492c1d235ed6e3bce9e7197d4a852261d4e9b7e
 
   config/eslintrc:
     dependencies:
@@ -69,8 +73,8 @@ importers:
         specifier: ~1.6.0
         version: 1.6.0
       eslint-plugin-command:
-        specifier: ^0.2.3
-        version: 0.2.3(eslint@8.57.0)
+        specifier: 0.2.6
+        version: 0.2.6(eslint@8.57.0)
       eslint-plugin-compat:
         specifier: ~6.0.0
         version: 6.0.0(eslint@8.57.0)
@@ -171,8 +175,8 @@ importers:
         specifier: ~0.3.0
         version: 0.3.0
       eslint-plugin-turbo:
-        specifier: ~2.0.9
-        version: 2.0.9(eslint@8.57.0)
+        specifier: ~2.0.14
+        version: 2.0.14(eslint@8.57.0)
       eslint-plugin-typescript-compat:
         specifier: ~1.0.2
         version: 1.0.2(eslint@8.57.0)(typescript@5.5.3)
@@ -204,6 +208,9 @@ importers:
       '@eslint/config-inspector':
         specifier: ^0.5.2
         version: 0.5.2(eslint@8.57.0)
+      '@ineedj/eslintrc':
+        specifier: ^1.2.0
+        version: 1.2.0(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.3))(tailwindcss@3.4.4)(typescript@5.5.3)(vue-eslint-parser@9.4.3(eslint@8.57.0))
       '@ineedj/prettierrc':
         specifier: ^2.0.0
         version: 2.0.0(prettier-plugin-packagejson@2.5.0(prettier@3.3.3))(prettier@3.3.3)
@@ -398,6 +405,10 @@ packages:
 
   '@es-joy/jsdoccomment@0.43.1':
     resolution: {integrity: sha512-I238eDtOolvCuvtxrnqtlBaw0BwdQuYqK7eA6XIonicMdOOOb75mqdIzkGDUbS04+1Di007rgm9snFRNeVrOog==}
+    engines: {node: '>=16'}
+
+  '@es-joy/jsdoccomment@0.48.0':
+    resolution: {integrity: sha512-G6QUWIcC+KvSwXNsJyDTHvqUdNoAVJPPgkc3+Uk4WBKqZvoXhlvazOgm9aL0HwihJLQf0l+tOE2UFzXBqCqgDw==}
     engines: {node: '>=16'}
 
   '@esbuild/aix-ppc64@0.21.5':
@@ -1773,6 +1784,11 @@ packages:
     peerDependencies:
       eslint: '*'
 
+  eslint-plugin-command@0.2.6:
+    resolution: {integrity: sha512-T0bHZ1oblW1xUHUVoBKZJR2osSNNGkfZuK4iqboNwuNS/M7tdp3pmURaJtTi/XDzitxaQ02lvOdFH0mUd5QLvQ==}
+    peerDependencies:
+      eslint: '*'
+
   eslint-plugin-compat@6.0.0:
     resolution: {integrity: sha512-oIynkQYqGnW9ibHl1cGLER8XkUlKaOI8bS80Qz7CjKROvbQm4oN8fWb5l2cG9GJJ4h5eFIHPqkB9ZJuMzwpPFQ==}
     engines: {node: '>=18.x'}
@@ -1981,6 +1997,11 @@ packages:
   eslint-plugin-tsdoc@0.3.0:
     resolution: {integrity: sha512-0MuFdBrrJVBjT/gyhkP2BqpD0np1NxNLfQ38xXDlSs/KVVpKI2A6vN7jx2Rve/CyUsvOsMGwp9KKrinv7q9g3A==}
 
+  eslint-plugin-turbo@2.0.14:
+    resolution: {integrity: sha512-E++MSAEeWZTU0FYARrfakMPq+7XeltqeY4JBDQTzbGEWG3kgYJPeYBMWsypcvBujVihQLlMu0S6ImnfV692mHg==}
+    peerDependencies:
+      eslint: '>6.6.0'
+
   eslint-plugin-turbo@2.0.9:
     resolution: {integrity: sha512-q4s4mg6JcXzz5zK4LC3c6FcWehGAWjGj7kIM76ZvG0KiR9Ks0znzjnAKW0NoiDP4s/gt3r4YPOpI357qWt167Q==}
     peerDependencies:
@@ -2075,6 +2096,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@10.1.0:
@@ -2656,6 +2678,10 @@ packages:
 
   jsdoc-type-pratt-parser@4.0.0:
     resolution: {integrity: sha512-YtOli5Cmzy3q4dP26GraSOeAhqecewG04hoO8DY56CH4KJ9Fvv5qKWUCCo3HZob7esJQHCv6/+bnTy72xZZaVQ==}
+    engines: {node: '>=12.0.0'}
+
+  jsdoc-type-pratt-parser@4.1.0:
+    resolution: {integrity: sha512-Hicd6JK5Njt2QB6XYFS7ok9e37O8AYk3jTcppG4YVQnYjOemymvTcmc7OWsmq/Qqj5TdRFO5/x/tIPmBeRtGHg==}
     engines: {node: '>=12.0.0'}
 
   jsesc@0.5.0:
@@ -3951,6 +3977,7 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
+<<<<<<< HEAD
   turbo-darwin-64@2.1.1:
     resolution: {integrity: sha512-aYNuJpZlCoi0Htd79fl/2DywpewGKijdXeOfg9KzNuPVKzSMYlAXuAlNGh0MKjiOcyqxQGL7Mq9LFhwA0VpDpQ==}
     cpu: [x64]
@@ -3983,6 +4010,40 @@ packages:
 
   turbo@2.1.1:
     resolution: {integrity: sha512-u9gUDkmR9dFS8b5kAYqIETK4OnzsS4l2ragJ0+soSMHh6VEeNHjTfSjk1tKxCqLyziCrPogadxP680J+v6yGHw==}
+=======
+  turbo-darwin-64@2.2.3:
+    resolution: {integrity: sha512-Rcm10CuMKQGcdIBS3R/9PMeuYnv6beYIHqfZFeKWVYEWH69sauj4INs83zKMTUiZJ3/hWGZ4jet9AOwhsssLyg==}
+    cpu: [x64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.2.3:
+    resolution: {integrity: sha512-+EIMHkuLFqUdJYsA3roj66t9+9IciCajgj+DVek+QezEdOJKcRxlvDOS2BUaeN8kEzVSsNiAGnoysFWYw4K0HA==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-linux-64@2.2.3:
+    resolution: {integrity: sha512-UBhJCYnqtaeOBQLmLo8BAisWbc9v9daL9G8upLR+XGj6vuN/Nz6qUAhverN4Pyej1g4Nt1BhROnj6GLOPYyqxQ==}
+    cpu: [x64]
+    os: [linux]
+
+  turbo-linux-arm64@2.2.3:
+    resolution: {integrity: sha512-hJYT9dN06XCQ3jBka/EWvvAETnHRs3xuO/rb5bESmDfG+d9yQjeTMlhRXKrr4eyIMt6cLDt1LBfyi+6CQ+VAwQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-windows-64@2.2.3:
+    resolution: {integrity: sha512-NPrjacrZypMBF31b4HE4ROg4P3nhMBPHKS5WTpMwf7wydZ8uvdEHpESVNMOtqhlp857zbnKYgP+yJF30H3N2dQ==}
+    cpu: [x64]
+    os: [win32]
+
+  turbo-windows-arm64@2.2.3:
+    resolution: {integrity: sha512-fnNrYBCqn6zgKPKLHu4sOkihBI/+0oYFr075duRxqUZ+1aLWTAGfHZLgjVeLh3zR37CVzuerGIPWAEkNhkWEIw==}
+    cpu: [arm64]
+    os: [win32]
+
+  turbo@2.2.3:
+    resolution: {integrity: sha512-5lDvSqIxCYJ/BAd6rQGK/AzFRhBkbu4JHVMLmGh/hCb7U3CqSnr5Tjwfy9vc+/5wG2DJ6wttgAaA7MoCgvBKZQ==}
+>>>>>>> 1492c1d235ed6e3bce9e7197d4a852261d4e9b7e
     hasBin: true
 
   type-check@0.4.0:
@@ -4442,6 +4503,12 @@ snapshots:
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.0.0
 
+  '@es-joy/jsdoccomment@0.48.0':
+    dependencies:
+      comment-parser: 1.4.1
+      esquery: 1.6.0
+      jsdoc-type-pratt-parser: 4.1.0
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -4668,8 +4735,13 @@ snapshots:
 
   '@ineedj/prettierrc@2.0.0(prettier-plugin-packagejson@2.5.0(prettier@3.3.3))(prettier@3.3.3)':
     dependencies:
+<<<<<<< HEAD
       prettier: 3.3.3
       prettier-plugin-packagejson: 2.5.0(prettier@3.3.3)
+=======
+      prettier: 3.3.2
+      prettier-plugin-packagejson: 2.5.0(prettier@3.3.2)
+>>>>>>> 1492c1d235ed6e3bce9e7197d4a852261d4e9b7e
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6029,6 +6101,11 @@ snapshots:
       '@es-joy/jsdoccomment': 0.43.1
       eslint: 8.57.0
 
+  eslint-plugin-command@0.2.6(eslint@8.57.0):
+    dependencies:
+      '@es-joy/jsdoccomment': 0.48.0
+      eslint: 8.57.0
+
   eslint-plugin-compat@6.0.0(eslint@8.57.0):
     dependencies:
       '@mdn/browser-compat-data': 5.5.35
@@ -6311,6 +6388,11 @@ snapshots:
     dependencies:
       '@microsoft/tsdoc': 0.15.0
       '@microsoft/tsdoc-config': 0.17.0
+
+  eslint-plugin-turbo@2.0.14(eslint@8.57.0):
+    dependencies:
+      dotenv: 16.0.3
+      eslint: 8.57.0
 
   eslint-plugin-turbo@2.0.9(eslint@8.57.0):
     dependencies:
@@ -7037,6 +7119,8 @@ snapshots:
       argparse: 2.0.1
 
   jsdoc-type-pratt-parser@4.0.0: {}
+
+  jsdoc-type-pratt-parser@4.1.0: {}
 
   jsesc@0.5.0: {}
 
@@ -8541,6 +8625,7 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.5.3
 
+<<<<<<< HEAD
   turbo-darwin-64@2.1.1:
     optional: true
 
@@ -8567,6 +8652,34 @@ snapshots:
       turbo-linux-arm64: 2.1.1
       turbo-windows-64: 2.1.1
       turbo-windows-arm64: 2.1.1
+=======
+  turbo-darwin-64@2.2.3:
+    optional: true
+
+  turbo-darwin-arm64@2.2.3:
+    optional: true
+
+  turbo-linux-64@2.2.3:
+    optional: true
+
+  turbo-linux-arm64@2.2.3:
+    optional: true
+
+  turbo-windows-64@2.2.3:
+    optional: true
+
+  turbo-windows-arm64@2.2.3:
+    optional: true
+
+  turbo@2.2.3:
+    optionalDependencies:
+      turbo-darwin-64: 2.2.3
+      turbo-darwin-arm64: 2.2.3
+      turbo-linux-64: 2.2.3
+      turbo-linux-arm64: 2.2.3
+      turbo-windows-64: 2.2.3
+      turbo-windows-arm64: 2.2.3
+>>>>>>> 1492c1d235ed6e3bce9e7197d4a852261d4e9b7e
 
   type-check@0.4.0:
     dependencies:

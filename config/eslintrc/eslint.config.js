@@ -1,19 +1,16 @@
-import ineedj from "./dist/index.js";
+import ineedj from "../dist/index.js";
 
 export default ineedj({
 	formatters: {
-		json: true,
+		json: false,
 		stylistic: false,
 		stylisticJSX: false,
 		stylisticTS: false,
 		perfectionistSorters: false
 	},
-	modifiers: {
-		only: "warn",
-		commands: false
-	},
 	syntax: {
-		mdx: true,
+		website: false,
+
 		vitest: false,
 		eslint: true,
 		jsx: false,
