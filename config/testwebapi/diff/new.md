@@ -1,0 +1,56 @@
+# MUST HAVE
+
+📏♻️🦄
+
+- [ ] Special Support
+  - [ ] Printers (Where needed)
+  - [ ] Accessibility - WCAG 2.1 or 3.0
+  - [ ] Contrast
+    - [ ] more (default)
+    - [ ] lower
+  - [ ] 🌐 Internationalization (i18n)
+    - [ ] Multi-language support
+    - [ ] RTL layout support
+- [ ] 📏 Responsiveness
+  - [ ] 📺 TV support
+  - [ ] 🖥️ Desktop
+    - [ ] MD 2560px
+    - [ ] LG 1440px
+    - [ ] XL 1024px
+  - [ ] 💻 Tablet 768px
+  - [ ] 📱 Mobile
+    - [ ] S 425px
+    - [ ] M 375px
+    - [ ] L 320px
+- [ ] ⚡ Optimized
+  - [ ] Use CDN's
+  - [ ] Caching Files (CSS/JS with naming `fileName.cacheTag.ext`)
+  - [ ] CSS
+    - [ ] Minification
+    - [ ] Critical CSS inlining
+  - [ ] Javascript
+    - [ ] ♻️ Minify and Compress (Code-Splitting, Lazy Loading, Memoizing/Cache'ing, treeshake, optimize etc)
+    - [ ] Async Loading
+    - [ ] Load at the End of the Body (`<script>` tags at bottom of body)
+    - [ ] Priority Loading
+  - [ ] 🖼️ Images
+    - [ ] Optimization (compression, proper format selection)
+    - [ ] Lazy loading
+    - [ ] Responsive images (srcset)
+  - [ ] 🔒 Security
+    - [ ] Implementation of Content Security Policy (CSP)
+    - [ ] HTTPS enforcement
+    - [ ] Cross-Site Scripting (XSS) protection
+- [ ] Maintaining
+  - [ ] To Statistics
+  - [ ] 📊 Analytics Integration
+  - [ ] 🐛 Error Logging and Monitoring
+- [ ] 🧪 Testing
+  - [ ] Unit Tests
+  - [ ] Integration Tests
+  - [ ] Cross-browser compatibility
+  - [ ] Performance benchmarking
+- [ ] 📱 Progressive Web App (PWA) features
+  - [ ] Service Workers
+  - [ ] Offline functionality
+  - [ ] Add to Home Screen capability

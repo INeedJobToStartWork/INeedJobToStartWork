@@ -1,0 +1,37 @@
+📏♻️🦄
+
+- [ ] Special Support
+  - [ ] Printers (Where needed)
+  - [ ] Accessibility - WCAG 2.1 or 3.0
+  - [ ] Contrast
+    - [ ] more (default)
+    - [ ] lower
+- [ ] 📏 Responsivenes
+  - [ ] 📺 TV support
+  - [ ] 🖥️ Desktop
+    - [ ] XL 2560px
+    - [ ] L 2048px
+    - [ ] M 1440px
+    - [ ] S 1024px
+  - [ ] 💻 Tablet 768px
+  - [ ] 📱 Mobile
+    - [ ] L 425px
+    - [ ] M 375px
+    - [ ] S 320px
+- [ ] ⚡ Optimized
+  - [ ] 100/100 points at `unlighthouse`
+    - [ ] 100/100 Performance
+    - [ ] 100/100 Accessibility
+    - [ ] 100/100 Best Practices
+    - [ ] 100/100 SEO
+    - [ ] 100/100 CrUX
+  - [ ] Use CDN's
+  - [ ] Caching Files (CSS/JS with naming `fileName.cacheTag.ext`)
+  - [ ] CSS
+  - [ ] Javascript
+    - [ ] ♻️ Minify and Compress (Code-Splitting, Lazy Loading, Memoizing/Cache'ing, treeshake, optimize etc)
+    - [ ] Async Loading
+    - [ ] Load at the End of the Body (`<script>` tags at bottom of body)
+    - [ ] Priority Loading
+- Maintaining
+  - To Statistics

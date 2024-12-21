@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  transition: 150ms;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance;
+}
+:is(p, ol, li, figcaption, caption, a) {
+  max-width: 80ch;
+  text-wrap: pretty;
+}
+
+:is(a) {
+  text-decoration: none;
+}
+
+:is(img, picture, svg, video) {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+:is(ol, li) {
+  list-style-position: inside;
+}
+
+/* 
+
+  Force Colored
+
+*/
+:is(button, a) {
+  outline: 0.0625em solid transparent; /* 1px */
+
+  &:is(:hover, :focus) {
+    outline: 0.1875em solid transparent; /* 3px */
+  }
+}
+
+:is(a, a:visited, a:active) {
+  background-color: none;
+  text-decoration: none;
+}
+
+/* @media (forced-colors: active) {
+  svg: ;
+} */
