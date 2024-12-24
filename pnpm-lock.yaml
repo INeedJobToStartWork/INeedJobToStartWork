@@ -18,8 +18,8 @@ importers:
         specifier: ^20.14.10
         version: 20.14.10
       commitsmile:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
       globals:
         specifier: ^13.24.0
         version: 13.24.0
@@ -1437,8 +1437,8 @@ packages:
     resolution: {integrity: sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==}
     engines: {node: '>= 12.0.0'}
 
-  commitsmile@1.0.2:
-    resolution: {integrity: sha512-QzPhiXhIi9ty6oUwm2YYB9X6K9ccg80s6nPob8fDk3FBZLWyI3/U9PNUokPoI0Se7FKISUrbxeICKd8nS/S9Dw==}
+  commitsmile@1.0.3:
+    resolution: {integrity: sha512-Uan1k+oJ7JQlbTNmHldtEOfe1AZd7L+MzmUK6YEk6IJFonV3nhuBNYJ5Fyml8tAXdGq1vhiOFSVzhX6rVGP2/g==}
     engines: {node: '>=20'}
     hasBin: true
     bundledDependencies:
@@ -5609,7 +5609,7 @@ snapshots:
 
   comment-parser@1.4.1: {}
 
-  commitsmile@1.0.2: {}
+  commitsmile@1.0.3: {}
 
   concat-map@0.0.1: {}
 
