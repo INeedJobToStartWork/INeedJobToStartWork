@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // @ts-expect-error: No type declaration for module
 import EslintCssModules from "eslint-plugin-css-modules";
-// @ts-expect-error: No type declaration for module
+
 import EslintReact from "eslint-plugin-react";
 // @ts-expect-error: No type declaration for module
 import EslintReactFormFields from "eslint-plugin-react-form-fields";
@@ -10,7 +10,7 @@ import EslintReactHooksForms from "eslint-plugin-react-hook-form";
 // @ts-expect-error: No type declaration for module
 import EslintReactPerf from "eslint-plugin-react-perf";
 import EslintReactPrefFuncComp from "eslint-plugin-react-prefer-function-component";
-// @ts-expect-error: No type declaration for module
+
 import EslintReactRefresh from "eslint-plugin-react-refresh";
 // @ts-expect-error: No type declaration for module
 import EslintSSRFriendly from "eslint-plugin-ssr-friendly";
@@ -180,10 +180,12 @@ export default defineFlatConfig({
 		"@EslintReact/state-in-constructor": "off", // idk
 		"@EslintReact/static-property-placement": "off", // idk
 		"@EslintReact/style-prop-object": "off", // Who use this
+		"@EslintReact/jsx-props-no-spread-multi-class": "error",
 		"@EslintReact/void-dom-elements-no-children": "error",
+		"@EslintReact/forward-ref-uses-ref": "error",
+		"@EslintReact/jsx-props-no-spread-multi": "error",
 
 		"@EslintReactRefresh/only-export-components": "error",
-
 		// React
 		"@EslintReactHooksForms/no-nested-object-setvalue": "error",
 		"@EslintReactHooksForms/no-access-control": "error",

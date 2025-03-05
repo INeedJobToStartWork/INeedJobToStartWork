@@ -25,6 +25,8 @@ export default defineFlatConfig({
 		"@EslintTOML/spaced-comment": ["error", "always"],
 		"@EslintTOML/table-bracket-spacing": ["error", "always"],
 		"@EslintTOML/tables-order": "error",
-		"@EslintTOML/vue-custom-block/no-parsing-error": "off" // React only
+		"@EslintTOML/vue-custom-block/no-parsing-error": "off", // React only
+		"@EslintTOML/no-mixed-type-in-array": "off",
+		"@EslintTOML/indent": ["error", 2]
 	}
 });

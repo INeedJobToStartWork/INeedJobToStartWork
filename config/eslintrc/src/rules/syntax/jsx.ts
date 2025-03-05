@@ -73,6 +73,7 @@ export default defineFlatConfig({
 		"@EslintJSXA11/role-has-required-aria-props": "warn",
 		"@EslintJSXA11/role-supports-aria-props": "error",
 		"@EslintJSXA11/scope": "error",
-		"@EslintJSXA11/tabindex-no-positive": "error" // Can have some issues
+		"@EslintJSXA11/tabindex-no-positive": "error", // Can have some issues
+		"@EslintJSXA11/mouse-events-have-key-events": "warn"
 	}
 });

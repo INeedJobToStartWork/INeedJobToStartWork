@@ -12,12 +12,12 @@ import EslintPii from "eslint-plugin-pii";
 // @ts-expect-error: No type declaration for module
 import EslintPromise from "eslint-plugin-promise";
 import EslintSecurity from "eslint-plugin-security";
+
 import EslintSonar from "eslint-plugin-sonarjs";
-// @ts-expect-error: No type declaration for module
 import EslintUnicorn from "eslint-plugin-unicorn";
 // @ts-expect-error: No type declaration for module
 import EslintImports from "eslint-plugin-import";
-// @ts-expect-error: No type declaration for module
+// @tsw-expect-error: No type declaration for module
 import EslintUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import { filesTS, languageOptionsTS } from "../helpers";
@@ -33,7 +33,6 @@ const languageOptions = (() =>
 
 export default defineFlatConfig({
 	files: files,
-
 	languageOptions: languageOptions,
 	name: "Default",
 	plugins: {
@@ -265,6 +264,7 @@ export default defineFlatConfig({
 		"@EslintPii/no-email": "error",
 		"@EslintPii/no-ip": "error",
 		"@EslintPii/no-phone-number": "error",
+		"@EslintPii/no-dob": "off",
 
 		"@EslintOptRegConf/optimize-regex": "error",
 		"@EslintSecurity/detect-unsafe-regex": "error",
@@ -276,7 +276,7 @@ export default defineFlatConfig({
 		// "@EslintSecurity/detect-no-unsafe-regex": "error",
 		"@EslintSecurity/detect-non-literal-require": "error",
 
-		// "@EslintSecurity/detect-child-process":"error",
+		"@EslintSecurity/detect-child-process": "warn",
 		"@EslintSecurity/detect-new-buffer": "error",
 		"@EslintSecurity/detect-disable-mustache-escape": "error",
 		"@EslintSecurity/detect-possible-timing-attacks": "error",
@@ -284,8 +284,7 @@ export default defineFlatConfig({
 		"@EslintSecurity/detect-buffer-noassert": "error",
 		"@EslintSecurity/detect-pseudoRandomBytes": "error",
 		"@EslintSecurity/detect-no-csrf-before-method-override": "error",
-
-		// "@EslintSecurity/detect-non-literal-fs-filename":"error"
+		"@EslintSecurity/detect-non-literal-fs-filename": "warn",
 
 		"@EslintPromise/always-return": "error",
 		"@EslintPromise/no-return-wrap": "error",

@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { defineFlatConfig } from "eslint-flat-config-utils";
-// @ts-expect-error: No type declaration for module
+
 import EslintStorybook from "eslint-plugin-storybook";
 
 export default defineFlatConfig({
 	files: ["**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 	name: "Storybook",
-	plugins: { "@EslintStorybook": EslintStorybook },
+	plugins: { "@EslintStorybook": EslintStorybook as any }, // TODO: HERE
 	rules: {
 		"@EslintStorybook/default-exports": "error",
 		"@EslintStorybook/await-interactions": "error",

@@ -24,6 +24,7 @@ export default defineFlatConfig({
 		// Formatter
 		"@EslintTailwindCSSReadable/multiline": "warn",
 		"@EslintTailwindCSSReadable/no-unnecessary-whitespace": "warn",
-		"@EslintTailwindCSSReadable/sort-classes": "warn"
+		"@EslintTailwindCSSReadable/sort-classes": "warn",
+		"@EslintTailwindCSSReadable/no-duplicate-classes": "error"
 	}
 });

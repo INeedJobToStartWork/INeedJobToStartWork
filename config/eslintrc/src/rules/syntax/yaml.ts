@@ -32,6 +32,7 @@ export default defineFlatConfig({
 		"@EslintYML/sort-keys": "warn", // Maybe someone need to off it cuz iteration
 		"@EslintYML/sort-sequence-values": ["error", { pathPattern: ".*", order: { type: "asc" } }], // Maybe someone gonna off it
 		"@EslintYML/spaced-comment": ["error", "always"],
-		"@EslintYML/vue-custom-block/no-parsing-error": "off" // Only react
+		"@EslintYML/vue-custom-block/no-parsing-error": "off", // Only react
+		"@EslintYML/flow-sequence-bracket-spacing": "off"
 	}
 });
