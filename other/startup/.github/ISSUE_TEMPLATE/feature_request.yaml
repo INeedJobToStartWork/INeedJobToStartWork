@@ -37,7 +37,7 @@ body:
   - type: input
     id: solution
     attributes:
-      label: What it gonna solve? Why we should ad it?
+      label: What it gonna solve? Why should we add it?
       description: How it will help you and others? What kind of problems it will solve?.
       placeholder: |
         e.g It will help me and users to prevent api calls spamming and give a better user experience.
