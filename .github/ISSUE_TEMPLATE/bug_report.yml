@@ -14,7 +14,7 @@ body:
 
         Before submitting a new bug/issue, please check the links below to see if there is a solution or question posted there already:
           - INEEDJ's [Issue's tab](https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues)
-          - INEEDJ's [closed issues tab](https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues?q=is%3Aissue+is%3Aclosed)
+          - INEEDJ's [closed issues tab](https://github.com/INeedJobToStartWork/INeedJobToStartWork/issues?q=is%3Aissue+state%3Aclosed)
           - INEEDJ's [Discussions tab](https://github.com/INeedJobToStartWork/INeedJobToStartWork/discussions)
 
 

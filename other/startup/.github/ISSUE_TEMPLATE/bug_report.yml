@@ -14,7 +14,7 @@ body:
 
         Before submitting a new bug/issue, please check the links below to see if there is a solution or question posted there already:
           - PACKAGECUSTOM's [Issue's tab](https://github.com/INeedJobToStartWork/PACKAGECUSTOM/issues)
-          - PACKAGECUSTOM's [closed issues tab](https://github.com/INeedJobToStartWork/PACKAGECUSTOM/issues?q=is%3Aissue+is%3Aclosed)
+          - PACKAGECUSTOM's [closed issues tab](https://github.com/INeedJobToStartWork/PACKAGECUSTOM/issues?q=is%3Aissue+state%3Aclosed)
           - PACKAGECUSTOM's [Discussions tab](https://github.com/INeedJobToStartWork/PACKAGECUSTOM/discussions)
 
 
