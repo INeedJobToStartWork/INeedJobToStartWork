@@ -1,5 +1,2 @@
 ![Banner](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/8a7bea48-e844-4fab-94b1-1c61cd9806aa)
-![AboutMe](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/b0548da2-3e4d-4b48-b305-a4d9755962e7)
-![BannerRoadMap](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/87bc9ba6-ebc2-41b5-b11b-9bccc509582e)
-![sectionRoadMap](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/43ab5875-2169-4cce-8433-7a1fddc9b0bc)
-![setionRoadMap2](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/7192daf7-5bfb-4fb5-863a-62112b4d73d8)
+
