@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-import EslintMdx, { createRemarkProcessor as mdxProcessor } from "eslint-plugin-mdx";
+import { rules as EslintMdx, createRemarkProcessor as mdxProcessor } from "eslint-plugin-mdx";
 
 import { composer, defineFlatConfig } from "eslint-flat-config-utils";
 
