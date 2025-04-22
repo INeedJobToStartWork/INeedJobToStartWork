@@ -4,7 +4,6 @@ module.exports = {
   bracketSameLine: true,
   bracketSpacing: true,
   cursorOffset: -1,
-  plugins: ["prettier-plugin-packagejson"],
   printWidth: 120,
   proseWrap: "always",
   tabWidth: 2,

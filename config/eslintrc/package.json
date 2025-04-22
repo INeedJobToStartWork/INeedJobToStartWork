@@ -102,7 +102,7 @@
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^1.0.2",
-		"@ineedj/prettierrc": "^2.0.0",
+		"@ineedj/prettierrc": "^3.0.0",
 		"@ineedj/tsconfig": "workspace:*",
 		"@ineedj/tsuprc": "workspace:*",
 		"@types/eslint-plugin-security": "^3.0.0",
