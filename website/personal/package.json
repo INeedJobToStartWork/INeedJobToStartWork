@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@ineedj/eslintrc": "~1.2.0",
-		"@ineedj/prettierrc": "^3.0.0",
+		"@ineedj/prettierrc": "^2.0.0",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
