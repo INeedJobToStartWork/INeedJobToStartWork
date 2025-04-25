@@ -8,24 +8,30 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "------------------------DEV & BUILD-------------------------": "",
     "dev": "turbo dev",
     "build": "turbo build",
     "build:npm": "turbo build:npm",
     "start": "turbo start",
+    "------------------------LINTING & FORMATTING---------------": "",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "lint:next": "turbo lint:next",
     "lint:test": "turbo lint:test",
     "format": "turbo format",
+    "------------------------UTILS------------------------------": "",
     "clean": "turbo clean",
+    "------------------------NPM SCRIPTS-------------------------": "",
     "npm:prepack": "turbo npm:prepack",
     "npm:postpack": "turbo npm:postpack",
     "npm:version": "changeset version",
     "npm:publish": "changeset publish",
+    "------------------------HUSKY & GIT HOOKS------------------": "",
     "preinstall": "husky init",
     "pre": "turbo pre",
     "pre:husky": "git add . && lint-staged",
     "prepare": "husky",
+    "------------------------TESTING----------------------------": "",
     "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
@@ -44,5 +50,8 @@
   "lint-staged": {
     "*": ""
   },
-  "packageManager": "pnpm@9.4.0"
+  "packageManager": "pnpm@9.4.0",
+  "dependencies": {
+    "ineedjobtostartwork": "file:"
+  }
 }
