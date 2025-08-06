@@ -1,2 +1,2 @@
-![Banner](https://github.com/INeedJobToStartWork/INeedJobToStartWork/assets/97305201/8a7bea48-e844-4fab-94b1-1c61cd9806aa)
+![Banner](https://github.com/user-attachments/assets/389e1477-7fbd-4e5d-99de-b96464e92163)
 
