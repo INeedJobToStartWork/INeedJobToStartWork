@@ -1,6 +1,6 @@
 {
   "name": "@ineedj/prettierrc",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "INEEDJ config for Prettier ",
   "keywords": [
     "prettierrc",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "author": "ineedjobtostartwork",
   "peerDependencies": {
-    "prettier": "^3.1.1"
+    "prettier": "^3.8.1"
   },
   "publishConfig": {
     "provenance": true
