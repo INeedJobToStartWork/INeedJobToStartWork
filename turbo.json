@@ -1,25 +1,57 @@
 {
   "$schema": "https://turbo.build/schema.json",
+
   "tasks": {
     "pre": {},
-    "start": {},
+    "storybook": {},
+    "analyze": {},
+    "start": {
+      "outputs": []
+    },
+    "start:dev": {
+      "outputs": []
+    },
+    "start:prod": {
+      "outputs": []
+    },
+    "bench": {},
     "build": {},
-    "dts": {},
-    "lint:next": {},
-    "lint:test": {},
+    "build:dev": {
+      "cache": false,
+      "dependsOn": ["^build:dev"],
+      "outputs": ["dist/**"]
+    },
+    "build:prod": {
+      "cache": true,
+      "dependsOn": ["^build:prod", "^format", "^lint:fix", "^lint"],
+      "outputs": ["dist/**"]
+    },
     "build:npm": {
+      "cache": true,
+      "dependsOn": ["^build:prod", "^format", "^lint"],
+      "outputs": ["dist/**"],
       "inputs": ["*", "!dist"]
+    },
+    "test": {},
+    "test:watch": {
+      "cache": false
     },
     "lint": {},
     "lint:fix": {},
+    "lint:test": {},
+    "lint:next": {},
     "link-cli": {},
     "link-cli:dev": {},
     "unlink-cli": {},
     "unlink-cli:dev": {},
     "format": {},
+    "clean": {
+      "cache": false
+    },
     "npm:prepack": {},
     "npm:postpack": {},
     "prepublishOnly": {},
+    "test:coverage": {},
     "dev": {
       "cache": false,
       "persistent": true
