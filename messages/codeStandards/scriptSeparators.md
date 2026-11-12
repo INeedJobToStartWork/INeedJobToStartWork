@@ -14,17 +14,36 @@ Visual Scripts separators implemented as scripts (unusable, only visually) **to 
 
 ```ts
 	"scripts": {
-		"prepare": "",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"format": "pnpm prettier . --write && pnpm prettier . --check",
-		"build:dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
-		"build:prod": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
-		"commands:dev": "node lib/scripts/registerCommands.js",
-		"commands:prod": "node dist/scripts/registerCommands.js",
-		"start:prod": "set NODE_ENV=production && nodemon --watch dist ./dist/index.js",
-		"start:dev": "set NODE_ENV=development && nodemon --watch lib ./lib/index.js",
-		"test": "echo \"Error: no test specified\""
+    "preinstall": "husky init",
+    "prepare": "husky",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:next": "turbo lint:next",
+    "lint:test": "turbo lint:test",
+    "format": "turbo format",
+    "clean:cache": "rimraf --glob \"**/.turbo\"",
+    "clean:builds": "rimraf --glob \"**/dist\" \"**/build\" \"**/lib\"",
+    "clean:node_modules": "rimraf --glob \"**/node_modules\"",
+    "link-cli": "turbo link-cli",
+    "link-cli:dev": "turbo link-cli",
+    "unlink-cli:dev": "turbo link-cli",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:dev": "turbo build:dev",
+    "build:prod": "turbo build:prod",
+    "build:npm": "turbo build:npm",
+    "start:dev": "turbo start:dev",
+    "start:prod": "turbo start:prod",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
+    "test:coverage": "turbo test:coverage",
+    "bench": "turbo bench"
 	},
 ```
 
@@ -32,22 +51,41 @@ Visual Scripts separators implemented as scripts (unusable, only visually) **to 
 
 ```ts
 	"scripts": {
-		"------------------------INSTALLATION--------------------------------------": "",
-		"prepare": "",
-		"------------------------UTILS---------------------------------------------": "",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"format": "pnpm prettier . --write && pnpm prettier . --check",
-		"------------------------BUILDS--------------------------------------------": "",
-		"build:dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
-		"build:prod": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
-		"------------------------DEPLOYS-------------------------------------------": "",
-		"commands:dev": "node lib/scripts/registerCommands.js",
-		"commands:prod": "node dist/scripts/registerCommands.js",
-		"start:prod": "set NODE_ENV=production && nodemon --watch dist ./dist/index.js",
-		"start:dev": "set NODE_ENV=development && nodemon --watch lib ./lib/index.js",
-		"------------------------TESTS---------------------------------------------": "",
-		"test": "echo \"Error: no test specified\""
+    "------------------------INSTALLATION-------------------": "",
+    "preinstall": "husky init",
+    "prepare": "husky",
+    "pre": "turbo pre",
+    "pre:husky": "git add . && lint-staged",
+    "------------------------UTILS--------------------------": "",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:next": "turbo lint:next",
+    "lint:test": "turbo lint:test",
+    "format": "turbo format",
+    "clean:cache": "rimraf --glob \"**/.turbo\"",
+    "clean:builds": "rimraf --glob \"**/dist\" \"**/build\" \"**/lib\"",
+    "clean:node_modules": "rimraf --glob \"**/node_modules\"",
+    "link-cli": "turbo link-cli",
+    "link-cli:dev": "turbo link-cli",
+    "unlink-cli:dev": "turbo link-cli",
+    "------------------------BUILDS-------------------------": "",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "build:dev": "turbo build:dev",
+    "build:prod": "turbo build:prod",
+    "build:npm": "turbo build:npm",
+    "------------------------DEPLOYS------------------------": "",
+    "start:dev": "turbo start:dev",
+    "start:prod": "turbo start:prod",
+    "npm:prepack": "turbo npm:prepack",
+    "npm:postpack": "turbo npm:postpack",
+    "npm:version": "changeset version",
+    "npm:publish": "changeset publish",
+    "------------------------TESTS--------------------------": "",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
+    "test:coverage": "turbo test:coverage",
+    "bench": "turbo bench"
 	},
 ```
 
@@ -59,5 +97,10 @@ Visual Scripts separators implemented as scripts (unusable, only visually) **to 
 "------------------------BUILDS-----------------------": "", // For build-related scripts (e.g., dev/prod builds)
 "------------------------DEPLOYS----------------------": "", // For deployment and runtime scripts (e.g., start commands)
 "------------------------TESTS------------------------": "", // For testing-related scripts (e.g., test, coverage)
-"------------------------OTHER------------------------": "",
+"------------------------OTHER------------------------": "", // Last section for ungrouped scripts, which are not fit to any other section
 ```
+
+## AI Suggestions
+
+Use the examples from the Examples section first. When the OTHER section accumulates a group of scripts that fit a new separator, propose creating a new separator with its own name.
+Order matters, so you should follow the order of the examples. If you would like to create a new separator like mentioned above, add it before the OTHER section. OTHER section should be the last section.
