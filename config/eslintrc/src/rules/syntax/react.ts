@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { IFlatConfig } from "../../types";
 // @ts-expect-error: No type declaration for module
 import EslintCssModules from "eslint-plugin-css-modules";
 
@@ -7,6 +7,7 @@ import EslintReact from "eslint-plugin-react";
 import EslintReactFormFields from "eslint-plugin-react-form-fields";
 // @ts-expect-error: No type declaration for module
 import EslintReactHooksForms from "eslint-plugin-react-hook-form";
+import EslintReactHooks from "eslint-plugin-react-hooks";
 // @ts-expect-error: No type declaration for module
 import EslintReactPerf from "eslint-plugin-react-perf";
 import EslintReactPrefFuncComp from "eslint-plugin-react-prefer-function-component";
@@ -16,23 +17,24 @@ import EslintReactRefresh from "eslint-plugin-react-refresh";
 import EslintSSRFriendly from "eslint-plugin-ssr-friendly";
 // @ts-expect-error: No type declaration for module
 import EslintValJSXNesting from "eslint-plugin-validate-jsx-nesting";
-import { isTs, languageOptionsTS } from "../helpers";
+import { fixupPlugin, isTs, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.jsx", ...(isTs ? ["**/*.tsx"] : [])],
 	name: "React",
 	languageOptions: languageOptionsTS(),
 	plugins: {
-		"@EslintReact": EslintReact,
+		"@EslintReact": fixupPlugin(EslintReact),
 		"@EslintReactRefresh": EslintReactRefresh,
-		"@EslintReactPrefFuncComp": EslintReactPrefFuncComp as any,
-		"@EslintReactFormFields": EslintReactFormFields,
-		"@EslintReactHooksForms": EslintReactHooksForms,
-		"@EslintSSRFriendly": EslintSSRFriendly,
-		"@EslintValJSXNesting": EslintValJSXNesting,
+		"@EslintReactPrefFuncComp": EslintReactPrefFuncComp,
+		"@EslintReactFormFields": fixupPlugin(EslintReactFormFields),
+		"@EslintReactHooksForms": fixupPlugin(EslintReactHooksForms),
+		"@EslintReactHooks": EslintReactHooks as any,
+		"@EslintSSRFriendly": fixupPlugin(EslintSSRFriendly),
+		"@EslintValJSXNesting": fixupPlugin(EslintValJSXNesting),
 		"@EslintReactPerf": EslintReactPerf,
-		"@EslintCssModules": EslintCssModules
+		"@EslintCssModules": fixupPlugin(EslintCssModules)
 	},
 	rules: {
 		"@EslintReact/boolean-prop-naming": "error",
@@ -62,7 +64,7 @@ export default defineFlatConfig({
 		"@EslintReact/jsx-curly-spacing": "off", // There no stylistic changes
 		"@EslintReact/jsx-curly-newline": "off", // There no stylistic changes
 		"@EslintReact/jsx-equals-spacing": "off", // There no stylistic changes
-		"@EslintReact/jsx-filename-extension": ["error", "always"],
+		"@EslintReact/jsx-filename-extension": ["error", { allow: "always", extensions: [".jsx", ".tsx"] }],
 		"@EslintReact/jsx-first-prop-new-line": "off", // There no stylistic changes
 		"@EslintReact/jsx-handler-names": "off", // not sure about configuration
 		"@EslintReact/jsx-indent": "off", // There no stylistic changes
@@ -89,12 +91,12 @@ export default defineFlatConfig({
 		"@EslintReact/jsx-no-comment-textnodes": "error",
 		"@EslintReact/jsx-no-constructed-context-values": "error",
 		"@EslintReact/jsx-no-duplicate-props": "error",
-		"@EslintReact/jsx-no-leaked-render": ["error", { validStrategies: "ternary" }],
+		"@EslintReact/jsx-no-leaked-render": ["error", { validStrategies: ["ternary"] }],
 		"@EslintReact/jsx-no-literals": [
 			"error",
 			{
 				noStrings: true,
-				allowedStrings: true,
+				allowedStrings: [],
 				ignoreProps: true,
 				noAttributeStrings: false
 			}
@@ -180,7 +182,6 @@ export default defineFlatConfig({
 		"@EslintReact/state-in-constructor": "off", // idk
 		"@EslintReact/static-property-placement": "off", // idk
 		"@EslintReact/style-prop-object": "off", // Who use this
-		"@EslintReact/jsx-props-no-spread-multi-class": "error",
 		"@EslintReact/void-dom-elements-no-children": "error",
 		"@EslintReact/forward-ref-uses-ref": "error",
 		"@EslintReact/jsx-props-no-spread-multi": "error",

@@ -6,8 +6,6 @@ export const tsParserOptions = {
 	parserOptions: {
 		parser: true,
 		tsconfigRootDir: process.cwd(),
-		project: "./tsconfig.json",
-
 		projectService: true,
 		// extraFileExtensions: ['.ts'],
 

@@ -1,5 +1,52 @@
 # @ineedj/eslintrc
 
+## 2.0.0
+
+### Major Changes
+
+- Support for ESLint 10 + all dependencies updated to latest.
+
+  ### Breaking Changes
+  - Requires ESLint `>=10.4` (flat config only) and Node.js `^20.19.0 || ^22.13.0 || >=24`.
+  - `syntax.typescript` requires TypeScript `<6.1` (`typescript-eslint` supported range). Parser now uses only
+    `projectService` (`project: "./tsconfig.json"` removed - both together are an error in `typescript-eslint` 8.x), so
+    linted files must be included in a `tsconfig.json`.
+  - `syntax.tailwindcss` requires Tailwind CSS v4 installed in the project (`eslint-plugin-tailwindcss` v4).
+  - `formatters.json` now applies only to `.json`, `.jsonc` and `.json5` files.
+  - Replaced plugins (plugin namespaces are kept):
+    - `eslint-plugin-vitest` -> `@vitest/eslint-plugin`
+    - `eslint-plugin-readable-tailwind` -> `eslint-plugin-better-tailwindcss` (`@EslintTailwindCSSReadable/multiline` ->
+      `enforce-consistent-line-wrapping`, `@EslintTailwindCSSReadable/sort-classes` -> `enforce-consistent-class-order`)
+    - `eslint-plugin-deprecation` -> `@typescript-eslint/no-deprecated`
+    - `@stylistic/eslint-plugin-js|ts|jsx|plus` -> `@stylistic/eslint-plugin` (registered under the same
+      `@stylistic/js|ts|jsx|plus` namespaces)
+  - Renamed rules:
+    - `@typescript-eslint/no-throw-literal` -> `@typescript-eslint/only-throw-error`
+    - `@typescript-eslint/no-useless-template-literals` -> `@typescript-eslint/no-unnecessary-template-expression`
+    - `@typescript-eslint/ban-types` -> `@typescript-eslint/no-restricted-types`, `no-empty-object-type`,
+      `no-unsafe-function-type`, `no-wrapper-object-types`
+    - `@EslintUnicorn/no-array-for-each` -> `@EslintUnicorn/no-for-each`
+  - Removed rules/options (removed upstream): `@EslintSonar/no-one-iteration-loop`,
+    `@EslintTailwindCSS/migration-from-tailwind-2`, `@stylistic/jsx/jsx-indent`, `@stylistic/jsx/jsx-sort-props`,
+    `@stylistic/jsx/jsx-props-no-multi-spaces`,
+    `@EslintPerfectionist/sort-astro-attributes|sort-svelte-attributes|sort-vue-attributes`, `spread-last` option of
+    `@EslintPerfectionist/sort-array-includes`, `overrides.arrow` option of `@stylistic/ts/type-annotation-spacing`.
+
+  ### Fixes
+  - Legacy plugins (`import`, `react`, `jsx-a11y`, `pii`, `ssr-friendly`, `typescript-sort-keys`, ...) are wrapped with
+    `@eslint/compat`, so they don't crash on ESLint 10.
+  - `syntax.react`: `@EslintReactHooks` plugin was not registered (the whole preset crashed); fixed invalid options of
+    `jsx-filename-extension`, `jsx-no-leaked-render` and `jsx-no-literals`.
+  - `syntax.website`: `plugin`/`rule` typos - the preset was never applied.
+  - `formatters.stylisticTS` / `formatters.stylisticJSX` were applied to every file except TS/JSX (`ignores` ->
+    `files`).
+  - `formatters.json`, `syntax.yaml`, `syntax.toml`: files were parsed as JavaScript, now use proper ESLint languages.
+  - `syntax.ignoreGlobalFiles.gitIgnore` doesn't crash when the project has no `.gitignore`.
+  - Typos in rule keys (`exports-last`, `default-param-last`, TOML `no-mixed-type-in-array`) and a stray `console.log`
+    on config load.
+  - Type declarations build fixed (`.d.ts`), fewer `as any` casts.
+  - README: requirements section, removed obsolete `ESLINT_USE_FLAT_CONFIG`, `README.npm.md` synced.
+
 ## 1.2.4
 
 ### Patch Changes

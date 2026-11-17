@@ -1,4 +1,4 @@
-import ineedj from "./dist/index";
+import ineedj from "./dist/index.js";
 
 export default ineedj({
 	formatters: {
@@ -18,7 +18,7 @@ export default ineedj({
 		node: true,
 		react: true,
 		storybook: true,
-		tailwindcss: true,
+		tailwindcss: false, // eslint-plugin-tailwindcss v4 requires tailwindcss to be installed
 		typescript: true,
 		toml: true,
 		yaml: true,

@@ -1,10 +1,11 @@
-import stylisticJSX from "@stylistic/eslint-plugin-jsx";
+import type { IFlatConfig } from "../../types";
+import stylistic from "@stylistic/eslint-plugin";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-export default defineFlatConfig({
-	ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+export default defineFlatConfig<IFlatConfig>({
+	files: ["**/*.jsx", "**/*.tsx"],
 	name: "Stylistic - Strong Typing",
-	plugins: { "@stylistic/jsx": stylisticJSX as any },
+	plugins: { "@stylistic/jsx": stylistic },
 	rules: {
 		// "@stylistic/jsx/jsx-child-element-spacing": [1, { selfClosing: "line-aligned", nonEmpty: "after-props" }], TODO
 		"@stylistic/jsx/jsx-closing-bracket-location": "error",
@@ -34,7 +35,6 @@ export default defineFlatConfig({
 		"@stylistic/jsx/jsx-equals-spacing": ["error", "never"],
 		"@stylistic/jsx/jsx-first-prop-new-line": ["error", "never"],
 		"@stylistic/jsx/jsx-function-call-newline": ["error", "multiline"],
-		"@stylistic/jsx/jsx-indent": ["error", "tab"],
 		"@stylistic/jsx/jsx-indent-props": ["error", "tab"],
 		"@stylistic/jsx/jsx-max-props-per-line": [
 			"error",
@@ -53,8 +53,7 @@ export default defineFlatConfig({
 				html: true
 			}
 		],
-		"@stylistic/jsx/jsx-sort-props": "off", // sorted by other
-		"@stylistic/jsx/jsx-props-no-multi-spaces": "error",
+		// jsx-indent, jsx-sort-props, jsx-props-no-multi-spaces removed in stylistic v5 (covered by indent / no-multi-spaces)
 		"@stylistic/jsx/jsx-tag-spacing": [
 			"error",
 			{

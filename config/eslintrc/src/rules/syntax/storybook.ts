@@ -1,12 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { IFlatConfig } from "../../types";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 import EslintStorybook from "eslint-plugin-storybook";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 	name: "Storybook",
-	plugins: { "@EslintStorybook": EslintStorybook as any }, // TODO: HERE
+	plugins: { "@EslintStorybook": EslintStorybook as any },
 	rules: {
 		"@EslintStorybook/default-exports": "error",
 		"@EslintStorybook/await-interactions": "error",

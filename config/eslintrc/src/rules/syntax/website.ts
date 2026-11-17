@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { IFlatConfig } from "../../types";
 import globals from "globals";
 import { filesTS, languageOptionsTS } from "../helpers";
 
@@ -9,14 +9,14 @@ const files = (() => filesTS(["**/*.html", "**/*.js", "**/*.jsx", "**/*.mjs", "*
 const languageOptions = (() =>
 	languageOptionsTS({ ecmaVersion: "latest", sourceType: "module", globals: { ...globals.node } }))();
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: files,
 	languageOptions: languageOptions,
 	name: "Website",
-	plugin: {
+	plugins: {
 		"@EslintCompat": EslintCompat
 	},
-	rule: {
+	rules: {
 		"@EslintCompat/compat": "warn"
 	}
 });

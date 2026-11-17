@@ -17,7 +17,7 @@
 | `modifiers.ban`                         | TBan                         | Allows blocking of specific elements.                                                            |
 | `modifiers.headers`                     | Theaders                     | Allows defining headers.                                                                         |
 | `modifiers.only`                        | "error" or "warn"            | Change level Severity for all plugins.                                                           |
-| `modifiers.renamePlugins`               | boolean                      | If true, `renamePlugins` in options will override this.                                          |
+| `modifiers.renamePlugins`               | boolean                      | Not implemented yet - currently has no effect.                                                   |
 | `modifiers.commands`                    | boolean                      | If true, [`eslint-plugin-command`](https://github.com/antfu/eslint-plugin-command) will turn on. |
 | `syntax.eslint`                         | boolean                      | Enables support for ESLint.                                                                      |
 | `syntax.ignoreGlobalFiles`              | Prettify<IignoreGlobalFiles> | Enables global file ignoring.                                                                    |
@@ -29,15 +29,24 @@
 | `syntax.node`                           | boolean                      | Enables support for Node.js.                                                                     |
 | `syntax.react`                          | boolean                      | Enables support for React.                                                                       |
 | `syntax.storybook`                      | boolean                      | Enables support for Storybook.                                                                   |
-| `syntax.tailwindcss`                    | boolean                      | Enables support for Tailwind CSS.                                                                |
+| `syntax.tailwindcss`                    | boolean                      | Enables support for Tailwind CSS (requires Tailwind CSS v4 installed in the project).            |
 | `syntax.toml`                           | boolean                      | Enables support for TOML.                                                                        |
 | `syntax.turbo`                          | boolean                      | Enables support for Turbo.                                                                       |
-| `syntax.typescript`                     | boolean                      | Enables support for TypeScript.                                                                  |
+| `syntax.typescript`                     | boolean                      | Enables support for TypeScript (type-aware - linted files must be included in `tsconfig.json`).  |
 | `syntax.vitest`                         | boolean                      | Enables support for Vitest.                                                                      |
 | `syntax.website`                        | boolean                      | Enables support for websites.                                                                    |
 | `syntax.yaml`                           | boolean                      | Enables support for YAML.                                                                        |
 
 More about rules setup with `@eslint/config-inspector`
+
+## Requirements
+
+| Dependency   | Version                            | Needed for                                                |
+| ------------ | ---------------------------------- | --------------------------------------------------------- |
+| ESLint       | `>=10.4` (flat config only)        | always                                                    |
+| Node.js      | `^20.19.0 \|\| ^22.13.0 \|\| >=24` | always (ESLint 10 requirement)                            |
+| TypeScript   | `>=4.8.4 <6.1.0`                   | `syntax.typescript` (`typescript-eslint` supported range) |
+| Tailwind CSS | `^4`                               | `syntax.tailwindcss`                                      |
 
 ## Install
 
@@ -66,12 +75,6 @@ yarn add -D "@ineedj/eslintrc"
 ```
 
 ## Usage
-
-`.env`
-
-```env
-ESLINT_USE_FLAT_CONFIG = true
-```
 
 `eslint.config.js`
 

@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
-import EslintVitest from "eslint-plugin-vitest";
+import type { IFlatConfig } from "../../types";
+import EslintVitest from "@vitest/eslint-plugin";
 import globals from "globals";
 
 import tsParserOptions from "../helpers/tsParser";
@@ -15,11 +14,11 @@ const languageOptions = (() =>
 		...(isTs ? tsParserOptions : {})
 	}))();
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	name: "VitestJS",
 	files: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
 	languageOptions: languageOptions,
-	plugins: { vitest: EslintVitest as any },
+	plugins: { vitest: EslintVitest },
 	// plugins: { "@EslintVitest": EslintVitest as any },
 	rules: {
 		...EslintVitest.configs.recommended.rules

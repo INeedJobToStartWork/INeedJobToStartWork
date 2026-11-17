@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
 import { rules as EslintMdx, createRemarkProcessor as mdxProcessor } from "eslint-plugin-mdx";
 
 import { composer, defineFlatConfig } from "eslint-flat-config-utils";
@@ -10,7 +8,6 @@ export default composer([
 		files: ["**/*.md"],
 		// languageOptions: languageOptions,
 		plugins: { "@EslintMdx": EslintMdx as any },
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 		processor: mdxProcessor({
 			lintCodeBlocks: true
 		}) as any,

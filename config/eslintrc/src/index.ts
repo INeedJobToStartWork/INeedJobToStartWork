@@ -121,7 +121,7 @@ const configLoader = (TruthyValue: unknown, config: unknown[] | unknown) => {
  * @returns {FlatConfigComposer} Array of Eslint configs objects.
  */
 
-// eslint-disable-next-line @typescript-eslint/promise-function-async
+// eslint-disable-next-line @typescript-eslint/promise-function-async, complexity -- one optional-chained toggle per option
 const ineedj = (inputConfig: IConfigInput) =>
 	new FlatConfigComposer([
 		// Modifiers

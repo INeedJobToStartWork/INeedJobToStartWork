@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
+import type { IFlatConfig } from "../../types";
 import EslintTurbo from "eslint-plugin-turbo";
 import globals from "globals";
 
@@ -16,7 +15,7 @@ const languageOptions = (() =>
 		...(isTs ? tsParserOptions : {})
 	}))();
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	name: "Turbo",
 	files: files,
 	languageOptions: languageOptions,

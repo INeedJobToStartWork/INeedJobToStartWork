@@ -1,13 +1,14 @@
+import type { IFlatConfig } from "../../types";
 import EslintJsonC from "eslint-plugin-jsonc";
-import { filesTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-const files = filesTS(["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.jsx", "**/*.json"]);
+const files = ["**/*.json", "**/*.jsonc", "**/*.json5"];
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: files,
 	name: "JSON formatter",
-	plugins: { "@EslintJsonC": EslintJsonC as object },
+	language: "@EslintJsonC/x",
+	plugins: { "@EslintJsonC": EslintJsonC },
 	ignores: ["!**/*.json"], //unignore cuz it's ignored globally
 	rules: {
 		"@EslintJsonC/array-bracket-newline": "error",

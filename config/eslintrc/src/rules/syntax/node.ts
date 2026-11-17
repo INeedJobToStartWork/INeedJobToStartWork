@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
+import type { IFlatConfig } from "../../types";
 import EslintNode from "eslint-plugin-n";
 import globals from "globals";
 
@@ -17,11 +16,11 @@ const languageOptions = (() =>
 		...(isTs ? tsParserOptions : {})
 	}))();
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	name: "NodeJS",
 	files: files,
 	languageOptions: languageOptions,
-	plugins: { "@EslintNode": EslintNode as any },
+	plugins: { "@EslintNode": EslintNode },
 	rules: {
 		"@EslintNode/callback-return": "error",
 		"@EslintNode/exports-style": "error", // maybe problems cuz we only esm

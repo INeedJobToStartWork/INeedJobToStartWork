@@ -1,22 +1,20 @@
+import type { IFlatConfig } from "../../types";
 import { defineFlatConfig } from "eslint-flat-config-utils";
-// @ts-expect-error: No type declaration for module
 import EslintPerfectionist from "eslint-plugin-perfectionist";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"],
 	name: "Perfectionist Sorter",
 
-	plugins: { "@EslintPerfectionist": EslintPerfectionist as any },
+	plugins: { "@EslintPerfectionist": EslintPerfectionist },
 	rules: {
 		"@EslintPerfectionist/sort-array-includes": [
 			"error",
 			{
 				type: "line-length",
-				order: "asc",
-				"spread-last": true
+				order: "asc"
 			}
 		],
-		"@EslintPerfectionist/sort-astro-attributes": "off",
 		"@EslintPerfectionist/sort-classes": "off",
 		"@EslintPerfectionist/sort-enums": "off", // On when block sort enums by order incrementation (?)
 		"@EslintPerfectionist/sort-exports": [
@@ -101,7 +99,6 @@ export default defineFlatConfig({
 			}
 		],
 		"@EslintPerfectionist/sort-objects": "off",
-		"@EslintPerfectionist/sort-svelte-attributes": "off", // xD
 		"@EslintPerfectionist/sort-intersection-types": [
 			"error",
 			{
@@ -115,7 +112,7 @@ export default defineFlatConfig({
 				type: "natural",
 				order: "asc"
 			}
-		],
-		"@EslintPerfectionist/sort-vue-attributes": "off" // xD * 2
+		]
+		// sort-astro/svelte/vue-attributes removed in perfectionist v5
 	}
 });

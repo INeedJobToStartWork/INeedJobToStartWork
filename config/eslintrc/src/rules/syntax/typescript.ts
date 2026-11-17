@@ -1,32 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { IFlatConfig } from "../../types";
 import tslint from "@typescript-eslint/eslint-plugin";
-import eslintDeprecation from "eslint-plugin-deprecation";
 // @ts-expect-error: No type declaration for module
 import EslintTypescriptSortKeys from "eslint-plugin-typescript-sort-keys";
 // @ts-expect-error: No type declaration for module
 import EslintNoExplicitTypeExports from "eslint-plugin-no-explicit-type-exports";
 import eslintTSDocs from "eslint-plugin-tsdoc";
-import { fileURLToPath } from "node:url";
-import { languageOptionsTS } from "../helpers";
+import { fixupPlugin, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-// 👇️ "/home/borislav/Desktop/javascript/index.js"
-const __filename = fileURLToPath(import.meta.url);
-console.log(__filename);
-
-// 👇️ "/home/borislav/Desktop/javascript"
-// const __dirname = path.resolve('tsconfig.json');
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
-	files: ["**/*.ts", "**/*.cts", "**/*.mts", "**.*.tsx"],
+	files: ["**/*.ts", "**/*.cts", "**/*.mts", "**/*.tsx"],
 	languageOptions: languageOptionsTS(),
 	name: "TypeScript - Strong Typing",
 	plugins: {
 		"@typescript-eslint": tslint as any,
-		"@EslintDeprecation": eslintDeprecation as any,
-		"@EslintTSDocs": eslintTSDocs as any,
-		"@EslintNoExplicitTypeExports": EslintNoExplicitTypeExports,
-		"@EslintTypescriptSortKeys": EslintTypescriptSortKeys
+		"@EslintTSDocs": eslintTSDocs,
+		"@EslintNoExplicitTypeExports": fixupPlugin(EslintNoExplicitTypeExports),
+		"@EslintTypescriptSortKeys": fixupPlugin(EslintTypescriptSortKeys)
 	},
 	rules: {
 		"@typescript-eslint/explicit-module-boundary-types": "error", // ccc
@@ -42,11 +33,8 @@ export default defineFlatConfig({
 		"@typescript-eslint/default-param-last": "error", // Security problem at Serverside
 		"@typescript-eslint/restrict-plus-operands": "error", // ?????
 		"no-throw-literal": "off",
-		// "@typescript-eslint/only-throw-error": "error", // TODO IN NEXT PATCH INSTEAD BELLOW
-		"@typescript-eslint/no-throw-literal": "error",
-		// "@typescript-eslint/no-unnecessary-template-expression": "error",// TODO IN NEXT PATCH
-		// "@typescript-eslint/no-unnecessary-template-expression": "error",
-		"@typescript-eslint/no-useless-template-literals": "error",
+		"@typescript-eslint/only-throw-error": "error",
+		"@typescript-eslint/no-unnecessary-template-expression": "error",
 		"@typescript-eslint/no-unsafe-enum-comparison": "error", // ccc
 		"no-redeclare": "off",
 		"@typescript-eslint/no-redeclare": "off",
@@ -81,7 +69,6 @@ export default defineFlatConfig({
 		"@typescript-eslint/consistent-indexed-object-style": ["warn", "record"],
 		"@typescript-eslint/consistent-type-exports": "error",
 		"@typescript-eslint/consistent-type-imports": ["error", { fixStyle: "separate-type-imports" }],
-		"@typescript-eslint/default-param-last:": "off",
 		"@typescript-eslint/explicit-function-return-type": "off",
 
 		// "@typescript-eslint/explicit-module-boundary-types": ["error", { allowArgumentsExplicitlyTypedAsAny: true }],
@@ -114,7 +101,6 @@ export default defineFlatConfig({
 		"@typescript-eslint/no-magic-numbers": "off",
 
 		"@typescript-eslint/no-misused-new": "error",
-		"no-extraneous-class": "off",
 		"@typescript-eslint/no-misused-promises": "error",
 		"@typescript-eslint/no-namespace": ["error", { allowDeclarations: true }],
 		"no-implied-eval": "off",
@@ -145,7 +131,6 @@ export default defineFlatConfig({
 		"@typescript-eslint/no-unused-expressions": "error",
 		"no-unused-vars": "off",
 		"@typescript-eslint/no-unused-vars": "warn",
-		"no-unnecessary-type-arguments": "off",
 		"@typescript-eslint/no-use-before-define": "off",
 		"@typescript-eslint/no-useless-constructor": "error",
 		"@typescript-eslint/no-useless-empty-export": "error",
@@ -179,21 +164,24 @@ export default defineFlatConfig({
 		"@typescript-eslint/triple-slash-reference": "error",
 		"@typescript-eslint/unified-signatures": "error",
 		"require-await": "off",
-		"@EslintDeprecation/deprecation": "error", // TEST123123
+		"@typescript-eslint/no-deprecated": "error",
 
 		"@EslintTSDocs/syntax": "error",
 
 		"@EslintNoExplicitTypeExports/no-explicit-type-exports": "error",
 		"@EslintTypescriptSortKeys/interface": "warn",
 		"@EslintTypescriptSortKeys/string-enum": "warn",
-		"@typescript-eslint/ban-types": [
+		// "ban-types" was split in typescript-eslint v8 into the 4 rules below
+		"@typescript-eslint/no-restricted-types": [
 			"error",
 			{
 				types: {
 					TODO: "It's only allowed in Development"
-				},
-				extendDefaults: true
+				}
 			}
-		]
+		],
+		"@typescript-eslint/no-empty-object-type": "error",
+		"@typescript-eslint/no-unsafe-function-type": "error",
+		"@typescript-eslint/no-wrapper-object-types": "error"
 	}
 });

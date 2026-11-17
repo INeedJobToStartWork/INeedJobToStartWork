@@ -1,10 +1,11 @@
-import stylisticTs from "@stylistic/eslint-plugin-ts";
+import type { IFlatConfig } from "../../types";
+import stylistic from "@stylistic/eslint-plugin";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-export default defineFlatConfig({
-	ignores: ["**/*.ts", "**/*.cts", "**/*.mts", "**/*.tsx"],
+export default defineFlatConfig<IFlatConfig>({
+	files: ["**/*.ts", "**/*.cts", "**/*.mts", "**/*.tsx"],
 	name: "Stylistic - Strong Typing",
-	plugins: { "@stylistic/ts": stylisticTs as any },
+	plugins: { "@stylistic/ts": stylistic },
 	rules: {
 		"@stylistic/ts/block-spacing": ["error", "always"],
 		"@stylistic/ts/brace-style": ["error", "stroustrup", { allowSingleLine: true }],
@@ -39,13 +40,8 @@ export default defineFlatConfig({
 			"error",
 			{
 				before: false,
-				after: true,
-				overrides: {
-					arrow: {
-						before: true,
-						after: true
-					}
-				}
+				after: true
+				// overrides.arrow removed in stylistic v5 - arrow spacing handled by "@stylistic/js/arrow-spacing"
 			}
 		]
 	}

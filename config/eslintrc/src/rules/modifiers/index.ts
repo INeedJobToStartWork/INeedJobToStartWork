@@ -1,17 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import type { IFlatConfig } from "../../types";
+import { fixupPlugin } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 // @ts-expect-error: No type declaration for module
 import ban from "eslint-plugin-ban";
 // @ts-expect-error: No type declaration for module
 import header from "eslint-plugin-header";
-// @ts-expect-error: No type declaration for module
 import OnlyWarning from "eslint-plugin-only-warn";
 // @ts-expect-error: No type declaration for module
 import OnlyError from "eslint-plugin-only-error";
 import type { TBan, Theaders } from "./types";
 import commands from "eslint-plugin-command/config";
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 
 export interface ImodifiercsConfig {
 	ban?: TBan;
@@ -22,13 +21,13 @@ export interface ImodifiercsConfig {
 }
 
 export const modifiersConfig = (props: ImodifiercsConfig | undefined = { commands: true }): object => [
-	defineFlatConfig({
+	defineFlatConfig<IFlatConfig>({
 		name: "Modifiers",
 		plugins: {
-			"@ModifierBan": ban,
-			"@ModifierHeader": header,
+			"@ModifierBan": fixupPlugin(ban),
+			"@ModifierHeader": fixupPlugin(header),
 			...(Object.hasOwn(props, "only") && props.only === "warn"
-				? { "@ModifierOnlyWarning": OnlyWarning }
+				? { "@ModifierOnlyWarning": OnlyWarning as any }
 				: { "@ModifierOnlyError": OnlyError }) // Sometimes bugging
 		},
 		rules: {
@@ -40,4 +39,4 @@ export const modifiersConfig = (props: ImodifiercsConfig | undefined = { command
 ];
 
 export default modifiersConfig;
-export * from "./types";
+export type * from "./types";

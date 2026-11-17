@@ -1,15 +1,16 @@
+import type { IFlatConfig } from "../../types";
 // @ts-expect-error: No type declaration for module
 import EslintJSXA11 from "eslint-plugin-jsx-a11y";
-import { isTs, languageOptionsTS } from "../helpers";
+import { fixupPlugin, isTs, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 export const files = ["**/*.jsx", ...(isTs ? ["**/*.tsx"] : [])];
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	name: "Default",
 	files: files,
 	languageOptions: languageOptionsTS(),
-	plugins: { "@EslintJSXA11": EslintJSXA11 as any },
+	plugins: { "@EslintJSXA11": fixupPlugin(EslintJSXA11) },
 	rules: {
 		"@EslintJSXA11/alt-text": "error",
 		"@EslintJSXA11/anchor-ambiguous-text": "error",

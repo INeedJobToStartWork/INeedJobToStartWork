@@ -1,10 +1,12 @@
+import type { IFlatConfig } from "../../types";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 import EslintTOML from "eslint-plugin-toml";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.toml"],
 	name: "Toml",
-	plugins: { "@EslintTOML": EslintTOML as any },
+	language: "@EslintTOML/toml",
+	plugins: { "@EslintTOML": EslintTOML },
 	rules: {
 		"@EslintTOML/array-bracket-newline": "error",
 		"@EslintTOML/array-bracket-spacing": "error",
@@ -13,7 +15,6 @@ export default defineFlatConfig({
 		"@EslintTOML/inline-table-curly-spacing": "error",
 		"@EslintTOML/key-spacing": "error",
 		"@EslintTOML/keys-order": "error",
-		"@EslintTOML/no-mixed-type-in-array:": "off", // idk how to config
 		"@EslintTOML/no-non-decimal-integer": "off",
 		"@EslintTOML/no-space-dots": "error",
 		"@EslintTOML/no-unreadable-number-separator": "error",

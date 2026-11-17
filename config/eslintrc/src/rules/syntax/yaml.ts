@@ -1,10 +1,12 @@
+import type { IFlatConfig } from "../../types";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 import EslintYML from "eslint-plugin-yml";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.yml", "**/*.yaml"],
 	name: "Yaml",
-	plugins: { "@EslintYML": EslintYML as any },
+	language: "@EslintYML/yaml",
+	plugins: { "@EslintYML": EslintYML },
 	rules: {
 		"@EslintYML/block-mapping-colon-indicator-newline": ["error", "always"],
 		"@EslintYML/block-mapping-question-indicator-newline": ["error", "always"],

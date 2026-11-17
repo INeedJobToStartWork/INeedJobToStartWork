@@ -1,12 +1,12 @@
-// @ts-expect-error: No type declaration for module
+import type { IFlatConfig } from "../../types";
 import EslintNext from "@next/eslint-plugin-next";
 import { languageOptionsTS, filesTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	name: "NextJS",
 	files: filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]),
-	plugins: { "@EslintNext": EslintNext as any },
+	plugins: { "@EslintNext": EslintNext },
 	languageOptions: languageOptionsTS(),
 	rules: {
 		"@EslintNext/google-font-display": "error",

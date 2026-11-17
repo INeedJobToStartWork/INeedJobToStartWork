@@ -1,9 +1,9 @@
-import stylisticJs from "@stylistic/eslint-plugin-js";
-import stylisticPlus from "@stylistic/eslint-plugin-plus";
+import type { IFlatConfig } from "../../types";
+import stylistic from "@stylistic/eslint-plugin";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 import globals from "globals";
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: ["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs", "**/*.ts", "**/*.tsx", "**/*.mts", "**/*.ets"],
 	languageOptions: {
 		ecmaVersion: "latest",
@@ -12,8 +12,8 @@ export default defineFlatConfig({
 	},
 	name: "stylistic_js",
 	plugins: {
-		"@stylistic/plus": stylisticPlus as any,
-		"@stylistic/js": stylisticJs as any
+		"@stylistic/plus": stylistic,
+		"@stylistic/js": stylistic
 	},
 	rules: {
 		"@stylistic/plus/type-generic-spacing": ["error"],

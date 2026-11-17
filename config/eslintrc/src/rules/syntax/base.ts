@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import type { IFlatConfig } from "../../types";
 // @ts-expect-error: No type declaration for module
 import EslintPrefArrayFunc from "eslint-plugin-array-func";
 // @ts-expect-error: No type declaration for module
@@ -15,12 +15,11 @@ import EslintSecurity from "eslint-plugin-security";
 
 import EslintSonar from "eslint-plugin-sonarjs";
 import EslintUnicorn from "eslint-plugin-unicorn";
-// @ts-expect-error: No type declaration for module
 import EslintImports from "eslint-plugin-import";
 // @tsw-expect-error: No type declaration for module
 import EslintUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
-import { filesTS, languageOptionsTS } from "../helpers";
+import { filesTS, fixupPlugin, languageOptionsTS } from "../helpers";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
 const files = (() => filesTS(["**/*.js", "**/*.jsx", "**/*.mjs", "**/*.ejs"]))();
@@ -31,20 +30,20 @@ const languageOptions = (() =>
 		globals: { ...globals.node }
 	}))();
 
-export default defineFlatConfig({
+export default defineFlatConfig<IFlatConfig>({
 	files: files,
 	languageOptions: languageOptions,
 	name: "Default",
 	plugins: {
-		"@EslintOptRegConf": EslintOptRegConf,
-		"@EslintPii": EslintPii,
-		"@EslintSecurity": EslintSecurity as any,
+		"@EslintOptRegConf": fixupPlugin(EslintOptRegConf),
+		"@EslintPii": fixupPlugin(EslintPii),
+		"@EslintSecurity": EslintSecurity,
 		"@EslintPromise": EslintPromise,
 		"@EslintUnicorn": EslintUnicorn,
-		"@EslintSonar": EslintSonar as any,
+		"@EslintSonar": EslintSonar,
 		"@EslintNoUnsanitized": EslintNoUnsanitized,
 		"@EslintUnusedImports": EslintUnusedImports,
-		"@EslintImports": EslintImports,
+		"@EslintImports": fixupPlugin(EslintImports),
 		"@EslintPrefArrayFunc": EslintPrefArrayFunc
 	},
 	rules: {
@@ -89,7 +88,6 @@ export default defineFlatConfig({
 		"no-self-compare": "error",
 		"no-setter-return": "error",
 		"no-sparse-arrays": "warn",
-		disallowArithmeticOperators: 0,
 		"no-template-curly-in-string": "error",
 		"no-this-before-super": "error",
 		"no-undef": "warn",
@@ -316,7 +314,7 @@ export default defineFlatConfig({
 		"@EslintUnicorn/no-abusive-eslint-disable": "error",
 		"@EslintUnicorn/no-anonymous-default-export": "error",
 		"@EslintUnicorn/no-array-callback-reference": "error",
-		"@EslintUnicorn/no-array-for-each": "warn",
+		"@EslintUnicorn/no-for-each": "warn",
 		"@EslintUnicorn/no-array-method-this-argument": "warn",
 		"@EslintUnicorn/no-array-push-push": "error",
 		"@EslintUnicorn/no-array-reduce": "warn",
@@ -435,7 +433,7 @@ export default defineFlatConfig({
 		"@EslintSonar/no-inverted-boolean-check": "error",
 		"@EslintSonar/no-nested-switch": "error",
 		"@EslintSonar/no-nested-template-literals": "error",
-		"@EslintSonar/no-one-iteration-loop": "error",
+		// "@EslintSonar/no-one-iteration-loop" removed in sonarjs v4, use core "no-unreachable-loop"
 		"@EslintSonar/no-redundant-boolean": "off",
 		"@EslintSonar/no-redundant-jump": "error",
 		"@EslintSonar/no-same-line-conditional": "error",
@@ -462,7 +460,6 @@ export default defineFlatConfig({
 		"@EslintImports/default": "off", // ERRORS ["error"]
 		"@EslintImports/no-namespace": "off", // needed in some libs
 		"@EslintImports/export": "error",
-		"@EslintImports/exports-lats": "off",
 		// "@EslintImports/no-mutable-exports"
 		"@EslintImports/namespace": "off", // ERRORS ["error"]
 		"@EslintImports/no-mutable-exports": "error",

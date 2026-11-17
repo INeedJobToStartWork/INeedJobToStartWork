@@ -1,3 +1,4 @@
+import type { IFlatConfig } from "../../types";
 import gitIgnore from "eslint-config-flat-gitignore";
 import { defineFlatConfig } from "eslint-flat-config-utils";
 
@@ -17,11 +18,11 @@ export interface IignoreGlobalFiles {
 export const ignoreGlobalFiles = (
 	properties: IignoreGlobalFiles = { gitIgnore: true, basicIgnores: true }
 ): object[] => [
-	defineFlatConfig({
+	defineFlatConfig<IFlatConfig>({
 		// name: "Ignore Global - Custom", // ADD when it will be backported or ported to eslint 9
 		ignores: properties.ignoreFiles ?? []
 	}),
-	defineFlatConfig({
+	defineFlatConfig<IFlatConfig>({
 		// name: "Ignore Global - Basic",
 		ignores: properties.basicIgnores
 			? [
@@ -44,7 +45,7 @@ export const ignoreGlobalFiles = (
 	}),
 	{
 		// name: "Ignore Global - gitignore",
-		...(properties.gitIgnore ? gitIgnore() : {})
+		...(properties.gitIgnore ? gitIgnore({ strict: false }) : {}) // strict: false - don't crash when project has no .gitignore
 	}
 ];
 
