@@ -38,6 +38,15 @@
     },
     "lint": {},
     "lint:fix": {},
+    "@ineedj/eslintrc#build": {
+      "outputs": ["dist/**"]
+    },
+    "@ineedj/eslintrc#lint": {
+      "dependsOn": ["build"]
+    },
+    "@ineedj/eslintrc#lint:fix": {
+      "dependsOn": ["build"]
+    },
     "lint:test": {},
     "lint:next": {},
     "link-cli": {},

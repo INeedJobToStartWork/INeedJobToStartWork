@@ -6,11 +6,12 @@ runs:
   steps:
     - name: 🚀 Setup pnpm
       uses: pnpm/action-setup@v4
+    # No `registry-url` here: it makes setup-node write an `_authToken=${NODE_AUTH_TOKEN}` .npmrc
+    # with a placeholder token, which interferes with npm Trusted Publishing (OIDC).
     - name: 🟢 Setup node
       uses: actions/setup-node@v4.0.2
       with:
         node-version-file: '.nvmrc'
-        registry-url: 'https://registry.npmjs.org'
         cache: 'pnpm'
 
     - name: 🤖 Setup Git User

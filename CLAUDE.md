@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A pnpm + Turborepo monorepo holding INEEDJ's shared, npm-published tooling configs (`@ineedj/*`), plus non-code reference material. Node version comes from `.nvmrc` (20.x); package manager is `pnpm@9.4.0`.
+A pnpm + Turborepo monorepo holding INEEDJ's shared, npm-published tooling configs (`@ineedj/*`), plus non-code reference material. Node version comes from `.nvmrc` (24.x; ESLint 10 / `eslint-flat-config-utils` need `Object.groupBy`, i.e. Node >= 21); package manager is `pnpm@9.4.0`.
 
 Workspaces (`pnpm-workspace.yaml` also lists `website/*`, `packages/*`, `tests/*`, which do not currently exist):
 
